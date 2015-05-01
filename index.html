@@ -3,13 +3,260 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=320">
   <title>HTML Academy: pink</title>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
 
-  <p></p>
+
+
+
+	<!-- в page-header лежит фоновая картинка -->
+	<header class="page-header">
+
+
+
+		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
+		<div class="top-menu">
+			<div class="container-280">
+				<h1 class="pink-logo">Pink</h1>
+				<nav class="mobile-menu">
+					<ul>
+						<li><a href="#information">Информация</a></li>
+						<li><a href="#features">Возможности</a></li>
+						<li><a href="#reviews">Отзывы</a></li>
+						<li><a href="#prices">Стоимость</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+
+
+		<!-- в фоне header-content лежит картинка со смартфоном-->
+		<div class="header-content">
+			<div class="container-320">
+				 <!-- page-blocks-title - класс для стилизации одинаковых заголовков блоков. OpenSans-Light 24px -->
+				<h2 class="header-text page-blocks-title">Взгляните на жизнь иначе!</h2>
+			</div>
+		</div>
+
+
+
+	</header>
+
+
+
+	<!-- downloads - темно-синий фон -->
+	<div class="downloads">
+		<div class="container-280">
+			<button class="dowload-app-btn">Скачать приложение</button>
+			<div class="platform-icons">
+				<img src="http://placehold.it/45x60" width="45" height="60" alt="apple">
+				<img src="http://placehold.it/45x60" width="45" height="60" alt="android">
+				<img src="http://placehold.it/45x60" width="45" height="60" alt="windows">
+			</div>
+			<p class="downloads-information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+		</div>
+	</div>
+
+
+
+
+	<!-- якорь для пункта меню "информация" -->
+	<a id="information"></a>
+
+	<!-- information-block - белый фон -->
+	<div class="information-block">
+		<div class="container-280">
+			<h2 class="information-block-text page-blocks-title">Устали от серости мегаполиса?</h2>
+			<h2 class="information-block-text page-blocks-title">Нам есть, что вам предложить!</h2>
+		</div>
+	</div>
+
+
+
+
+	<!-- якорь для пункта меню "возможности" -->
+	<a id="features"></a>
+
+	<!-- features-block - серый фон, серый псевдоэлемент, наползающий на вышерасположенный блок и картинка со смартфоном -->
+	<div class="features-block">
+		<div class="container-280">
+
+			<section class="feature-1">
+				<h1 class="feature-title">Поднимает настроение</h1>
+				<p class="feature-description">Приложение поможет вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+			</section>
+
+			<section class="feature-1">
+				<h1 class="feature-title">Меняет мир вокруг</h1>
+				<p class="feature-description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+			</section>
+
+			<section class="feature-1">
+				<h1 class="feature-title">Заводит новых друзей</h1>
+				<p class="feature-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+			</section>
+
+		</div>
+	</div>
+
+
+
+
+
+	<!-- якорь для пункта меню "отзывы" -->
+	<a id="reviews"></a>
+
+	<!-- reviews-block - белый фон и серый псевдоэлемент внизу блока -->
+	<div class="reviews-block">
+		<div class="container-280">
+			<!-- переключающиеся слайды -->
+			<div class="reviews">
+				<section class="review-1">
+					<h1 class="review-author">Николай Петров</h1>
+					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+				</section>
+				<!--section class="review-2">
+					<h1 class="review-author">Иван Сидоров</h1>
+					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+				</section>
+				<section class="review-3">
+					<h1 class="review-author">Василий Кузнецов</h1>
+					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+				</section-->
+			</div>
+			<div class="controls">
+				<!-- невидимые радиобаттоны -->
+				<div class="control-btns">
+					<input type="radio" name="review-toggle" id="review-1" checked>
+					<input type="radio" name="review-toggle" id="review-2">
+					<input type="radio" name="review-toggle" id="review-3">
+				</div>
+				<!-- лейблы стилизуются под управляющие кнопки -->
+				<div class="control-labels">
+					<label for="review-1"></label>
+					<label for="review-2"></label>
+					<label for="review-3"></label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- якорь для пункта меню "стоимость" -->
+	<a id="prices"></a>
+
+	<!-- prices-block - серый фон -->
+	<div class="prices-block">
+		<!-- price-table - контейнер для таблицы, превышающей ширину вьюпорта. переключение с одного столбца на другой трансформациями -->
+		<div class="price-table">
+			<table>
+				<tr>
+					<th>
+						<p class="price-table-title">База</p>
+						<p class="price-table-amount">1,99 USD</p>
+					</th>
+					<th class="flag-hit">
+						<p class="price-table-title">Стандарт</p>
+						<p class="price-table-amount">3,99 USD</p>
+					</th>
+					<th>
+						<p class="price-table-title">Анлим</p>
+						<p class="price-table-amount">9,99 USD</p>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<span>Розовый фильтр</span>
+						<span class="feature-enabled">Да</span>
+					</td>
+					<td>
+						<span>Розовый фильтр</span>
+						<span class="feature-enabled">Да</span>
+					</td>
+					<td>
+						<span>Розовый фильтр</span>
+						<span class="feature-enabled">Да</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>Смайлики</span>
+						<span class="feature-disabled">Нет</span>
+					</td>
+					<td>
+						<span>Смайлики</span>
+						<span class="feature-enabled">Да</span>
+					</td>
+					<td>
+						<span>Смайлики</span>
+						<span class="feature-enabled">Да</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>Комментарии</span>
+						<span class="feature-disabled">Нет</span>
+					</td>
+					<td>
+						<span>Комментарии</span>
+						<span class="feature-disabled">Нет</span>
+					</td>
+					<td>
+						<span>Комментарии</span>
+						<span class="feature-enabled">Да</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="controls">
+			<!-- невидимые радиобаттоны -->
+				<div class="control-btns">
+					<input type="radio" name="price-toggle" id="price-table-1">
+					<input type="radio" name="price-toggle" id="price-table-2" checked>
+					<input type="radio" name="price-toggle" id="price-table-3">
+				</div>
+				<!-- лейблы стилизуются под управляющие кнопки -->
+				<div class="control-labels">
+					<label for="price-table-1"></label>
+					<label for="price-table-2"></label>
+					<label for="price-table-3"></label>
+				</div>
+		</div>
+	</div>
+
+
+
+	<!-- footer-contacts - белый фон и белый псевдоэлемент внизу блока над картой -->
+	<div class="footer-contacts">
+		<div class="container-280">
+			<h2 class="footer-contacts-title page-blocks-title">Остались вопросы?</h2>
+			<h2 class="footer-contacts-title page-blocks-title">Свяжитесь с нами!</h2>
+			<p class="contacts-paragraph-title">Звоните:</p>
+			<p class="contacts-data">+7 (812) 555-66-66</p>
+			<p class="contacts-paragraph-title">Пишите:</p>
+			<p class="contacts-data">mail@htmlacademy.ru</p>
+			<p class="contacts-paragraph-title">Приезжайте в гости:</p>
+			<p class="contacts-data">ул. Большая Конюшенная, 19/8</p>
+		</div>
+	</div>	
+
+
+
+
+	<div id="map-canvas" class="map-wrapper">
+		<img src="http://placehold.it/320x200" width="320" height="200" alt="map">
+	</div>
+	
+	
+  
 
   <!-- <script src="js/script.js"></script> -->
 
