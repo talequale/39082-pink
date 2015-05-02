@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=320">
+  <title>HTML Academy: pink</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body class="pink-form-mobile">
+
+
+
+
+	<!-- в page-header лежит фоновая картинка -->
+	<header class="page-header">
+
+
+
+		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
+		<div class="top-menu">
+			<div class="container-280">
+				<h1 class="pink-logo">Pink</h1>
+				<nav class="mobile-menu">
+					<ul>
+						<li><a href="index.html#information">Информация</a></li>
+						<li><a href="index.html#features">Возможности</a></li>
+						<li><a href="index.html#reviews">Отзывы</a></li>
+						<li><a href="index.html#prices">Стоимость</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+
+		<h2 class="container-280 header-text page-blocks-title">Конкурс на самое безбашенное путешествие с Пинк</h2>
+
+
+
+	</header>
+
+
+
+	<form action="#" method="post">
+
+
+		<!-- form-name-block - белый фон -->
+		<div class="form-name-block">
+
+			<div class="container-280">
+
+				<p class="name-block-description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+
+				<p>
+					<label for="first-name" class="form-paragraph-uppercase">Имя: *</label>
+					<input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя" required>
+				</p>
+
+				<p>
+					<label for="last-name" class="form-paragraph-uppercase">Фамилия: *</label>
+					<input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию" required>
+				</p>
+
+				<p>
+					<label for="middle-name" class="form-paragraph-uppercase">Отчество:</label>
+					<input type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+				</p>
+
+			</div>
+
+		</div>
+
+
+		
+		<!-- form-platform-choice - серый фон -->
+		<div class="form-platform-choice">
+
+			<div class="container-280">
+
+				<h2 class="form-paragraph-uppercase">С каким приложением путешествовали?</h2>
+
+				<p>
+					<input type="radio" id="ios" name="platform" checked>
+					<label for="ios" class="form-paragraph-lowregister">Pink для iOS</label>
+				</p>
+
+				<p>
+					<input type="radio" id="android" name="platform">
+					<label for="android" class="form-paragraph-lowregister">Pink на Android</label>
+				</p>
+
+				<p>
+					<input type="radio" id="windows" name="platform">
+					<label for="windows" class="form-paragraph-lowregister">Windows Phone</label>
+				</p>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- form-date-block - белый фон -->
+		<div class="form-date-block">
+			
+			<div class="container-280">
+
+				<h2 class="form-paragraph-uppercase">Когда вы путешествовали? *</h2>
+
+				<p>
+					<input type="date" id="departure-date" name="departure-date" class="form-paragraph-lowregister" placeholder="1 апреля 2015" required>
+					<label for="departure-date" class="form-paragraph-uppercase">Дата выезда</label>
+				</p>
+
+				<p>
+					<input type="number" id="trip-length" name="trip-length" class="form-paragraph-lowregister" placeholder="10 дней" required>
+					<label for="trip-length" class="form-paragraph-uppercase">Продолжительность</label>
+				</p>
+
+				<p>
+					<input type="date" id="return-date" name="return-date" class="form-paragraph-lowregister" placeholder="1 апреля 2015" required>
+					<label for="return-date" class="form-paragraph-uppercase">Дата возвращения</label>
+				</p>
+				
+			</div>
+
+		</div>
+
+
+		<!-- form-companions-block - серый фон -->
+		<div class="form-companions-block">
+			
+			<div class="container-280">
+
+				<p>
+					<label for="number-of-companions" class="form-paragraph-uppercase">Количество попутчиков *</label>
+					<input type="number" id="number-of-companions" name="number-of-companions" class="form-paragraph-lowregister" placeholder="2 чел" required>
+				</p>
+
+				<section class="companion-name">
+					<table>
+						<tr>
+							<th class="form-paragraph-uppercase">№</th>
+							<th>
+								<label for="name-1" class="form-paragraph-uppercase">Имя: *</label>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<p class="form-paragraph-lowregister">1</p>
+							</td>
+							<td>
+								<input id="name-1" class="form-paragraph-lowregister" placeholder="Введите ваше имя" required>
+							</td>
+						</tr>
+						<tr>
+							<th class="form-paragraph-uppercase"></th>
+							<th><label for="nickname-1" class="form-paragraph-uppercase">Прозвище:</label></th>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input type="text" id="nickname-1" class="form-paragraph-lowregister" placeholder="Ну как же без этого!">
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section class="companion-name">
+					<table>
+						<tr>
+							<th class="form-paragraph-uppercase">№</th>
+							<th>
+								<label for="name-2" class="form-paragraph-uppercase">Имя: *</label>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<p class="form-paragraph-lowregister">2</p>
+							</td>
+							<td>
+								<input id="name-2" class="form-paragraph-lowregister" placeholder="Введите ваше имя" required>
+							</td>
+						</tr>
+						<tr>
+							<th class="form-paragraph-uppercase"></th>
+							<th><label for="nickname-2" class="form-paragraph-uppercase">Прозвище:</label></th>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input type="text" id="nickname-2" class="form-paragraph-lowregister" placeholder="Ну как же без этого!">
+							</td>
+						</tr>
+					</table>
+				</section>
+
+			</div>
+
+		</div>
+
+		<!-- form-achievements-block - белый фон -->
+		<div class="form-achievements-block">
+
+			<div class="container-280">
+
+				<h2 class="form-paragraph-uppercase">Ваши безбашенные достижения в путешествии</h2>
+
+				<p>
+					<input type="checkbox" id="selfie-shark" checked>
+					<label for="selfie-shark" class="form-paragraph-lowregister">Сделал селфи с акулой</label>
+				</p>
+
+				<p>
+					<input type="checkbox" id="sunburn" checked>
+					<label for="sunburn" class="form-paragraph-lowregister">Обгорел на пляже</label>
+				</p>
+
+				<p>
+					<input type="checkbox" id="chuck-norris">
+					<label for="chuck-norris" class="form-paragraph-lowregister">Видел Чака Норриса</label>
+				</p>
+
+				<p>
+					<input type="checkbox" id="souvenirs">
+					<label for="souvenirs" class="form-paragraph-lowregister">Накупил сувениров</label>
+				</p>
+
+				<p>
+					<input type="checkbox" id="leaning-tower" checked>
+					<label for="leaning-tower" class="form-paragraph-lowregister">Удержал башню</label>
+				</p>
+
+				<p>
+					<input type="checkbox" id="ruined-hotel">
+					<label for="ruined-hotel" class="form-paragraph-lowregister">Разгромил отель</label>
+				</p>
+			</div>
+
+		</div>
+
+		<!-- form-photos-block - серый фон -->
+		<div class="form-photos-block">
+			
+			<div class="container-280">
+
+				<h2 class="form-paragraph-uppercase">Ваши фотографии из поездки *</h2>
+
+				<a href="#" class="bordered-btn">Загрузить фотографии</a>
+
+				<div class="images">
+
+					<div class="close-btn">
+						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<p class="image-caption">Img-1.jpg</p>
+					</div>
+
+					<div class="close-btn">
+						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<p class="image-caption">Img-2.jpg</p>
+					</div>
+
+					<div class="close-btn">
+						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<p class="image-caption">Img-3.jpg</p>
+					</div>
+
+					<div class="close-btn">
+						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<p class="image-caption">Img-4.jpg</p>
+					</div>
+
+					<div class="close-btn">
+						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<p class="image-caption">Img-5.jpg</p>
+					</div>
+
+					<div class="close-btn">
+						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<p class="image-caption">Img-6.jpg</p>
+					</div>
+
+					<div class="close-btn">
+						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<p class="image-caption">Img-7.jpg</p>
+					</div>
+
+					<div class="close-btn">
+						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<p class="image-caption">Img-8.jpg</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- form-submit-block - белый фон -->
+		<div class="form-submit-block">
+
+			<div class="container-280">
+				
+				<input type="submit" id="submit-btn" name="submit-btn" value="Отправить форму">
+
+				<p class="form-paragraph-uppercase">* &mdash; обязательные поля</p>
+
+			</div>
+
+		</div>
+
+
+	</form>
+
+
+
+
+	<footer class="footer-page">
+		
+		<div class="container-280">
+
+			<div class="footer-logo  clearfix">
+				<img src="http://placehold.it/60x40" width="60" height="40" alt="">
+				<p class="pink-logo">Pink</p>
+			</div>
+			
+			<div class="footer-social-btns">
+				<a href="#" class="twitter-btn">Twitter</a>
+				<a href="#" class="facebook-btn">Facebook</a>
+				<a href="#" class="youtube-btn">Youtube</a>
+			</div>
+
+			<div class="copyright clearfix">
+				<p>Разработано</p>
+				<a href="https://htmlacademy.ru/"><img src="http://placehold.it/28x34" width="28" height="34" alt=""></a>
+			</div>
+
+		</div>
+
+	</footer>
+	
+
+
+
+    <!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>
