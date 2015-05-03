@@ -20,14 +20,14 @@
 
 		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
 		<div class="top-menu">
-			<div class="container-280">
-				<h1 class="pink-logo">Pink</h1>
+			<div class="container">
+				<div class="pink-logo">Pink</div>
+				<button class="menu-toggle">Меню</button>
 				<nav class="mobile-menu">
 					<ul>
-						<li><a href="#information">Информация</a></li>
-						<li><a href="#features">Возможности</a></li>
-						<li><a href="#reviews">Отзывы</a></li>
-						<li><a href="#prices">Стоимость</a></li>
+						<li><a href="index.html" class="current">Главная</a></li>
+						<li><a href="form.html">Конкурс для путешественников</a></li>
+						<li><a href="blog.html">Блог путешественников</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -37,40 +37,35 @@
 
 		<!-- в фоне header-content лежит картинка со смартфоном-->
 		<div class="header-content">
-			<div class="container-320">
+			<div class="container">
 				 <!-- page-blocks-title - класс для стилизации одинаковых заголовков блоков. OpenSans-Light 24px -->
-				<h2 class="header-text page-blocks-title">Взгляните на жизнь иначе!</h2>
+				<h1 class="header-text page-blocks-title">Взгляните на жизнь иначе!</h1>
 			</div>
 		</div>
 
+
+		<!-- downloads - темно-синий фон -->
+		<div class="downloads">
+			<div class="container">
+				<a href="#" class="dowload-app-btn">Скачать приложение</a>
+					<div class="platform-icons">
+					<img src="http://placehold.it/45x60" width="45" height="60" alt="apple">
+					<img src="http://placehold.it/45x60" width="45" height="60" alt="android">
+					<img src="http://placehold.it/45x60" width="45" height="60" alt="windows">
+				</div>
+				<p class="downloads-information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+			</div>
+		</div>
 
 
 	</header>
 
 
 
-	<!-- downloads - темно-синий фон -->
-	<div class="downloads">
-		<div class="container-280">
-			<button class="dowload-app-btn">Скачать приложение</button>
-			<div class="platform-icons">
-				<img src="http://placehold.it/45x60" width="45" height="60" alt="apple">
-				<img src="http://placehold.it/45x60" width="45" height="60" alt="android">
-				<img src="http://placehold.it/45x60" width="45" height="60" alt="windows">
-			</div>
-			<p class="downloads-information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-		</div>
-	</div>
-
-
-
-
-	<!-- якорь для пункта меню "информация" -->
-	<a id="information"></a>
 
 	<!-- information-block - белый фон -->
 	<div class="information-block">
-		<div class="container-280">
+		<div class="container">
 			<h2 class="information-block-text page-blocks-title">Устали от серости мегаполиса?</h2>
 			<h2 class="information-block-text page-blocks-title">Нам есть, что вам предложить!</h2>
 		</div>
@@ -79,25 +74,22 @@
 
 
 
-	<!-- якорь для пункта меню "возможности" -->
-	<a id="features"></a>
-
 	<!-- features-block - серый фон, серый псевдоэлемент, наползающий на вышерасположенный блок и картинка со смартфоном -->
 	<div class="features-block">
-		<div class="container-280">
+		<div class="container">
 
-			<section class="feature-1">
-				<h1 class="feature-title">Поднимает настроение</h1>
+			<section class="feature">
+				<h2 class="feature-title">Поднимает настроение</h2>
 				<p class="feature-description">Приложение поможет вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
 			</section>
 
-			<section class="feature-1">
-				<h1 class="feature-title">Меняет мир вокруг</h1>
+			<section class="feature">
+				<h2 class="feature-title">Меняет мир вокруг</h2>
 				<p class="feature-description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
 			</section>
 
-			<section class="feature-1">
-				<h1 class="feature-title">Заводит новых друзей</h1>
+			<section class="feature">
+				<h2 class="feature-title">Заводит новых друзей</h2>
 				<p class="feature-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
 			</section>
 
@@ -108,24 +100,21 @@
 
 
 
-	<!-- якорь для пункта меню "отзывы" -->
-	<a id="reviews"></a>
-
 	<!-- reviews-block - белый фон и серый псевдоэлемент внизу блока -->
 	<div class="reviews-block">
-		<div class="container-280">
+		<div class="container">
 			<!-- переключающиеся слайды -->
 			<div class="reviews">
-				<section class="review-1">
-					<h1 class="review-author">Николай Петров</h1>
+				<section class="review  rewiew-1">
+					<h2 class="review-author">Николай Петров</h2>
 					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section>
-				<!--section class="review-2">
-					<h1 class="review-author">Иван Сидоров</h1>
+				<!--section class="review  review-2">
+					<h2 class="review-author">Иван Сидоров</h2>
 					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section>
-				<section class="review-3">
-					<h1 class="review-author">Василий Кузнецов</h1>
+				<section class="review  review-3">
+					<h2 class="review-author">Василий Кузнецов</h2>
 					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section-->
 			</div>
@@ -149,9 +138,6 @@
 
 
 
-
-	<!-- якорь для пункта меню "стоимость" -->
-	<a id="prices"></a>
 
 	<!-- prices-block - серый фон -->
 	<div class="prices-block">
@@ -236,7 +222,7 @@
 
 	<!-- footer-contacts - белый фон и белый псевдоэлемент внизу блока над картой -->
 	<div class="footer-contacts">
-		<div class="container-280">
+		<div class="container">
 			<h2 class="footer-contacts-title page-blocks-title">Остались вопросы?</h2>
 			<h2 class="footer-contacts-title page-blocks-title">Свяжитесь с нами!</h2>
 			<p class="contacts-paragraph-title">Звоните:</p>
@@ -251,9 +237,7 @@
 
 
 
-	<div id="map-canvas" class="map-wrapper">
-		<img src="http://placehold.it/320x200" width="320" height="200" alt="map">
-	</div>
+	<div id="map-canvas" class="map-wrapper"></div>
 	
 	
   
