@@ -19,22 +19,22 @@
 
 
 		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
-		<div class="top-menu">
+		<div class="page-header__top-menu">
 			<div class="container">
-				<div class="pink-logo"><a href="index.html">Pink</a></div>
+				<div class="pink-logo">Pink</div>
 				<button class="menu-toggle">Меню</button>
-				<nav class="mobile-menu">
+				<nav class="top-menu__mobile-menu">
 					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="form.html" class="current">Конкурс для путешественников</a></li>
-						<li><a href="blog.html">Блог путешественников</a></li>
+						<li><a href="index.html" class="mobile-menu__link">Главная</a></li>
+						<li><a href="form.html"  class="mobile-menu__link--current">Конкурс для путешественников</a></li>
+						<li><a href="blog.html"class="mobile-menu__link">Блог путешественников</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 
 
-		<h1 class="container header-text page-blocks-title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+		<h1 class="header-content__text">Конкурс на самое безбашенное путешествие с Пинк</h1>
 
 
 
@@ -45,20 +45,20 @@
 		<form action="#" method="post">
 
 
-			<!-- form-name-block - белый фон -->
-			<div class="form-name-block">
+			<!-- page-form__name-block - белый фон -->
+			<div class="page-form__name-block">
 
 				<div class="container">
 
-					<p class="name-block-description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+					<p class="name-block__description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
 
-					<label for="first-name" class="form-paragraph-uppercase">Имя: *</label>
+					<label for="first-name">Имя: *</label>
 					<input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя" required>
 
-					<label for="last-name" class="form-paragraph-uppercase">Фамилия: *</label>
+					<label for="last-name">Фамилия: *</label>
 					<input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию" required>
 
-					<label for="middle-name" class="form-paragraph-uppercase">Отчество:</label>
+					<label for="middle-name">Отчество:</label>
 					<input type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
 
 				</div>
@@ -67,21 +67,21 @@
 
 
 		
-			<!-- form-platform-choice - серый фон -->
-			<div class="form-platform-choice">
+			<!-- page-form__platform-choice - серый фон -->
+			<div class="page-form__platform-choice">
 
 				<div class="container">
 
-					<h2 class="form-paragraph-uppercase">С каким приложением путешествовали?</h2>
+					<h2 class="platform-choice__title">С каким приложением путешествовали?</h2>
 
 					<input type="radio" id="ios" name="platform" checked>
-					<label for="ios" class="form-paragraph-lowregister">Pink для iOS</label>
+					<label for="ios">Pink для iOS</label>
 
 					<input type="radio" id="android" name="platform">
-					<label for="android" class="form-paragraph-lowregister">Pink на Android</label>
+					<label for="android">Pink на Android</label>
 
 					<input type="radio" id="windows" name="platform">
-					<label for="windows" class="form-paragraph-lowregister">Windows Phone</label>
+					<label for="windows">Windows Phone</label>
 
 				</div>
 
@@ -89,101 +89,101 @@
 
 
 
-			<!-- form-date-block - белый фон -->
-			<div class="form-date-block">
+			<!-- page-form__date-block - белый фон -->
+			<div class="page-form__date-block">
 			
 				<div class="container">
 
-					<h2 class="form-paragraph-uppercase">Когда вы путешествовали? *</h2>
+					<h2 class="date-block__title">Когда вы путешествовали? *</h2>
 
-					<input type="text" id="departure-date" name="departure-date" class="form-paragraph-lowregister" placeholder="1 апреля 2015" required>
-					<label for="departure-date" class="form-paragraph-uppercase">Дата выезда</label>
+					<input type="text" id="departure-date" name="departure-date" placeholder="1 апреля 2015" required>
+					<label for="departure-date">Дата выезда</label>
 
-					<button class="reduce-btn">-</button>
+					<button class="decrease-btn">-</button>
 
-					<input type="text" id="trip-length" name="trip-length" class="form-paragraph-lowregister" placeholder="10 дней" required>
+					<input type="text" id="trip-length" name="trip-length" placeholder="10 дней" required>
 
 					<button class="increase-btn">+</button>
 
-					<label for="trip-length" class="form-paragraph-uppercase">Продолжительность</label>
+					<label for="trip-length">Продолжительность</label>
 
-					<input type="text" id="return-date" name="return-date" class="form-paragraph-lowregister" placeholder="15 апреля 2015" disabled>
-					<label for="return-date" class="form-paragraph-uppercase">Дата возвращения</label>
+					<input type="text" id="return-date" name="return-date" placeholder="15 апреля 2015" disabled>
+					<label for="return-date">Дата возвращения</label>
 
 			</div>
 
 		</div>
 
 
-		<!-- form-companions-block - серый фон -->
-		<div class="form-companions-block">
+		<!-- page-form__companions-block - серый фон -->
+		<div class="page-form__companions-block">
 			
 			<div class="container">
 
 				<p>
-					<label for="number-of-companions" class="form-paragraph-uppercase">Количество попутчиков *</label>
+					<label for="number-of-companions">Количество попутчиков *</label>
 
-					<button class="reduce-btn">-</button>
+					<button class="decrease-btn">-</button>
 
-					<input type="text" id="number-of-companions" name="number-of-companions" class="form-paragraph-lowregister" placeholder="2 чел" required>
+					<input type="text" id="number-of-companions" name="number-of-companions" placeholder="2 чел" required>
 
 					<button class="increase-btn">+</button>
 
 				</p>
 
-				<div class="companion-name">
-					<table>
+				<div class="companions-block__companion-name">
+					<table class="companions-block__table">
 						<tr>
-							<th class="form-paragraph-uppercase">№</th>
+							<th>№</th>
 							<th>
-								<label for="name-1" class="form-paragraph-uppercase">Имя: *</label>
+								<label for="name-1">Имя: *</label>
 							</th>
 						</tr>
 						<tr>
 							<td>
-								<p class="form-paragraph-lowregister">1</p>
+								<p>1</p>
 							</td>
 							<td>
-								<input id="name-1" class="form-paragraph-lowregister" placeholder="Введите ваше имя" required>
+								<input id="name-1" placeholder="Введите ваше имя" required>
 							</td>
 						</tr>
 						<tr>
-							<th class="form-paragraph-uppercase"></th>
-							<th><label for="nickname-1" class="form-paragraph-uppercase">Прозвище:</label></th>
+							<th></th>
+							<th><label for="nickname-1">Прозвище:</label></th>
 						</tr>
 						<tr>
 							<td></td>
 							<td>
-								<input type="text" id="nickname-1" class="form-paragraph-lowregister" placeholder="Ну как же без этого!">
+								<input type="text" id="nickname-1" placeholder="Ну как же без этого!">
 							</td>
 						</tr>
 					</table>
 				</div>
 
-				<div class="companion-name">
-					<table>
+				<div class="companions-block__companion-name">
+					<table class="companions-block__table">
 						<tr>
-							<th class="form-paragraph-uppercase">№</th>
+							<th>№</th>
 							<th>
-								<label for="name-2" class="form-paragraph-uppercase">Имя: *</label>
+								<label for="name-2">Имя: *</label>
 							</th>
 						</tr>
 						<tr>
 							<td>
-								<p class="form-paragraph-lowregister">2</p>
+								<p>1</p>
 							</td>
 							<td>
-								<input id="name-2" class="form-paragraph-lowregister" placeholder="Введите ваше имя" required>
+								<input id="name-2" placeholder="Введите ваше имя" required>
 							</td>
 						</tr>
 						<tr>
-							<th class="form-paragraph-uppercase"></th>
-							<th><label for="nickname-2" class="form-paragraph-uppercase">Прозвище:</label></th>
+							<th></th>
+							<th><label for="nickname-2">Прозвище:</label></th>
 						</tr>
 						<tr>
 							<td></td>
 							<td>
-								<input type="text" id="nickname-2" class="form-paragraph-lowregister" placeholder="Ну как же без этого!">
+								<input type="text" id="nickname-2" placeholder="Ну как же без этого!">
 							</td>
 						</tr>
 					</table>
@@ -193,91 +193,91 @@
 
 		</div>
 
-		<!-- form-achievements-block - белый фон -->
-		<div class="form-achievements-block">
+		<!-- page-form__achievements-block - белый фон -->
+		<div class="page-form__achievements-block">
 
 			<div class="container">
 
-				<h2 class="form-paragraph-uppercase">Ваши безбашенные достижения в путешествии</h2>
+				<h2 class="achievements-block__title">Ваши безбашенные достижения в путешествии</h2>
 
 				<input type="checkbox" id="selfie-shark" checked>
-				<label for="selfie-shark" class="form-paragraph-lowregister">Сделал селфи с акулой</label>
+				<label for="selfie-shark">Сделал селфи с акулой</label>
 
 				<input type="checkbox" id="sunburn" checked>
-				<label for="sunburn" class="form-paragraph-lowregister">Обгорел на пляже</label>
+				<label for="sunburn">Обгорел на пляже</label>
 
 				<input type="checkbox" id="chuck-norris">
-				<label for="chuck-norris" class="form-paragraph-lowregister">Видел Чака Норриса</label>
+				<label for="chuck-norris">Видел Чака Норриса</label>
 
 				<input type="checkbox" id="souvenirs">
-				<label for="souvenirs" class="form-paragraph-lowregister">Накупил сувениров</label>
+				<label for="souvenirs">Накупил сувениров</label>
 
 				<input type="checkbox" id="leaning-tower" checked>
-				<label for="leaning-tower" class="form-paragraph-lowregister">Удержал башню</label>
+				<label for="leaning-tower">Удержал башню</label>
 
 				<input type="checkbox" id="ruined-hotel">
-				<label for="ruined-hotel" class="form-paragraph-lowregister">Разгромил отель</label>
+				<label for="ruined-hotel">Разгромил отель</label>
 	
 			</div>
 
 		</div>
 
-		<!-- form-photos-block - серый фон -->
-		<div class="form-photos-block">
+		<!-- page-form__photos-block - серый фон -->
+		<div class="page-form__photos-block">
 			
 			<div class="container">
 
-				<h2 class="form-paragraph-uppercase">Ваши фотографии из поездки *</h2>
+				<h2 class="photos-block-title">Ваши фотографии из поездки *</h2>
 
 				<input type="file" id="upload-images-btn">
 
-				<div class="images">
+				<div class="photos-block__images">
 
-					<figure class="image">
+					<figure class="photos-block__image">
 						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
-						<p class="image-caption">Img-1.jpg</p>
+						<p class="image__caption">Img-1.jpg</p>
 						<button class="delete-btn">Удалить картинку</button>
 					</figure>
 
-					<figure class="image">
+					<figure class="photos-block__image">
 						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
-						<p class="image-caption">Img-1.jpg</p>
+						<p class="image__caption">Img-1.jpg</p>
 						<button class="delete-btn">Удалить картинку</button>
 					</figure>
 
-					<figure class="image">
+					<figure class="photos-block__image">
 						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
-						<p class="image-caption">Img-1.jpg</p>
+						<p class="image__caption">Img-1.jpg</p>
 						<button class="delete-btn">Удалить картинку</button>
 					</figure>
 
-					<figure class="image">
+					<figure class="photos-block__image">
 						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
-						<p class="image-caption">Img-1.jpg</p>
+						<p class="image__caption">Img-1.jpg</p>
 						<button class="delete-btn">Удалить картинку</button>
 					</figure>
 
-					<figure class="image">
+					<figure class="photos-block__image">
 						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
-						<p class="image-caption">Img-1.jpg</p>
+						<p class="image__caption">Img-1.jpg</p>
 						<button class="delete-btn">Удалить картинку</button>
 					</figure>
 
-					<figure class="image">
+					<figure class="photos-block__image">
 						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
-						<p class="image-caption">Img-1.jpg</p>
+						<p class="image__caption">Img-1.jpg</p>
 						<button class="delete-btn">Удалить картинку</button>
 					</figure>
 
-					<figure class="image">
+					<figure class="photos-block__image">
 						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
-						<p class="image-caption">Img-1.jpg</p>
+						<p class="image__caption">Img-1.jpg</p>
 						<button class="delete-btn">Удалить картинку</button>
 					</figure>
 
-					<figure class="image">
+					<figure class="photos-block__image">
 						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
-						<p class="image-caption">Img-1.jpg</p>
+						<p class="image__caption">Img-1.jpg</p>
 						<button class="delete-btn">Удалить картинку</button>
 					</figure>
 				</div>
@@ -285,14 +285,14 @@
 
 		</div>
 
-		<!-- form-submit-block - белый фон -->
-		<div class="form-submit-block">
+		<!-- page-form__submit-block - белый фон -->
+		<div class="page-form__submit-block">
 
 			<div class="container">
 				
 				<button type="submit" id="submit-btn">Отправить форму</button>
 
-				<p class="form-paragraph-uppercase">* &mdash; обязательные поля</p>
+				<p>* &mdash; обязательные поля</p>
 
 			</div>
 
@@ -309,18 +309,18 @@
 		
 		<div class="container">
 
-			<div class="footer-logo  clearfix">
-				<img src="http://placehold.it/60x40" width="60" height="40" alt="">
-				<p class="pink-logo">Pink</p>
+			<div class="footer-page__footer-logo  clearfix">
+				<img class="footer-logo__image" src="http://placehold.it/60x40" width="60" height="40" alt="">
+				<p class="footer-logo__text-logo">Pink</p>
 			</div>
 			
-			<div class="footer-social-btns">
-				<a href="#" class="twitter-btn">Twitter</a>
-				<a href="#" class="facebook-btn">Facebook</a>
-				<a href="#" class="youtube-btn">Youtube</a>
+			<div class="footer-page__social-btns">
+				<a href="#" class="social-btns__twitter-btn">Twitter</a>
+				<a href="#" class="social-btns__facebook-btn">Facebook</a>
+				<a href="#" class="social-btns__youtube-btn">Youtube</a>
 			</div>
 
-			<div class="copyright clearfix">
+			<div class="footer-page__copyright clearfix">
 				<p>Разработано</p>
 				<a href="https://htmlacademy.ru/"><img src="http://placehold.it/28x34" width="28" height="34" alt=""></a>
 			</div>

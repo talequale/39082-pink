@@ -19,15 +19,15 @@
 
 
 		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
-		<div class="top-menu">
+		<div class="page-header__top-menu">
 			<div class="container">
 				<div class="pink-logo">Pink</div>
 				<button class="menu-toggle">Меню</button>
-				<nav class="mobile-menu">
+				<nav class="top-menu__mobile-menu">
 					<ul>
-						<li><a href="index.html" class="current">Главная</a></li>
-						<li><a href="form.html">Конкурс для путешественников</a></li>
-						<li><a href="blog.html">Блог путешественников</a></li>
+						<li><a href="index.html" class="mobile-menu__link--current">Главная</a></li>
+						<li><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
+						<li><a href="blog.html"class="mobile-menu__link">Блог путешественников</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -36,24 +36,23 @@
 
 
 		<!-- в фоне header-content лежит картинка со смартфоном-->
-		<div class="header-content">
+		<div class="page-header__header-content">
 			<div class="container">
-				 <!-- page-blocks-title - класс для стилизации одинаковых заголовков блоков. OpenSans-Light 24px -->
-				<h1 class="header-text page-blocks-title">Взгляните на жизнь иначе!</h1>
+				<h1 class="header-content__text">Взгляните на жизнь иначе!</h1>
 			</div>
 		</div>
 
 
 		<!-- downloads - темно-синий фон -->
-		<div class="downloads">
+		<div class="page-header__downloads">
 			<div class="container">
-				<a href="#" class="dowload-app-btn">Скачать приложение</a>
-					<div class="platform-icons">
-					<img src="http://placehold.it/45x60" width="45" height="60" alt="apple">
-					<img src="http://placehold.it/45x60" width="45" height="60" alt="android">
-					<img src="http://placehold.it/45x60" width="45" height="60" alt="windows">
+				<a href="#" class="downloads__btn">Скачать приложение</a>
+				<div class="downloads__icons">
+					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="apple">
+					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="android">
+					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="windows">
 				</div>
-				<p class="downloads-information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+				<p class="downloads__information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
 			</div>
 		</div>
 
@@ -66,8 +65,8 @@
 	<!-- information-block - белый фон -->
 	<div class="information-block">
 		<div class="container">
-			<h2 class="information-block-text page-blocks-title">Устали от серости мегаполиса?</h2>
-			<h2 class="information-block-text page-blocks-title">Нам есть, что вам предложить!</h2>
+			<h2 class="information-block__text">Устали от серости мегаполиса?</h2>
+			<h2 class="information-block__text">Нам есть, что вам предложить!</h2>
 		</div>
 	</div>
 
@@ -78,19 +77,19 @@
 	<div class="features-block">
 		<div class="container">
 
-			<section class="feature">
-				<h2 class="feature-title">Поднимает настроение</h2>
-				<p class="feature-description">Приложение поможет вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+			<section class="features-block__feature">
+				<h2 class="feature__title">Поднимает настроение</h2>
+				<p class="feature__description">Приложение поможет вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
 			</section>
 
-			<section class="feature">
-				<h2 class="feature-title">Меняет мир вокруг</h2>
-				<p class="feature-description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+			<section class="features-block__feature">
+				<h2 class="feature__title">Меняет мир вокруг</h2>
+				<p class="feature__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
 			</section>
 
-			<section class="feature">
-				<h2 class="feature-title">Заводит новых друзей</h2>
-				<p class="feature-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+			<section class="features-block__feature">
+				<h2 class="feature__title">Заводит новых друзей</h2>
+				<p class="feature__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
 			</section>
 
 		</div>
@@ -104,29 +103,29 @@
 	<div class="reviews-block">
 		<div class="container">
 			<!-- переключающиеся слайды -->
-			<div class="reviews">
-				<section class="review  rewiew-1">
-					<h2 class="review-author">Николай Петров</h2>
-					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+			<div class="reviews-block__reviews">
+				<section class="reviews-block__review  reviews-block__review--1">
+					<h2 class="review__author">Николай Петров</h2>
+					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section>
-				<!--section class="review  review-2">
-					<h2 class="review-author">Иван Сидоров</h2>
-					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+				<!--section class="reviews-block__review  reviews-block__review--2">
+					<h2 class="review__author">Иван Сидоров</h2>
+					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section>
-				<section class="review  review-3">
-					<h2 class="review-author">Василий Кузнецов</h2>
-					<p class="review-text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+				<section class="reviews-block__review  reviews-block__review--2">
+					<h2 class="review__author">Василий Кузнецов</h2>
+					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section-->
 			</div>
-			<div class="controls">
+			<div class="reviews-block__slider-controls">
 				<!-- невидимые радиобаттоны -->
-				<div class="control-btns">
+				<div class="reviews-block__radio-btns">
 					<input type="radio" name="review-toggle" id="review-1" checked>
 					<input type="radio" name="review-toggle" id="review-2">
 					<input type="radio" name="review-toggle" id="review-3">
 				</div>
 				<!-- лейблы стилизуются под управляющие кнопки -->
-				<div class="control-labels">
+				<div class="reviews-block__control-labels">
 					<label for="review-1"></label>
 					<label for="review-2"></label>
 					<label for="review-3"></label>
@@ -142,75 +141,75 @@
 	<!-- prices-block - серый фон -->
 	<div class="prices-block">
 		<!-- price-table - контейнер для таблицы, превышающей ширину вьюпорта. переключение с одного столбца на другой трансформациями -->
-		<div class="price-table">
+		<div class="prices-block__price-table">
 			<table>
 				<tr>
 					<th>
-						<p class="price-table-title">База</p>
-						<p class="price-table-amount">1,99 USD</p>
+						<p class="price-table__title">База</p>
+						<p class="price-table__amount">1,99 USD</p>
 					</th>
 					<th class="flag-hit">
-						<p class="price-table-title">Стандарт</p>
-						<p class="price-table-amount">3,99 USD</p>
+						<p class="price-table__title">Стандарт</p>
+						<p class="price-table__amount">3,99 USD</p>
 					</th>
 					<th>
-						<p class="price-table-title">Анлим</p>
-						<p class="price-table-amount">9,99 USD</p>
+						<p class="price-table__title">Анлим</p>
+						<p class="price-table__amount">9,99 USD</p>
 					</th>
 				</tr>
 				<tr>
 					<td>
 						<span>Розовый фильтр</span>
-						<span class="feature-enabled">Да</span>
+						<span class="price-table__feature--enabled">Да</span>
 					</td>
 					<td>
 						<span>Розовый фильтр</span>
-						<span class="feature-enabled">Да</span>
+						<span class="price-table__feature--enabled">Да</span>
 					</td>
 					<td>
 						<span>Розовый фильтр</span>
-						<span class="feature-enabled">Да</span>
+						<span class="price-table__feature--enabled">Да</span>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<span>Смайлики</span>
-						<span class="feature-disabled">Нет</span>
+						<span class="price-table__feature--disabled">Нет</span>
 					</td>
 					<td>
 						<span>Смайлики</span>
-						<span class="feature-enabled">Да</span>
+						<span class="price-table__feature--enabled">Да</span>
 					</td>
 					<td>
 						<span>Смайлики</span>
-						<span class="feature-enabled">Да</span>
+						<span class="price-table__feature--enabled">Да</span>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<span>Комментарии</span>
-						<span class="feature-disabled">Нет</span>
+						<span class="price-table__feature--disabled">Нет</span>
 					</td>
 					<td>
 						<span>Комментарии</span>
-						<span class="feature-disabled">Нет</span>
+						<span class="price-table__feature--disabled">Нет</span>
 					</td>
 					<td>
 						<span>Комментарии</span>
-						<span class="feature-enabled">Да</span>
+						<span class="price-table__feature--enabled">Да</span>
 					</td>
 				</tr>
 			</table>
 		</div>
-		<div class="controls">
+		<div class="prices-block__slider-controls">
 			<!-- невидимые радиобаттоны -->
-				<div class="control-btns">
+				<div class="prices-block__control-btns">
 					<input type="radio" name="price-toggle" id="price-table-1">
 					<input type="radio" name="price-toggle" id="price-table-2" checked>
 					<input type="radio" name="price-toggle" id="price-table-3">
 				</div>
 				<!-- лейблы стилизуются под управляющие кнопки -->
-				<div class="control-labels">
+				<div class="prices-block__control-labels">
 					<label for="price-table-1"></label>
 					<label for="price-table-2"></label>
 					<label for="price-table-3"></label>
@@ -223,14 +222,14 @@
 	<!-- footer-contacts - белый фон и белый псевдоэлемент внизу блока над картой -->
 	<div class="footer-contacts">
 		<div class="container">
-			<h2 class="footer-contacts-title page-blocks-title">Остались вопросы?</h2>
-			<h2 class="footer-contacts-title page-blocks-title">Свяжитесь с нами!</h2>
-			<p class="contacts-paragraph-title">Звоните:</p>
-			<p class="contacts-data">+7 (812) 555-66-66</p>
-			<p class="contacts-paragraph-title">Пишите:</p>
-			<p class="contacts-data">mail@htmlacademy.ru</p>
-			<p class="contacts-paragraph-title">Приезжайте в гости:</p>
-			<p class="contacts-data">ул. Большая Конюшенная, 19/8</p>
+			<h2 class="footer-contacts__title">Остались вопросы?</h2>
+			<h2 class="footer-contacts__title">Свяжитесь с нами!</h2>
+			<p class="footer-contacts__paragraph-title">Звоните:</p>
+			<p class="footer-contacts__information">+7 (812) 555-66-66</p>
+			<p class="footer-contacts__paragraph-title">Пишите:</p>
+			<p class="footer-contacts__information">mail@htmlacademy.ru</p>
+			<p class="footer-contacts__paragraph-title">Приезжайте в гости:</p>
+			<p class="footer-contacts__information">ул. Большая Конюшенная, 19/8</p>
 		</div>
 	</div>	
 

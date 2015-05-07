@@ -19,22 +19,22 @@
 
 
 		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
-		<div class="top-menu">
+		<div class="page-header__top-menu">
 			<div class="container">
-				<div class="pink-logo"><a href="index.html">Pink</a></div>
+				<div class="pink-logo">Pink</div>
 				<button class="menu-toggle">Меню</button>
-				<nav class="mobile-menu">
+				<nav class="top-menu__mobile-menu">
 					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="form.html">Конкурс для путешественников</a></li>
-						<li><a href="blog.html">Блог путешественников</a></li>
+						<li><a href="index.html" class="mobile-menu__link">Главная</a></li>
+						<li><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
+						<li><a href="blog.html"class="mobile-menu__link">Блог путешественников</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 
 
-		<p class="container header-text page-blocks-title">Блог путешественников, пользователей Пинк</p>
+		<p class="header-content__text">Блог путешественников, пользователей Пинк</p>
 
 
 
@@ -47,44 +47,44 @@
 		
 		<div class="container">
 
-			<article class="blog-entry">
-				<h1 class="blog-entry-title">Антон и Надя в Таиланде</h1>
-				<p class="blog-entry-date">Опубликовано: 6 месяцев назад</p>
-				<p class="blog-entry-review">Читайте рассказ о том, как семейная пара посещала Таиланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+			<article class="page-content__blog-entry">
+				<h1 class="blog-entry__title">Антон и Надя в Таиланде</h1>
+				<p class="blog-entry__date">Опубликовано: 6 месяцев назад</p>
+				<p class="blog-entry__review">Читайте рассказ о том, как семейная пара посещала Таиланд, стараясь максимально избегать избитых туристических мест и районов.</p>
 			
 
-				<h2 class="entry-subtitle">Предыстория</h2>
+				<h2 class="blog-entry__subtitle">Предыстория</h2>
 
-				<p class="entry-text">В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="http://skyscanner.ru" target="_blank">skyscanner.ru</a> мы все-таки решились!</p>
+				<p class="blog-entry__text">В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="http://skyscanner.ru" target="_blank">skyscanner.ru</a> мы все-таки решились!</p>
 
-				<h2 class="entry-subtitle">Выбор отеля</h2>
+				<h2 class="blog-entry__subtitle">Выбор отеля</h2>
 
-				<p class="entry-text">В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
+				<p class="blog-entry__text">В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
 
-				<ul class="cities-to-visit">
+				<ul class="blog-entry__cities-to-visit-list">
 					<li>Point Yamu by Como (Пхукет)</li>
 					<li>Amari Vogue Hotel (Краби)</li>
 					<li>Photo Hotel (Пхукет)</li>
 				</ul>
 
-				<p class="entry-text">В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
+				<p class="blog-entry__text">В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
 
 				<blockquote>
 					<p>Замечательное место, в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный, еда - потрясающая. Отель расположен в тихом и уединенном месте - в чем вся и прелесть. СПА отличный. Потрясающие виды.</p> 
 					<p class="quotation-author">Олег, г. Москва</p>
 				</blockquote>
 
-				<h2 class="entry-subtitle">Местная еда</h2>
+				<h2 class="blog-entry__subtitle">Местная еда</h2>
 
-				<p class="entry-text">Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо &laquo;not spicy&raquo;. Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
-
-				<div class="navigation-btns">
-					<a href="#" class="prev-btn">Пред.</a>
-					<a href="#" class="next-btn">След.</a>
-					<a href="blog.html">Назад к списку</a>
-				</div>
+				<p class="blog-entry__text">Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо &laquo;not spicy&raquo;. Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
 
 			</article>
+
+			<div class="page-content__navigation-btns">
+				<a href="#" class="navigation-btns__prev-btn">Пред.</a>
+				<a href="#" class="navigation-btns__next-btn">След.</a>
+				<a href="blog.html" class="navigation-btns__back-to-list-btn">Назад к списку</a>
+			</div>
 
 		</div>
 
@@ -97,18 +97,18 @@
 		
 		<div class="container">
 
-			<div class="footer-logo  clearfix">
-				<img src="http://placehold.it/60x40" width="60" height="40" alt="">
-				<p class="pink-logo">Pink</p>
+			<div class="footer-page__footer-logo  clearfix">
+				<img class="footer-logo__image" src="http://placehold.it/60x40" width="60" height="40" alt="">
+				<p class="footer-logo__text-logo">Pink</p>
 			</div>
 			
-			<div class="footer-social-btns">
-				<a href="#" class="twitter-btn">Twitter</a>
-				<a href="#" class="facebook-btn">Facebook</a>
-				<a href="#" class="youtube-btn">Youtube</a>
+			<div class="footer-page__social-btns">
+				<a href="#" class="social-btns__twitter-btn">Twitter</a>
+				<a href="#" class="social-btns__facebook-btn">Facebook</a>
+				<a href="#" class="social-btns__youtube-btn">Youtube</a>
 			</div>
 
-			<div class="copyright clearfix">
+			<div class="footer-page__copyright clearfix">
 				<p>Разработано</p>
 				<a href="https://htmlacademy.ru/"><img src="http://placehold.it/28x34" width="28" height="34" alt=""></a>
 			</div>
