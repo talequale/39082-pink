@@ -21,13 +21,23 @@
 		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
 		<div class="page-header__top-menu">
 			<div class="container">
-				<div class="pink-logo">Pink</div>
+
+
+				<div class="logo">Pink</div>
+
+
 				<button class="menu-toggle">Меню</button>
-				<nav class="top-menu__mobile-menu">
-					<ul>
-						<li><a href="index.html" class="mobile-menu__link--current">Главная</a></li>
-						<li><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
-						<li><a href="blog.html"class="mobile-menu__link">Блог путешественников</a></li>
+
+
+				<nav class="mobile-menu">
+
+					<ul class="mobile-menu__list">
+						<li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link  mobile-menu__link--current">Главная</a></li>
+
+						<li class="mobile-menu__item"><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
+
+						<li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Блог путешественников</a></li>
+
 					</ul>
 				</nav>
 			</div>
@@ -36,15 +46,15 @@
 
 
 		<!-- в фоне header-content лежит картинка со смартфоном-->
-		<div class="page-header__header-content">
+		<div class="page-header__content">
 			<div class="container">
-				<h1 class="header-content__text">Взгляните на жизнь иначе!</h1>
+				<h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
 			</div>
 		</div>
 
 
 		<!-- downloads - темно-синий фон -->
-		<div class="page-header__downloads">
+		<div class="downloads">
 			<div class="container">
 				<a href="#" class="downloads__btn">Скачать приложение</a>
 				<div class="downloads__icons">
@@ -62,34 +72,34 @@
 
 
 
-	<!-- information-block - белый фон -->
-	<div class="information-block">
+	<!-- information - белый фон -->
+	<div class="information">
 		<div class="container">
-			<h2 class="information-block__text">Устали от серости мегаполиса?</h2>
-			<h2 class="information-block__text">Нам есть, что вам предложить!</h2>
+			<h2 class="information__text">Устали от серости мегаполиса?</h2>
+			<h2 class="information__text">Нам есть, что вам предложить!</h2>
 		</div>
 	</div>
 
 
 
 
-	<!-- features-block - серый фон, серый псевдоэлемент, наползающий на вышерасположенный блок и картинка со смартфоном -->
-	<div class="features-block">
+	<!-- features - серый фон, серый псевдоэлемент, наползающий на вышерасположенный блок и картинка со смартфоном -->
+	<div class="features">
 		<div class="container">
 
-			<section class="features-block__feature">
-				<h2 class="feature__title">Поднимает настроение</h2>
-				<p class="feature__description">Приложение поможет вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+			<section class="feature-item">
+				<h2 class="feature-item__title">Поднимает настроение</h2>
+				<p class="feature-item__description">Приложение поможет вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
 			</section>
 
-			<section class="features-block__feature">
-				<h2 class="feature__title">Меняет мир вокруг</h2>
-				<p class="feature__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+			<section class="feature-item">
+				<h2 class="feature-item__title">Меняет мир вокруг</h2>
+				<p class="feature-item__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
 			</section>
 
-			<section class="features-block__feature">
-				<h2 class="feature__title">Заводит новых друзей</h2>
-				<p class="feature__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+			<section class="feature-item">
+				<h2 class="feature-item__title">Заводит новых друзей</h2>
+				<p class="feature-item__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
 			</section>
 
 		</div>
@@ -99,36 +109,36 @@
 
 
 
-	<!-- reviews-block - белый фон и серый псевдоэлемент внизу блока -->
-	<div class="reviews-block">
+	<!-- reviews - белый фон и серый псевдоэлемент внизу блока -->
+	<div class="reviews">
 		<div class="container">
 			<!-- переключающиеся слайды -->
-			<div class="reviews-block__reviews">
-				<section class="reviews-block__review  reviews-block__review--1">
+			<div class="reviews__items">
+				<section class="review  slide-1">
 					<h2 class="review__author">Николай Петров</h2>
 					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section>
-				<!--section class="reviews-block__review  reviews-block__review--2">
+				<!--section class="review  slide-2">
 					<h2 class="review__author">Иван Сидоров</h2>
 					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section>
-				<section class="reviews-block__review  reviews-block__review--2">
+				<section class="review  slide-3">
 					<h2 class="review__author">Василий Кузнецов</h2>
 					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 				</section-->
 			</div>
-			<div class="reviews-block__slider-controls">
+			<div class="slider-controls">
 				<!-- невидимые радиобаттоны -->
-				<div class="reviews-block__radio-btns">
-					<input type="radio" name="review-toggle" id="review-1" checked>
-					<input type="radio" name="review-toggle" id="review-2">
-					<input type="radio" name="review-toggle" id="review-3">
-				</div>
+				
+				<input type="radio" name="review-toggle" id="review-1" checked>
+				<input type="radio" name="review-toggle" id="review-2">
+				<input type="radio" name="review-toggle" id="review-3">
+				
 				<!-- лейблы стилизуются под управляющие кнопки -->
-				<div class="reviews-block__control-labels">
-					<label for="review-1"></label>
-					<label for="review-2"></label>
-					<label for="review-3"></label>
+				<div class="control-labels">
+					<label class="control-label" for="review-1"></label>
+					<label class="control-label" for="review-2"></label>
+					<label class="control-label" for="review-3"></label>
 				</div>
 			</div>
 		</div>
@@ -138,89 +148,91 @@
 
 
 
-	<!-- prices-block - серый фон -->
-	<div class="prices-block">
-		<!-- price-table - контейнер для таблицы, превышающей ширину вьюпорта. переключение с одного столбца на другой трансформациями -->
-		<div class="prices-block__price-table">
-			<table>
+	<!-- prices - серый фон -->
+	<div class="prices">
+		<!-- prices__wrapper - контейнер для таблицы, превышающей ширину вьюпорта. переключение с одного столбца на другой трансформациями -->
+		<div class="prices__wrapper">
+			<table class="prices__table">
 				<tr>
 					<th>
-						<p class="price-table__title">База</p>
-						<p class="price-table__amount">1,99 USD</p>
+						<p class="prices__title">База</p>
+						<p class="prices__amount">1,99 USD</p>
 					</th>
 					<th class="flag-hit">
-						<p class="price-table__title">Стандарт</p>
-						<p class="price-table__amount">3,99 USD</p>
+						<p class="prices__title">Стандарт</p>
+						<p class="prices__amount">3,99 USD</p>
 					</th>
 					<th>
-						<p class="price-table__title">Анлим</p>
-						<p class="price-table__amount">9,99 USD</p>
+						<p class="prices__title">Анлим</p>
+						<p class="prices__amount">9,99 USD</p>
 					</th>
 				</tr>
 				<tr>
 					<td>
-						<span>Розовый фильтр</span>
-						<span class="price-table__feature--enabled">Да</span>
+						<span class="prices__feature">Розовый фильтр</span>
+						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
 					</td>
 					<td>
-						<span>Розовый фильтр</span>
-						<span class="price-table__feature--enabled">Да</span>
+						<span class="prices__feature">Розовый фильтр</span>
+						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
 					</td>
 					<td>
-						<span>Розовый фильтр</span>
-						<span class="price-table__feature--enabled">Да</span>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span>Смайлики</span>
-						<span class="price-table__feature--disabled">Нет</span>
-					</td>
-					<td>
-						<span>Смайлики</span>
-						<span class="price-table__feature--enabled">Да</span>
-					</td>
-					<td>
-						<span>Смайлики</span>
-						<span class="price-table__feature--enabled">Да</span>
+						<span class="prices__feature">Розовый фильтр</span>
+						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<span>Комментарии</span>
-						<span class="price-table__feature--disabled">Нет</span>
+						<span class="prices__feature">Смайлики</span>
+						<span class="prices__checkbox  prices__checkbox--unchecked">Нет</span>
 					</td>
 					<td>
-						<span>Комментарии</span>
-						<span class="price-table__feature--disabled">Нет</span>
+						<span class="prices__feature">Смайлики</span>
+						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
 					</td>
 					<td>
-						<span>Комментарии</span>
-						<span class="price-table__feature--enabled">Да</span>
+						<span class="prices__feature">Смайлики</span>
+						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="prices__feature">Комментарии</span>
+						<span class="prices__checkbox  prices__checkbox--unchecked">Нет</span>
+					</td>
+					<td>
+						<span class="prices__feature">Комментарии</span>
+						<span class="prices__checkbox  prices__checkbox--unchecked">Нет</span>
+					</td>
+					<td>
+						<span class="prices__feature">Комментарии</span>
+						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
 					</td>
 				</tr>
 			</table>
 		</div>
-		<div class="prices-block__slider-controls">
+
+
+		<div class="slider-controls">
+
 			<!-- невидимые радиобаттоны -->
-				<div class="prices-block__control-btns">
-					<input type="radio" name="price-toggle" id="price-table-1">
-					<input type="radio" name="price-toggle" id="price-table-2" checked>
-					<input type="radio" name="price-toggle" id="price-table-3">
-				</div>
-				<!-- лейблы стилизуются под управляющие кнопки -->
-				<div class="prices-block__control-labels">
-					<label for="price-table-1"></label>
-					<label for="price-table-2"></label>
-					<label for="price-table-3"></label>
-				</div>
+			<input type="radio" name="price-toggle" id="price-table-1">
+			<input type="radio" name="price-toggle" id="price-table-2" checked>
+			<input type="radio" name="price-toggle" id="price-table-3">
+				
+			<!-- лейблы стилизуются под управляющие кнопки -->
+			<div class="control-labels">
+				<label class="control-label" for="price-table-1"></label>
+				<label class="control-label" for="price-table-2"></label>
+				<label class="control-label" for="price-table-3"></label>
+			</div>
 		</div>
 	</div>
 
 
 
 	<!-- footer-contacts - белый фон и белый псевдоэлемент внизу блока над картой -->
-	<div class="footer-contacts">
+	<footer class="footer-contacts">
 		<div class="container">
 			<h2 class="footer-contacts__title">Остались вопросы?</h2>
 			<h2 class="footer-contacts__title">Свяжитесь с нами!</h2>
@@ -231,12 +243,13 @@
 			<p class="footer-contacts__paragraph-title">Приезжайте в гости:</p>
 			<p class="footer-contacts__information">ул. Большая Конюшенная, 19/8</p>
 		</div>
-	</div>	
+		<div id="map-canvas" class="map-wrapper"></div>
+	</footer>	
 
 
 
 
-	<div id="map-canvas" class="map-wrapper"></div>
+	
 	
 	
   

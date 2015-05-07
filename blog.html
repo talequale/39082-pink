@@ -18,23 +18,32 @@
 
 
 
-		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
+		<!-- в page-header__top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
 		<div class="page-header__top-menu">
+
 			<div class="container">
-				<div class="pink-logo">Pink</div>
+
+				<div class="logo">Pink</div>
+
 				<button class="menu-toggle">Меню</button>
-				<nav class="top-menu__mobile-menu">
-					<ul>
-						<li><a href="index.html" class="mobile-menu__link">Главная</a></li>
-						<li><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
-						<li><a href="blog.html"class="mobile-menu__link--current">Блог путешественников</a></li>
+
+				<nav class="mobile-menu">
+
+					<ul class="mobile-menu__list">
+
+						<li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Главная</a></li>
+
+						<li class="mobile-menu__item"><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
+
+						<li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link--current">Блог путешественников</a></li>
+
 					</ul>
 				</nav>
 			</div>
 		</div>
 
 
-		<h1 class="header-content__text">Блог путешественников, пользователей Пинк</h1>
+		<h1 class="page-header__title">Блог путешественников, пользователей Пинк</h1>
 
 
 
@@ -47,36 +56,36 @@
 		
 		<div class="container">
 
-			<article class="page-content__blog-entry">
-				<h2 class="blog-entry__title"><a href="post.html">Антон и Надя в Таиланде</a></h2>
+			<article class="blog-entry">
+				<h2 class="blog-entry__title"><a href="post.html" class="blog-entry__link">Антон и Надя в Таиланде</a></h2>
 				<p class="blog-entry__date">Опубликовано: <time datetime="2014-10-01 12:00">6 месяцев назад</time></p>
 				<p class="blog-entry__review">Читайте рассказ о том, как семейная пара посещала Таиланд, стараясь максимально избегать избитых туристических мест и районов.</p>
 			</article>
 
-			<article class="page-content__blog-entry">
-				<h2 class="blog-entry__title"><a href="#">Гастрольный тур &laquo;Кубанских борщеваров&raquo;</a></h2>
+			<article class="blog-entry">
+				<h2 class="blog-entry__title"><a href="#" class="blog-entry__link">Гастрольный тур &laquo;Кубанских борщеваров&raquo;</a></h2>
 				<p class="blog-entry__date">Опубликовано: <time datetime="2010-04-01 12:00">5 лет назад</time></p>
 				<p class="blog-entry__review">Возрождение культурных традиций уже не за горами. Фолк-металл-рэп-группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p>
 			</article>
 
-			<article class="page-content__blog-entry">
-				<h2 class="blog-entry__title"><a href="#">Чета Болонских в Париже</a></h2>
+			<article class="blog-entry">
+				<h2 class="blog-entry__title"><a href="#" class="blog-entry__link">Чета Болонских в Париже</a></h2>
 				<p class="blog-entry__date">Опубликовано: <time datetime="1915-04-01 12:00">100 лет назад</time></p>
 				<p class="blog-entry__review">Невероятные приключения русских во Франции. Интриги, предательства, погони, и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p>
 			</article>
 
-			<article class="page-content__blog-entry">
-				<h2 class="blog-entry__title"><a href="#">Путешествие на яхте сеньора Христофора</a></h2>
+			<article class="blog-entry">
+				<h2 class="blog-entry__title"><a href="#" class="blog-entry__link">Путешествие на яхте сеньора Христофора</a></h2>
 				<p class="blog-entry__date">Опубликовано: <time datetime="1492-08-03 12:00">523 года назад</time></p>
 				<p class="blog-entry__review">Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди, и чем это обернется для всего человечества!</p>
 			</article>
 
 
 			<div class="pagination">
-				<a href="#" class="pagination__page-btn--current">1</a>
-				<a href="#" class="pagination__page-btn">2</a>
-				<a href="#" class="pagination__page-btn">3</a>
-				<a href="#" class="pagination__page-btn">4</a>
+				<a href="#" class="pagination__page-item  pagination__page-item--current">1</a>
+				<a href="#" class="pagination__page-item">2</a>
+				<a href="#" class="pagination__page-item">3</a>
+				<a href="#" class="pagination__page-item">4</a>
 			</div>
 
 		</div>
@@ -86,24 +95,29 @@
 
 
 
-	<footer class="footer-page">
+	<footer class="page-footer">
 		
 		<div class="container">
 
-			<div class="footer-page__footer-logo  clearfix">
-				<img class="footer-logo__image" src="http://placehold.it/60x40" width="60" height="40" alt="">
-				<p class="footer-logo__text-logo">Pink</p>
+			<div class="logo  logo--footer  clearfix">
+				<img class="logo__image" src="http://placehold.it/60x40" width="60" height="40" alt="">
+				<p class="logo__text">Pink</p>
 			</div>
 			
-			<div class="footer-page__social-btns">
-				<a href="#" class="social-btns__twitter-btn">Twitter</a>
-				<a href="#" class="social-btns__facebook-btn">Facebook</a>
-				<a href="#" class="social-btns__youtube-btn">Youtube</a>
+			<div class="social-btns">
+				<a href="#" class="social-btn  social-btn__twitter-btn">Twitter</a>
+				<a href="#" class="social-btn  social-btn__facebook-btn">Facebook</a>
+				<a href="#" class="social-btn  social-btn__youtube-btn">Youtube</a>
 			</div>
 
-			<div class="footer-page__copyright clearfix">
-				<p>Разработано</p>
-				<a href="https://htmlacademy.ru/"><img src="http://placehold.it/28x34" width="28" height="34" alt=""></a>
+			<div class="copyright clearfix">
+				<p class="copyright__text">
+					Разработано 
+					<a href="https://htmlacademy.ru/" class="copyright__link">
+						<img class="copyright__image" src="http://placehold.it/28x34" width="28" height="34" alt="">
+					</a>
+				</p>
+				
 			</div>
 
 		</div>
