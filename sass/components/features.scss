@@ -1,0 +1,32 @@
+.features {
+	position: relative;
+	padding: 55px 0 320px 0;
+	background-color: $color-gray;
+	@media (max-width: $breakpoint-phone) {
+		background-image: url("../img/bg-features-phone.png");
+		background-repeat: no-repeat;
+		background-size: 160px auto;
+		background-position: center bottom -45px;
+		&:before {
+			content: "";
+			position: absolute;
+			top: -48px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 0px 48px 480px;
+			border-color: transparent transparent $color-gray transparent;
+		}
+	}
+}
+.feature-item__title {
+	margin: 0;
+	margin-bottom: 20px;
+	font: 700 18px/10px $font;
+}
+.feature-item__description {
+	margin: 0;
+	margin-bottom: 40px;
+	font: 400 14px/24px $font;
+}
