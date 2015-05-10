@@ -2,16 +2,19 @@
 .page-header {
   color: #fff;
   background-color: #1d2631; }
-  .page-header .page-header__top-menu {
+  .page-header__top-menu {
     position: relative;
     padding: 24px 0 16px 0;
     background-color: rgba(0, 0, 0, 0.3); }
-    .page-header .page-header__top-menu--active {
+    .page-header__top-menu--active {
       background-color: #283645;
       box-shadow: inset 0px -1px 0px 0px black; }
-  .page-header .page-header__content {
+  .page-header__content {
     padding: 24px 0;
     height: 330px; }
+  .page-header__title {
+    margin: 0;
+    font: 300 24px/24px OpenSans, Helvetica, Arial, sans-serif; }
 
 .logo {
   float: left;
@@ -69,16 +72,16 @@
   top: 100%;
   left: 0;
   width: 100%; }
-  .mobile-menu .mobile-menu__list {
+  .mobile-menu__list {
     display: none; }
-    .mobile-menu .mobile-menu__list--active {
+    .mobile-menu__list--active {
       margin: 0;
       padding: 0;
       text-align: center;
       list-style: none; }
-  .mobile-menu .mobile-menu__item {
+  .mobile-menu__item {
     background-color: #283645; }
-  .mobile-menu .mobile-menu__link {
+  .mobile-menu__link {
     display: block;
     padding: 15px 0;
     text-decoration: none;
@@ -87,10 +90,6 @@
     color: #fff;
     border-top: 1px solid #485461;
     border-bottom: 1px solid #000; }
-
-.page-header__title {
-  margin: 0;
-  font: 300 24px/24px OpenSans, Helvetica, Arial, sans-serif; }
 
 .downloads {
   padding: 30px 0;
@@ -123,10 +122,10 @@
     background-image: url("../img/bg-header-phone.jpg");
     background-repeat: no-repeat;
     background-position: center -60px; }
-  .page-header__content {
-    background-image: url("../img/bg-header__content-phone.png");
-    background-repeat: no-repeat;
-    background-position: right bottom; } }
+    .page-header__content {
+      background-image: url("../img/bg-header__content-phone.png");
+      background-repeat: no-repeat;
+      background-position: right bottom; } }
 
 .information {
   padding: 45px 0 30px 0;
@@ -361,17 +360,18 @@ input[type="radio"]:checked + label {
       background-color: #d12755;
       border: 10px solid #fff;
       border-radius: 50%; }
-  .footer-contacts:after {
-    content: "";
-    position: absolute;
-    bottom: 152px;
-    left: 50%;
-    margin-left: -240px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 48px 240px 0 240px;
-    border-color: #fff transparent transparent transparent; }
+  @media (max-width: 480px) {
+    .footer-contacts:after {
+      content: "";
+      position: absolute;
+      bottom: 152px;
+      left: 50%;
+      margin-left: -240px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 48px 240px 0 240px;
+      border-color: #fff transparent transparent transparent; } }
 
 html, body {
   height: 100%;

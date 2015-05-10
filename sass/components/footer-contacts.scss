@@ -39,24 +39,25 @@
 			left: 50%;
 			margin-top: -18px;
 			margin-left: -18px;
-			wid
-			th: 16px;
+			width: 16px;
 			height: 16px;
 			background-color: $color-purple;
 			border: 10px solid $color-white;
 			border-radius: 50%;
 		}
 	}
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: 152px;
-		left: 50%;
-		margin-left: -240px;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 48px 240px 0 240px;
-		border-color: $color-white transparent transparent transparent;
+	@media (max-width: $breakpoint-phone) {
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 152px;
+			left: 50%;
+			margin-left: -240px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 48px 240px 0 240px;
+			border-color: $color-white transparent transparent transparent;
+		}
 	}
 }

@@ -1,7 +1,14 @@
+@mixin block-title($font) {
+  margin: 0;
+  font: 300 24px/24px $font;
+}
+
+
+
 .page-header {
   color: $color-white;
   background-color: $header-color-darkblue;
-  .page-header__top-menu {
+  &__top-menu {
     position: relative; //кнопка переключения - абс.поз.
     padding: 24px 0 16px 0;
     background-color: rgba(0, 0, 0, 0.3);
@@ -10,11 +17,15 @@
       box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,1);
     }
   }
-  .page-header__content {
+  &__content {
     padding: 24px 0;
     height: 330px;
   }
+  &__title {
+    @include block-title($font);
+  }
 }
+
 .logo {
   float: left;
   text-transform: uppercase;
@@ -77,12 +88,13 @@
     }
   }
 }
+
 .mobile-menu {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  .mobile-menu__list {
+  &__list {
     display: none;
     &--active {
       margin: 0;
@@ -91,10 +103,10 @@
       list-style: none;
     }
   }
-  .mobile-menu__item {
+  &__item {
     background-color: $color-darkblue;
   }
-  .mobile-menu__link {
+  &__link {
     display: block;
     padding: 15px 0;
     text-decoration: none;
@@ -104,15 +116,6 @@
     border-top: 1px solid #485461;
     border-bottom: 1px solid $color-black;
   }
-}
-
-@mixin block-title($font) {
-  margin: 0;
-  font: 300 24px/24px $font;
-}
-
-.page-header__title {
-  @include block-title($font);
 }
 
 .downloads {
@@ -157,10 +160,10 @@
     background-image: url("../img/bg-header-phone.jpg");
     background-repeat: no-repeat;
     background-position: center -60px;
-  }
-  .page-header__content {
-    background-image: url("../img/bg-header__content-phone.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    &__content {
+      background-image: url("../img/bg-header__content-phone.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
   }
 }
