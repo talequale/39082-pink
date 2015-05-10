@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <title>HTML Academy: pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/normalize-dist.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -32,6 +34,7 @@
 				<nav class="mobile-menu">
 
 					<ul class="mobile-menu__list">
+
 						<li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link  mobile-menu__link--current">Главная</a></li>
 
 						<li class="mobile-menu__item"><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
@@ -58,9 +61,9 @@
 			<div class="container">
 				<a href="#" class="downloads__btn">Скачать приложение</a>
 				<div class="downloads__icons">
-					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="apple">
-					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="android">
-					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="windows">
+					<img class="downloads__icon" src="img/downloads__apple-logo.png" width="46" height="57" alt="apple">
+					<img class="downloads__icon" src="img/downloads__android-logo.png" width="42" height="47" alt="android">
+					<img class="downloads__icon" src="img/downloads__windows-logo.png" width="44" height="42" alt="windows">
 				</div>
 				<p class="downloads__information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
 			</div>
@@ -109,7 +112,7 @@
 
 
 
-	<!-- reviews - белый фон и серый псевдоэлемент внизу блока -->
+	<!-- reviews - белый фон -->
 	<div class="reviews">
 		<div class="container">
 			<!-- переключающиеся слайды -->
@@ -128,16 +131,14 @@
 				</section-->
 			</div>
 			<div class="slider-controls">
-				<!-- невидимые радиобаттоны -->
-				
-				<input type="radio" name="review-toggle" id="review-1" checked>
-				<input type="radio" name="review-toggle" id="review-2">
-				<input type="radio" name="review-toggle" id="review-3">
-				
-				<!-- лейблы стилизуются под управляющие кнопки -->
+
+				<!-- невидимые радиобаттоны, лейблы стилизуются под управляющие кнопки -->
 				<div class="control-labels">
+					<input type="radio" name="review-toggle" id="review-1" checked>
 					<label class="control-label" for="review-1"></label>
+					<input type="radio" name="review-toggle" id="review-2">
 					<label class="control-label" for="review-2"></label>
+					<input type="radio" name="review-toggle" id="review-3">
 					<label class="control-label" for="review-3"></label>
 				</div>
 			</div>
@@ -148,7 +149,7 @@
 
 
 
-	<!-- prices - серый фон -->
+	<!-- prices - серый фон и серый псевдоэлемент вверху блока -->
 	<div class="prices">
 		<!-- prices__wrapper - контейнер для таблицы, превышающей ширину вьюпорта. переключение с одного столбца на другой трансформациями -->
 		<div class="prices__wrapper">
@@ -215,15 +216,13 @@
 
 		<div class="slider-controls">
 
-			<!-- невидимые радиобаттоны -->
-			<input type="radio" name="price-toggle" id="price-table-1">
-			<input type="radio" name="price-toggle" id="price-table-2" checked>
-			<input type="radio" name="price-toggle" id="price-table-3">
-				
-			<!-- лейблы стилизуются под управляющие кнопки -->
-			<div class="control-labels">
+			<!-- невидимые радиобаттоны, лейблы стилизуются под управляющие кнопки -->
+			<div class="control-labels  table-prices">
+				<input type="radio" name="price-toggle" id="price-table-1">
 				<label class="control-label" for="price-table-1"></label>
+				<input type="radio" name="price-toggle" id="price-table-2" checked>
 				<label class="control-label" for="price-table-2"></label>
+				<input type="radio" name="price-toggle" id="price-table-3">
 				<label class="control-label" for="price-table-3"></label>
 			</div>
 		</div>
@@ -234,13 +233,13 @@
 	<!-- footer-contacts - белый фон и белый псевдоэлемент внизу блока над картой -->
 	<footer class="footer-contacts">
 		<div class="container">
-			<h2 class="footer-contacts__title">Остались вопросы?</h2>
-			<h2 class="footer-contacts__title">Свяжитесь с нами!</h2>
-			<p class="footer-contacts__paragraph-title">Звоните:</p>
+			<h2 class="footer-contacts__title  footer-contacts__title--1">Остались вопросы?</h2>
+			<h2 class="footer-contacts__title  footer-contacts__title--2">Свяжитесь с нами!</h2>
+			<p class="footer-contacts__paragraph">Звоните:</p>
 			<p class="footer-contacts__information">+7 (812) 555-66-66</p>
-			<p class="footer-contacts__paragraph-title">Пишите:</p>
+			<p class="footer-contacts__paragraph">Пишите:</p>
 			<p class="footer-contacts__information">mail@htmlacademy.ru</p>
-			<p class="footer-contacts__paragraph-title">Приезжайте в гости:</p>
+			<p class="footer-contacts__paragraph">Приезжайте в гости:</p>
 			<p class="footer-contacts__information">ул. Большая Конюшенная, 19/8</p>
 		</div>
 		<div id="map-canvas" class="map-wrapper"></div>
