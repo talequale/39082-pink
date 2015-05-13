@@ -1,0 +1,43 @@
+/* блок "скачать приложение" */
+.downloads {
+  padding: 30px 0;
+  background-color: $darkblue--header;
+
+  /* кнопка "скачать приложение"" */
+  &__btn {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 30px;
+    padding: 13px 35px;
+    max-width: 210px;
+    text-decoration: none;
+    font: 700 18px/22px $font;
+    color: $white;
+    border: 3px solid $white;
+    border-radius: 37px; 
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  /* контейнер с иконками платформ */
+  &__icons {
+    margin-right: -36px;
+    margin-bottom: 22px;
+  }
+
+  /* стили отдельных иконок платформ */
+  &__icon {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 36px;
+  }
+
+  /* текст под кнопкой "скачать приложение" */
+  &__information {
+    margin: 0;
+    padding: 0 20px;
+    font: 300 14px/24px $font;
+  }
+}

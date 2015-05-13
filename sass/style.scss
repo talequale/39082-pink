@@ -1,34 +1,37 @@
-@import "variables.scss";
-@import "components/page-header.scss";
-@import "components/information.scss";
-@import "components/features.scss";
-@import "components/reviews.scss";
-@import "components/slider-controls.scss";
-@import "components/prices.scss";
-@import "components/footer-contacts.scss";
+@import "foundation/normalize.scss"; /* нормалайз */
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
 
-body {
-  background-color: $color-white;
-  color: $color-black;
-}
+@import "base/variables.scss"; /* файл с переменными */
+@import "base/mixins.scss"; /* примеси */
+@import "base/fonts.scss"; /* типографика */
 
-.clearfix:after {
-  content: "";
-  clear: both;
-}
 
-.container {
-  display: inline-block;
-  width: $container-width;
-}
+@import "base/components/layout.scss"; /* общие стили для html и body */ 
+@import "base/components/forms.scss"; /* формы */ 
+@import "base/components/buttons.scss"; /* кнопки */ 
+@import "base/components/page-header.scss"; /* хедер */
+@import "base/components/logo.scss"; /* логотип */
+@import "base/components/menu-toggle.scss"; /* кнопка включения и выключения мобильного меню */
+@import "base/components/mobile-menu.scss"; /* мобильное меню */
+@import "base/components/downloads.scss"; /* блок "скачать приложение" */
+@import "base/components/slider-controls.scss"; /* контролы для обоих слайдеров */
+@import "base/components/feature-item.scss"; /* блок характеристик приложения, главная */
+@import "base/components/review.scss"; /* блок отзыва на главной, один из слайдов первого слайдера */
+@import "base/components/prices.scss"; /* блок с таблицей-слайдером */
+@import "base/components/footer-contacts.scss"; /* футер на главной */
+
+
+@import "project/index.scss"; /* общие стили главной */
+
+
+@import "context/breakpoint-phone.scss"; /* медиавыражения для мобильной версии */
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,33 @@
+
+/* блок отзыва */
+.review {
+	display: none;
+	padding: 45px 0 0 0;
+
+	/* автор отзыва */
+	&__author {
+		margin: 0;
+		margin-bottom: 12px;
+		font: 700 18px/30px $font;
+		letter-spacing: 0.5px;
+	}
+	
+	/* текст отзыва */
+	&__text {
+		margin: 0;
+		margin-bottom: 30px;
+		font: 400 14px/30px $font;
+	}
+}
+
+/* переключение слайдов */
+
+#review-1:checked ~ .slide-1 { 
+  display: block;
+}
+#review-2:checked ~ .slide-2 { 
+  display: block;
+}
+#review-3:checked ~ .slide-3 { 
+  display: block;
+}

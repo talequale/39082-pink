@@ -1,0 +1,44 @@
+.page-header {
+  color: $white;
+  background-color: $darkblue--header;
+
+  &__top-menu { /* верхняя полоска хедера с лого и кнопкой */
+    position: relative; /* потому что кнопка переключения - абс.поз. */
+    padding: 17px 0 12px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    /* смена цвета полоски меню + открытое мобильное меню по модификатору open */
+    &--open {
+      position: relative; /* потому что кнопка переключения - абс.поз. */
+      padding: 24px 0 16px 0;
+      background-color: $darkblue;
+      box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,1);
+
+      .mobile-menu { /* открытое мобильное меню */
+        display: block;
+      }
+    }
+  }
+  
+  /* контейнер для картинки со смартфоном на главной */
+  &__content {
+    padding: 24px 0;
+    height: 344px;
+  }
+
+  &__title {
+    @include block-title($font);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

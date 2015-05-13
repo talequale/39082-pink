@@ -1,0 +1,16 @@
+.feature-item {
+
+	&__title {
+		margin: 0;
+		margin-bottom: 10px;
+		font: 700 18px/22px $font;
+		letter-spacing: 1px;
+	}
+	
+	&__description {
+		margin: 0;
+		margin-bottom: 34px;
+		font: 400 14px/24px $font;
+		letter-spacing: 0.5px;
+	}
+}
