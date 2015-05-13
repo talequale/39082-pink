@@ -1,0 +1,93 @@
+/* кнопка-гамбургер для переключения состояний меню */
+.menu-toggle { 
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -3px;
+  padding: 0;
+  float: right;
+  width: 50px;
+  height: 4px;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  font-size: 0;
+  background-color: $white;
+
+  /* верхняя полоска */
+  &:before { 
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: $white;
+  }
+
+  /* нижняя полоска */
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: $white;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  /* крестик вместо гамбургера по модификатору active */
+  &--active { 
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -2px;
+    font-size: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    /* элемент крестика, наклон вправо */
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 25px;
+      height: 3px;
+      border: none;
+      outline: none;
+      border-radius: 0;
+      font-size: 0;
+      background-color: $white;
+      transform: rotate(135deg);
+    }
+    
+    /* элемент крестика, наклон влево */
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 25px;
+      height: 3px;
+      border: none;
+      outline: none;
+      border-radius: 0;
+      font-size: 0;
+      background-color: $white;
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

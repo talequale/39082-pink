@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <title>HTML Academy: pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="index-page">
 
 
 
@@ -19,8 +20,8 @@
 
 
 		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
-		<div class="page-header__top-menu">
-			<div class="container">
+		<div class="page-header__top-menu clearfix">
+			<div class="container clearfix">
 
 
 				<div class="logo">Pink</div>
@@ -32,6 +33,7 @@
 				<nav class="mobile-menu">
 
 					<ul class="mobile-menu__list">
+
 						<li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link  mobile-menu__link--current">Главная</a></li>
 
 						<li class="mobile-menu__item"><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
@@ -58,9 +60,9 @@
 			<div class="container">
 				<a href="#" class="downloads__btn">Скачать приложение</a>
 				<div class="downloads__icons">
-					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="apple">
-					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="android">
-					<img class="downloads__icon" src="http://placehold.it/45x60" width="45" height="60" alt="windows">
+					<img class="downloads__icon" src="img/downloads__apple-logo.png" width="46" height="57" alt="apple">
+					<img class="downloads__icon" src="img/downloads__android-logo.png" width="42" height="47" alt="android">
+					<img class="downloads__icon" src="img/downloads__windows-logo.png" width="44" height="42" alt="windows">
 				</div>
 				<p class="downloads__information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
 			</div>
@@ -72,7 +74,7 @@
 
 
 
-	<!-- information - белый фон -->
+	<!-- information - белый фон + серый треугольник вторым фоном -->
 	<div class="information">
 		<div class="container">
 			<h2 class="information__text">Устали от серости мегаполиса?</h2>
@@ -83,7 +85,7 @@
 
 
 
-	<!-- features - серый фон, серый псевдоэлемент, наползающий на вышерасположенный блок и картинка со смартфоном -->
+	<!-- features - серый фон и картинка со смартфоном -->
 	<div class="features">
 		<div class="container">
 
@@ -109,38 +111,36 @@
 
 
 
-	<!-- reviews - белый фон и серый псевдоэлемент внизу блока -->
+	<!-- reviews - белый фон + серый треугольник вторым фоном-->
 	<div class="reviews">
-		<div class="container">
+
+		<div class="container  slider-controls">
+
+			<!-- невидимые радиобаттоны -->
+			<input type="radio" name="review-toggle" id="review-1" checked>
+			<input type="radio" name="review-toggle" id="review-2">
+			<input type="radio" name="review-toggle" id="review-3">
+			
+			<!-- лейблы стилизуются под управляющие кнопки -->
+			<div class="control-labels">
+				<label class="control-label" for="review-1"></label>
+				<label class="control-label" for="review-2"></label>
+				<label class="control-label" for="review-3"></label>
+			</div>
+			
 			<!-- переключающиеся слайды -->
-			<div class="reviews__items">
-				<section class="review  slide-1">
-					<h2 class="review__author">Николай Петров</h2>
-					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
-				</section>
-				<!--section class="review  slide-2">
-					<h2 class="review__author">Иван Сидоров</h2>
-					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
-				</section>
-				<section class="review  slide-3">
-					<h2 class="review__author">Василий Кузнецов</h2>
-					<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
-				</section-->
-			</div>
-			<div class="slider-controls">
-				<!-- невидимые радиобаттоны -->
-				
-				<input type="radio" name="review-toggle" id="review-1" checked>
-				<input type="radio" name="review-toggle" id="review-2">
-				<input type="radio" name="review-toggle" id="review-3">
-				
-				<!-- лейблы стилизуются под управляющие кнопки -->
-				<div class="control-labels">
-					<label class="control-label" for="review-1"></label>
-					<label class="control-label" for="review-2"></label>
-					<label class="control-label" for="review-3"></label>
-				</div>
-			</div>
+			<section class="review  slide-1">
+				<h2 class="review__author">Николай Петров</h2>
+				<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+			</section>
+			<section class="review  slide-2">
+				<h2 class="review__author">Иван Сидоров</h2>
+				<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+			</section>
+			<section class="review  slide-3">
+				<h2 class="review__author">Василий Кузнецов</h2>
+				<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+			</section>
 		</div>
 	</div>
 
@@ -149,7 +149,18 @@
 
 
 	<!-- prices - серый фон -->
-	<div class="prices">
+	<div class="prices  slider-controls">
+		<!-- невидимые радиобаттоны -->
+		<input type="radio" name="price-toggle" id="price-table-1">
+		<input type="radio" name="price-toggle" id="price-table-2" checked>
+		<input type="radio" name="price-toggle" id="price-table-3">
+
+		<!-- лейблы стилизуются под управляющие кнопки -->
+		<div class="control-labels  table-prices">
+			<label class="control-label" for="price-table-1"></label>
+			<label class="control-label" for="price-table-2"></label>
+			<label class="control-label" for="price-table-3"></label>
+		</div>
 		<!-- prices__wrapper - контейнер для таблицы, превышающей ширину вьюпорта. переключение с одного столбца на другой трансформациями -->
 		<div class="prices__wrapper">
 			<table class="prices__table">
@@ -159,8 +170,10 @@
 						<p class="prices__amount">1,99 USD</p>
 					</th>
 					<th class="flag-hit">
-						<p class="prices__title">Стандарт</p>
-						<p class="prices__amount">3,99 USD</p>
+						<div class="flag-hit__inner-wrapper">
+							<p class="prices__title">Стандарт</p>
+							<p class="prices__amount">3,99 USD</p>
+						</div>
 					</th>
 					<th>
 						<p class="prices__title">Анлим</p>
@@ -169,63 +182,65 @@
 				</tr>
 				<tr>
 					<td>
-						<span class="prices__feature">Розовый фильтр</span>
-						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Розовый фильтр</span>
+							<div class="prices__checkbox  prices__checkbox--checked">Да</div>
+						</div>
 					</td>
 					<td>
-						<span class="prices__feature">Розовый фильтр</span>
-						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Розовый фильтр</span>
+							<div class="prices__checkbox  prices__checkbox--checked">Да</div>
+						</div>
 					</td>
 					<td>
-						<span class="prices__feature">Розовый фильтр</span>
-						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span class="prices__feature">Смайлики</span>
-						<span class="prices__checkbox  prices__checkbox--unchecked">Нет</span>
-					</td>
-					<td>
-						<span class="prices__feature">Смайлики</span>
-						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
-					</td>
-					<td>
-						<span class="prices__feature">Смайлики</span>
-						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Розовый фильтр</span>
+							<div class="prices__checkbox  prices__checkbox--checked">Да</div>
+						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<span class="prices__feature">Комментарии</span>
-						<span class="prices__checkbox  prices__checkbox--unchecked">Нет</span>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Смайлики</span>
+							<div class="prices__checkbox  prices__checkbox--unchecked">Нет</div>
+						</div>
 					</td>
 					<td>
-						<span class="prices__feature">Комментарии</span>
-						<span class="prices__checkbox  prices__checkbox--unchecked">Нет</span>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Смайлики</span>
+							<div class="prices__checkbox  prices__checkbox--checked">Да</div>
+						</div>
 					</td>
 					<td>
-						<span class="prices__feature">Комментарии</span>
-						<span class="prices__checkbox  prices__checkbox--checked">Да</span>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Смайлики</span>
+							<div class="prices__checkbox  prices__checkbox--checked">Да</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Комментарии</span>
+							<div class="prices__checkbox  prices__checkbox--unchecked">Нет</div>
+						</div>
+					</td>
+					<td>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Комментарии</span>
+							<div class="prices__checkbox  prices__checkbox--unchecked">Нет</div>
+						</div>
+					</td>
+					<td>
+						<div class="checkbox-inner-wrapper">
+							<span class="prices__feature">Комментарии</span>
+							<div class="prices__checkbox  prices__checkbox--checked">Да</div>
+						</div>
 					</td>
 				</tr>
 			</table>
-		</div>
-
-
-		<div class="slider-controls">
-
-			<!-- невидимые радиобаттоны -->
-			<input type="radio" name="price-toggle" id="price-table-1">
-			<input type="radio" name="price-toggle" id="price-table-2" checked>
-			<input type="radio" name="price-toggle" id="price-table-3">
-				
-			<!-- лейблы стилизуются под управляющие кнопки -->
-			<div class="control-labels">
-				<label class="control-label" for="price-table-1"></label>
-				<label class="control-label" for="price-table-2"></label>
-				<label class="control-label" for="price-table-3"></label>
-			</div>
 		</div>
 	</div>
 
@@ -233,16 +248,26 @@
 
 	<!-- footer-contacts - белый фон и белый псевдоэлемент внизу блока над картой -->
 	<footer class="footer-contacts">
+
 		<div class="container">
-			<h2 class="footer-contacts__title">Остались вопросы?</h2>
-			<h2 class="footer-contacts__title">Свяжитесь с нами!</h2>
-			<p class="footer-contacts__paragraph-title">Звоните:</p>
+
+			<h2 class="footer-contacts__title  footer-contacts__title--1">Остались вопросы?</h2>
+
+			<h2 class="footer-contacts__title  footer-contacts__title--2">Свяжитесь с нами!</h2>
+
+			<p class="footer-contacts__paragraph">Звоните:</p>
+
 			<p class="footer-contacts__information">+7 (812) 555-66-66</p>
-			<p class="footer-contacts__paragraph-title">Пишите:</p>
+
+			<p class="footer-contacts__paragraph">Пишите:</p>
+
 			<p class="footer-contacts__information">mail@htmlacademy.ru</p>
-			<p class="footer-contacts__paragraph-title">Приезжайте в гости:</p>
+
+			<p class="footer-contacts__paragraph">Приезжайте в гости:</p>
+
 			<p class="footer-contacts__information">ул. Большая Конюшенная, 19/8</p>
 		</div>
+
 		<div id="map-canvas" class="map-wrapper"></div>
 	</footer>	
 

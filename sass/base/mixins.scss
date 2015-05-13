@@ -1,0 +1,4 @@
+@mixin block-title($font) {
+  margin: 0;
+  font: 300 24px/28px $font;
+}

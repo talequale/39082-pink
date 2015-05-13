@@ -1,0 +1,38 @@
+.information {
+	padding: 45px 0 30px 0;
+	color: $darkblue;
+	background-color: $white;
+	/* серый треугольник над следующим блоком */
+	background-image: url("../img/bg-gray-triangle.svg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: bottom center;
+
+	&__text {
+		@include block-title($font);
+		margin: 0;
+		margin-bottom: 30px;
+		padding: 0 20px;
+	}
+}
+
+
+/* нижний паддинг блока features - пространство для фона */
+.features {
+	position: relative;
+	padding: 55px 0 286px 0;
+	background-color: $gray;
+}
+
+.reviews {
+	/* серый треугольник над следующим блоком */
+	background-image: url("../img/bg-gray-triangle.svg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: bottom center;
+
+	.container {
+		padding-bottom: 65px;
+	}
+	
+}
