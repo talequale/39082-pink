@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <title>HTML Academy: pink</title>
-  <link rel="stylesheet" href="css/normalize-dist.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="pink-blog-mobile">
+<body class="pink-blog">
 
 
 
@@ -20,11 +20,11 @@
 
 
 		<!-- в page-header__top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
-		<div class="page-header__top-menu">
+		<div class="page-header__top-menu  clearfix">
 
-			<div class="container">
+			<div class="container  clearfix">
 
-				<div class="logo">Pink</div>
+				<div class="logo"><a href="index.html" class="logo__link">Pink</a></div>
 
 				<button class="menu-toggle">Меню</button>
 
@@ -100,8 +100,8 @@
 		
 		<div class="container">
 
-			<div class="logo  logo--footer  clearfix">
-				<img class="logo__image" src="http://placehold.it/60x40" width="60" height="40" alt="">
+			<div class="logo  logo--footer">
+				<img class="logo__image" src="img/logo__image.png" width="59" height="40" alt="">
 				<p class="logo__text">Pink</p>
 			</div>
 			
@@ -111,13 +111,12 @@
 				<a href="#" class="social-btn  social-btn__youtube-btn">Youtube</a>
 			</div>
 
-			<div class="copyright clearfix">
-				<p class="copyright__text">
-					Разработано 
-					<a href="https://htmlacademy.ru/" class="copyright__link">
-						<img class="copyright__image" src="http://placehold.it/28x34" width="28" height="34" alt="">
-					</a>
-				</p>
+			<div class="copyright">
+				<p class="copyright__text">Разработано</p>
+				<a href="https://htmlacademy.ru/" class="copyright__link">
+					<img class="copyright__image" src="img/htmlacademy-logo.png" width="27" height="34" alt="">
+				</a>
+				
 				
 			</div>
 

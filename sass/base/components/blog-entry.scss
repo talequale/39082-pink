@@ -1,0 +1,175 @@
+/* анонс записи на странице блога */
+.blog-entry {
+	position: relative;
+
+	/* светло-серый разделитель между записями */
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -25px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $lightgray;
+	}
+	
+	/* за последней записью разделителя нет */
+	&:nth-last-child(2):after {
+		content: "";
+		position: absolute;
+		bottom: -25px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 1px;
+		background-color: transparent;
+	}
+
+	/* заголовок записи в блоге */
+	&__title {
+		@include entry__title($font);
+		margin-bottom: 2px;
+	}
+
+	/* ссылка внутри заголовка в записи */
+	&__link {
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+		color: $darkblue;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	/* дата публикации записи */
+	&__date {
+		margin: 0;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		font: 400 12px/27px $font;
+		color: $purple;
+	}
+
+	/* краткое содержание записи */
+	&__review {
+		margin: 0;
+		margin-bottom: 50px;
+		font: 400 14px/27px $font;	
+	}
+}
+
+/* стили записи блога */
+.pink-post .blog-entry {
+
+	&__title {
+		margin: 0;
+		margin-bottom: 20px;
+		text-align: center;
+		font: 700 30px/36px $font;
+	}
+
+	&__date {
+		margin: 0;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	&__review {
+		position: relative;
+		margin: 0;
+		margin-bottom: 50px;
+		text-align: center;
+		font: 400 16px/27px $font; 
+
+		/* светло-серый разделитель */
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -25px;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $lightgray;
+		}
+	}
+
+	/* содержание поста */
+	&__content {
+		font: 400 14px/27px $font;
+		}
+	
+	/* заголовки внутри поста */
+	h2 {
+		margin: 0;
+		margin-bottom: 12px;
+		text-transform: uppercase;
+		font: 700 18px/30px $font;
+	}
+}
+
+.blog-entry__content {
+
+	p {
+		margin: 0;
+		margin-bottom: 25px;
+	}
+
+	a {
+		color: $purple;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		position: relative;
+		margin: 0;
+		margin-bottom: 25px;
+		padding: 0;
+		padding-left: 22px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -4px;
+			width: 6px;
+			height: 6px;
+			background-color: $purple;
+			border-radius: 50%;
+		}
+	}
+
+	blockquote {
+		position: relative;
+		margin: 0;
+		margin-bottom: 25px;
+		padding: 0;
+		padding-left: 22px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 8px;
+			bottom: 8px;
+			width: 2px;
+			background-color: $purple;
+		}
+	}
+
+	span {
+		display: block;
+		font-style: italic;
+		color: #8a8a8a;
+	}
+}
+

@@ -4,4 +4,64 @@
   text-transform: uppercase;
   font: 300 32px/36px $font;
   letter-spacing: 1.4px;
+
+	/* лого в футере */
+  &__text {
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 0;
+  	padding-top: 12px;
+  	color: $darkblue;
+  }
+
+	/* лого-картинка в футере */
+  &--image {
+  	display: inline-block;
+  	vertical-align: top;
+  	margin-right: 13px;
+  }
+	
+	/* в хедере у лого ограничена ширина, в футере блок занимает 100% */
+  &--footer {
+  	width: 100%;
+  	margin-bottom: 35px;
+  	text-align: center;
+  }
+}
+
+/* логотип-ссылка на внутренних страницах */
+.pink-blog .logo {
+
+  &__link {
+  	text-decoration: none;
+  	color: $white;
+
+  	&:hover {
+  		opacity: 0.5;
+  	}
+  }
+}
+
+.pink-post .logo {
+
+	&__link {
+  	text-decoration: none;
+  	color: $white;
+
+  	&:hover {
+  		opacity: 0.5;
+  	}
+  }
+}
+
+.pink-form .logo {
+
+	&__link {
+  	text-decoration: none;
+  	color: $white;
+
+  	&:hover {
+  		opacity: 0.5;
+  	}
+  }
 }

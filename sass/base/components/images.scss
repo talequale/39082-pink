@@ -1,0 +1,23 @@
+/* обертка галереи */
+.images {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	margin-right: -38px;
+}
+
+/* отдельная картинка */
+.image {
+	position: relative;
+	margin: 0;
+	margin-right: 38px;
+	margin-bottom: 20px;
+	
+	&__caption {
+		margin: 0;
+		margin-top: -3px;
+		text-transform: uppercase;
+		font: 400 12px/18px $font;
+	}
+}
+

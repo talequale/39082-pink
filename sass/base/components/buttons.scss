@@ -1,0 +1,75 @@
+/* кнопка минус */
+.decrease-btn {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 16px 0;
+	width: 63px;
+	font: 700 27px/27px $font;
+	background-color: $white;
+	border: 2px solid $lightgray;
+	border-radius: 3px 0 0 3px;
+	outline: none;
+}
+
+/* кнопка плюс */
+.increase-btn {
+	@extend .decrease-btn;
+	font-weight: 300;
+	font-size: 48px;
+	border-radius: 0 3px 3px 0;
+}
+
+/* кнопка удалить картинку */
+.delete-btn {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 31px;
+	height: 31px;
+	background-color: $white;
+	border: 2px solid $lightgray;
+	border-radius: 50%;
+	font-size: 0;
+
+	/* крестик на кнопке */
+	&:before {
+		content: "";
+		position: absolute;
+		top: 12px;
+		left: 6px;
+		width: 14px;
+		height: 2px;
+		background-color: $darkgray;
+		transform: rotate(45deg);
+	}
+
+	/* крестик на кнопке */
+	&:after {
+		content: "";
+		position: absolute;
+		top: 12px;
+		left: 6px;
+		width: 14px;
+		height: 2px;
+		background-color: $darkgray;
+		transform: rotate(135deg);
+	}
+}
+
+/* кнопка отправки формы */
+.submit-form-btn {
+	margin-bottom: 22px;
+	padding: 18px 0 15px 0;
+	width: 100%;
+	text-transform: uppercase;
+	font: 700 18px/30px $font;
+	color: $white;
+	background-color: $btn--green;
+	border: none;
+	border-radius: 3px;
+	outline: none;
+
+	&:hover {
+		background-color: $green;
+	}
+}

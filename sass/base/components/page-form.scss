@@ -1,0 +1,320 @@
+.page-form {
+	font: 400 14px/30px $font;
+	color: $darkblue;
+	
+	/* отдельные блоки формы */
+	&__block {
+		
+		/* блок с белым фоном */
+		&--bg-white {
+			padding-bottom: 27px;
+			padding-top: 50px;
+			background-color: $white;
+		}
+		
+		/* блок с серым фоном */
+		&--bg-gray {
+			padding-top: 37px;
+			padding-bottom: 1px;
+			background-color: $gray;
+		}
+
+		/* маргины для лейблов, которые идут после своих текстовых инпутов */
+		&--labels-to-bottom {
+	
+			label {
+				margin-top: -8px;
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	/* описание верхнего блока */
+	&__block-description {
+		margin: 0;
+		margin-bottom: 35px;
+	}
+
+	/* все лейблы на странице форм */
+	label {
+		display: block;
+	}
+	
+	/* заголовки блоков. lh в двухстрочных заголовках равен 18, в однострочных 30. изменила все на 18 */
+	&__block-title {
+		margin: 0;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+		font: 400 14px/18px $font;
+		color: $purple;
+	}
+
+	/* лейблы для текстовых инпутов */
+	&__text-input-label {
+		margin: 0;
+		margin-bottom: 3px;
+		text-transform: uppercase;
+		font: 400 14px/30px $font;
+		color: $purple;
+
+		&--companion-name {
+			padding-left: 20px;
+			text-align: left;
+		}
+	}
+
+	/* лейблы для радиобаттонов */
+	&__radiobutton-label {
+		position: relative;
+		margin: 0;
+		margin-bottom: 45px;
+		padding-left: 60px;
+		text-align: left;
+		font-size: 18px;
+
+		/* кастомная неотмеченная радиокнопка */
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -5px;
+			width: 35px;
+			height: 35px;
+			background-color: $white;
+			border: 2px solid $lightgray;
+			border-radius: 50%;
+		}
+	}
+
+	/* все текстовые инпуты */
+	input[type="text"] {
+		box-sizing: border-box;
+		margin-bottom: 16px;
+		padding: 17px 20px 13px 20px;
+		width: 100%;
+		font: 400 18px/30px $font;
+		border: 2px solid $lightgray;
+		border-radius: 3px;
+		outline: none;
+	}
+
+	/* все радиокнопки */
+	input[type="radio"] {
+		display: none;
+	}
+
+	/* замена цвета плейсхолдера в хроме */
+	input::-webkit-input-placeholder {
+		color: $darkblue;
+	}
+
+	/* а в фаерфоксе не работает */
+	input:-moz-placeholder {
+		color: $darkblue;
+	}
+
+	/* инпут с кнопками по бокам */
+	&__input-table {
+		margin-bottom: 16px;
+		width: 100%;
+		
+		&--companions {
+			margin-bottom: 79px;
+		}
+	}
+
+	&__input-table-cell {
+		background-color: transparent;
+		
+		/* фиксированная ширина для ячеек с кнопками */
+		&--button {
+			width: 63px;
+			font-size: 18px;
+		}
+	}
+	
+	/* нулевой нижний маргин у инпутов с боковыми кнопками и бордер */
+	input[name="input-number"] {
+		margin-bottom: 0;
+		padding: 16px 20px 13px 20px;
+		border-top: 2px solid $lightgray;
+		border-bottom: 2px solid $lightgray;
+		border-left: none;
+		border-right: none;
+		border-radius: 0;
+	}
+
+	/* нестандартный нижний маргин у лейбла для инпута с числом попутчиков + псевдоэлемент на нем */
+	label[for="number-of-companions"] {
+		position: relative;
+		margin-bottom: 26px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 168px;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background-color: $lightgray;
+		}
+	}
+	/* стили ячеек таблицы попутчиков с номерами */
+	&__companion-number {
+		text-transform: uppercase;
+		font: 400 14px/30px $font;
+		color: $purple;
+	}
+	
+	/* таблица с именами попутчиков */
+	&__table {
+		margin-bottom: 22px;
+		width: 100%;
+		border-spacing: 0;
+
+		tr {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	/* ячейка таблицы попутчиков с прозрачным фоном и цифрой */
+	&__companion {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 15px 0 14px 0;
+		width: 63px;
+		border: 2px solid $lightgray;
+		border-radius: 3px 0 0 3px;
+	}
+
+	/* нулевой нижний маргин у инпутов в таблице с попутчиками. и бордер */
+	input[name="input-companion"] {
+		margin-bottom: 0;
+		padding: 16px 20px 13px 20px;
+		border: 2px solid $lightgray;
+		border-left: none;
+		border-radius: 0 3px 3px 0;
+	}
+	
+
+	/* чекбоксы */
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	/* лейблы чекбоксов */
+	&__checkbox-label {
+		position: relative;
+		margin: 0;
+		margin-bottom: 52px;
+		padding: 0;
+		padding-left: 60px;
+		text-align: left;
+		font: 400 18px/30px $font;
+		
+		/* кастомный неотмеченный чекбокс */
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -5px;
+			width: 35px;
+			height: 35px;
+			border: 2px solid $lightgray;
+			border-radius: 2px;
+		}
+	}
+	
+	/* обертка для кнопки загрузки файлов */
+	&__fileform {
+		position: relative;
+		margin-bottom: 70px;
+
+		/* серый разделитель под кнопкой */
+		&:after {
+			content: "";
+			position: absolute;
+			top: 95px;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background-color: $lightgray;
+		}
+	}
+
+	/* кнопка загрузки файлов */
+	&__selectbutton {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 17px 0 12px 0;
+		width: 100%;
+		text-transform: uppercase;
+		font: 700 18px/30px $font;
+		background-color: $white;
+		border: 2px solid $lightgray;
+		border-radius: 3px;
+	}
+	
+	/* невидимый инпут для загрузки файлов */
+	input[type="file"] {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		z-index: 1000;
+	}
+	
+	/* примечание о необходимых полях * */
+	&__footnote {
+		margin-bottom: 25px;
+		text-transform: uppercase;
+
+		span {
+			color: $purple;
+		}
+	}
+}
+
+/* псевдоэлемент для отмеченных радиокнопок */
+input[type="radio"]:checked + label {
+	&:after {
+		content: "";
+		position: absolute;
+		left: 12px;
+		top: 7px;
+		width: 15px;
+		height: 15px;
+		background-color: $purple;
+		border-radius: 50%;
+		z-index: 100;
+	}
+}
+
+/* псевдоэлемент для отмеченных чекбоксов */
+input[type="checkbox"]:checked + label {
+	&:after {
+		content: "";
+		position: absolute;
+		top: 6px;
+		left: 7px;
+		width: 20px;
+		height: 7px;
+		border-left: 3px solid $purple;
+		border-bottom: 3px solid $purple;
+		transform: rotate(-45deg);
+	}
+}
+
+/* нестандартные отступы у лейблов в таблице */
+label[for="nickname-1"] {
+	padding-top: 18px;
+}
+
+label[for="nickname-2"] {
+	padding-top: 18px;
+}
+

@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <title>HTML Academy: pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
 </head>
 
-<body class="pink-post-mobile">
+<body class="pink-post">
 
 
 
@@ -19,11 +21,11 @@
 
 
 		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
-		<div class="page-header__top-menu">
-			<div class="container">
+		<div class="page-header__top-menu  clearfix">
+			<div class="container  clearfix">
 
 
-				<div class="logo">Pink</div>
+				<div class="logo"><a href="index.html" class="logo__link">Pink</a></div>
 
 
 				<button class="menu-toggle">Меню</button>
@@ -62,37 +64,40 @@
 				<p class="blog-entry__date">Опубликовано: 6 месяцев назад</p>
 				<p class="blog-entry__review">Читайте рассказ о том, как семейная пара посещала Таиланд, стараясь максимально избегать избитых туристических мест и районов.</p>
 			
+				<div class="blog-entry__content">
+					<h2>Предыстория</h2>
 
-				<h2>Предыстория</h2>
+					<p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="http://skyscanner.ru" target="_blank">skyscanner.ru</a> мы все-таки решились!</p>
 
-				<p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="http://skyscanner.ru" target="_blank">skyscanner.ru</a> мы все-таки решились!</p>
+					<h2>Выбор отеля</h2>
 
-				<h2>Выбор отеля</h2>
+					<p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
 
-				<p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
+					<ul>
+						<li>Point Yamu by Como (Пхукет)</li>
+						<li>Amari Vogue Hotel (Краби)</li>
+						<li>Photo Hotel (Пхукет)</li>
+					</ul>
 
-				<ul>
-					<li>Point Yamu by Como (Пхукет)</li>
-					<li>Amari Vogue Hotel (Краби)</li>
-					<li>Photo Hotel (Пхукет)</li>
-				</ul>
+					<p>В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
 
-				<p>В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
+					<blockquote>
+						Замечательное место, в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный, еда - потрясающая. Отель расположен в тихом и уединенном месте - в чем вся и прелесть. СПА отличный. Потрясающие виды.
+						<span>Олег, г. Москва</span>
+					</blockquote>
 
-				<blockquote>
-					Замечательное место, в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный, еда - потрясающая. Отель расположен в тихом и уединенном месте - в чем вся и прелесть. СПА отличный. Потрясающие виды.
-					<span>Олег, г. Москва</span>
-				</blockquote>
+					<h2>Местная еда</h2>
 
-				<h2>Местная еда</h2>
-
-				<p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо &laquo;not spicy&raquo;. Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
+					<p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо &laquo;not spicy&raquo;. Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
+				</div>
 
 			</article>
 
 			<div class="page-navigation">
-				<a href="#" class="navigation-btn  navigation-btn--half-width">Пред.</a>
-				<a href="#" class="navigation-btn  navigation-btn--half-width">След.</a>
+				<div class="page-navigation__wrapper">
+					<a href="#" class="navigation-btn  navigation-btn--half-width">Пред.</a>
+					<a href="#" class="navigation-btn  navigation-btn--half-width">След.</a>
+				</div>
 				<a href="blog.html" class="navigation-btn">Назад к списку</a>
 			</div>
 
@@ -107,8 +112,8 @@
 		
 		<div class="container">
 
-			<div class="logo  logo--footer  clearfix">
-				<img class="logo__image" src="http://placehold.it/60x40" width="60" height="40" alt="">
+			<div class="logo  logo--footer">
+				<img class="logo__image" src="img/logo__image.png" width="59" height="40" alt="">
 				<p class="logo__text">Pink</p>
 			</div>
 			
@@ -118,13 +123,12 @@
 				<a href="#" class="social-btn  social-btn__youtube-btn">Youtube</a>
 			</div>
 
-			<div class="copyright clearfix">
-				<p class="copyright__text">
-					Разработано 
-					<a href="https://htmlacademy.ru/" class="copyright__link">
-						<img class="copyright__image" src="http://placehold.it/28x34" width="28" height="34" alt="">
-					</a>
-				</p>
+			<div class="copyright">
+				<p class="copyright__text">Разработано</p>
+				<a href="https://htmlacademy.ru/" class="copyright__link">
+					<img class="copyright__image" src="img/htmlacademy-logo.png" width="27" height="34" alt="">
+				</a>
+				
 				
 			</div>
 

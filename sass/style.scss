@@ -1,9 +1,11 @@
 @import "foundation/normalize.scss"; /* нормалайз */
 
 
+
 @import "base/variables.scss"; /* файл с переменными */
 @import "base/mixins.scss"; /* примеси */
 @import "base/fonts.scss"; /* типографика */
+
 
 
 @import "base/components/layout.scss"; /* общие стили для html и body */ 
@@ -19,9 +21,21 @@
 @import "base/components/review.scss"; /* блок отзыва на главной, один из слайдов первого слайдера */
 @import "base/components/prices.scss"; /* блок с таблицей-слайдером */
 @import "base/components/footer-contacts.scss"; /* футер на главной */
+@import "base/components/blog-entry.scss"; /* футер на главной */
+@import "base/components/pagination.scss"; /* пагинация на странице блога */
+@import "base/components/page-footer.scss"; /* футер на внутренних страницах */
+@import "base/components/social-btns.scss"; /* блок с кнопками соцсетей ы футере */
+@import "base/components/copyright.scss"; /* информация о разработчиках в футере */
+@import "base/components/page-navigation.scss"; /* навигация по записям в блоге */
+@import "base/components/page-form.scss"; /* форма на странице конкурса */
+@import "base/components/images.scss"; /* галерея картинок */
+
 
 
 @import "project/index.scss"; /* общие стили главной */
+@import "project/blog.scss"; /* общие стили страницы блога */
+@import "project/form.scss"; /* общие стили страницы форм */
+
 
 
 @import "context/breakpoint-phone.scss"; /* медиавыражения для мобильной версии */

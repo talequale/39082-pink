@@ -28,9 +28,24 @@
 
   &__title {
     @include block-title($font);
+
+    /* паддинги заголовка хедера на странице блога */
+    .pink-blog & {
+      padding: 35px 20px 40px 20px;
+    }
+
+    /* паддинги заголовка хедера на странице форм */
+    .pink-form & {
+      padding: 35px 20px 40px 20px;
+    }
   }
 }
 
+/* паддинги заголовка хедера на странице записи блога */
+.pink-post .page-header__text {
+  @include block-title($font);
+  padding: 35px 20px 40px 20px;
+}
 
 
 

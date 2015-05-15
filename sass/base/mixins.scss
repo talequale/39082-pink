@@ -1,4 +1,12 @@
+/* стили заголовков блоков на главной и других страницах */
 @mixin block-title($font) {
   margin: 0;
   font: 300 24px/28px $font;
+}
+
+
+/* стили заголовков записей в блоге на странице блога */
+@mixin entry__title($font) {
+	margin: 0;
+	font: 400 18px/27px $font;
 }

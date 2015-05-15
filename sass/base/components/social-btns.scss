@@ -1,0 +1,40 @@
+/* резиновый контейнер с социальными кнопками */
+.social-btns {
+	display: flex-block;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-right: -12px;
+	margin-bottom: 40px;
+
+	/* стили отдельной социальной кнопки */
+	.social-btn {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 12px;
+		width: 45px;
+		height: 45px;
+		font-size: 0;
+		border: 3px solid $lightgray;
+		border-radius: 50%;
+		background-repeat: no-repeat;
+			background-position: center;
+
+		&__twitter-btn {
+			background-image: url("../img/twitter-icon.png");
+		}
+
+		&__facebook-btn {
+			background-image: url("../img/facebook-icon.png");
+		}
+
+		&__youtube-btn {
+			background-image: url("../img/youtube-icon.png");
+		}
+
+		&:hover {
+			border: 3px solid $purple;
+		}
+	}
+}
