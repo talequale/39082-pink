@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <title>HTML Academy: pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="pink-form-mobile">
+<body class="pink-form">
 
 
 
@@ -19,11 +20,11 @@
 
 
 		<!-- в top-menu лежит полупрозрачный фон, который при изменении состояния меню становится непрозрачным, в контейнере абсолютно спозиционированный текстовый логотип и иконка меню с выпадающим списком -->
-		<div class="page-header__top-menu">
-			<div class="container">
+		<div class="page-header__top-menu  clearfix">
+			<div class="container  clearfix">
 
 
-				<div class="logo">Pink</div>
+				<div class="logo"><a href="index.html"  class="logo__link">Pink</a></div>
 
 
 				<button class="menu-toggle">Меню</button>
@@ -62,13 +63,13 @@
 
 					<p class="page-form__block-description">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
 
-					<label for="first-name">Имя: *</label>
+					<label for="first-name" class="page-form__text-input-label">Имя: *</label>
 					<input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя" required>
 
-					<label for="last-name">Фамилия: *</label>
+					<label for="last-name" class="page-form__text-input-label">Фамилия: *</label>
 					<input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию" required>
 
-					<label for="middle-name">Отчество:</label>
+					<label for="middle-name" class="page-form__text-input-label">Отчество:</label>
 					<input type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
 
 				</div>
@@ -85,13 +86,13 @@
 					<h2 class="page-form__block-title">С каким приложением путешествовали?</h2>
 
 					<input type="radio" id="ios" name="platform" checked>
-					<label for="ios">Pink для iOS</label>
+					<label for="ios" class="page-form__radiobutton-label">Pink для iOS</label>
 
 					<input type="radio" id="android" name="platform">
-					<label for="android">Pink на Android</label>
+					<label for="android" class="page-form__radiobutton-label">Pink на Android</label>
 
 					<input type="radio" id="windows" name="platform">
-					<label for="windows">Windows Phone</label>
+					<label for="windows" class="page-form__radiobutton-label">Windows Phone</label>
 
 				</div>
 
@@ -100,25 +101,29 @@
 
 
 			<!-- белый фон -->
-			<div class="page-form__block  page-form__block--bg-white">
+			<div class="page-form__block  page-form__block--bg-white  page-form__block--labels-to-bottom">
 			
 				<div class="container">
 
 					<h2 class="page-form__block-title">Когда вы путешествовали? *</h2>
 
 					<input type="text" id="departure-date" name="departure-date" placeholder="1 апреля 2015" required>
-					<label for="departure-date">Дата выезда</label>
+					<label for="departure-date" class="page-form__text-input-label">Дата выезда</label>
 
-					<button class="decrease-btn">-</button>
+					<table class="page-form__input-table">
+						<tr class="page-form__input-table-row">
+							<td class="page-form__input-table-cell  page-form__input-table-cell--button"><button class="decrease-btn">&mdash;</button></td>
 
-					<input type="text" id="trip-length" name="trip-length" placeholder="10 дней" required>
+							<td class="page-form__input-table-cell"><input type="text" id="trip-length" name="input-number" placeholder="10 дней" required></td>
 
-					<button class="increase-btn">+</button>
+							<td class="page-form__input-table-cell  page-form__input-table-cell--button"><button class="increase-btn">+</button></td>
+						</tr>
+					</table>
 
-					<label for="trip-length">Продолжительность</label>
+					<label for="trip-length" class="page-form__text-input-label">Продолжительность</label>
 
 					<input type="text" id="return-date" name="return-date" placeholder="15 апреля 2015" disabled>
-					<label for="return-date">Дата возвращения</label>
+					<label for="return-date" class="page-form__text-input-label">Дата возвращения</label>
 
 			</div>
 
@@ -131,33 +136,37 @@
 			<div class="container">
 
 				
-				<label for="number-of-companions">Количество попутчиков *</label>
+				<label for="number-of-companions" class="page-form__text-input-label">Количество попутчиков *</label>
 
-				<button class="decrease-btn">-</button>
+				<table class="page-form__input-table  page-form__input-table--companions">
+					<tr class="page-form__input-table-row">
+						<td class="page-form__input-table-cell  page-form__input-table-cell--button"><button class="decrease-btn">&mdash;</button></td>
 
-				<input type="text" id="number-of-companions" name="number-of-companions" placeholder="2 чел" required>
+						<td class="page-form__input-table-cell"><input type="text" id="number-of-companions" name="input-number" placeholder="2 чел" required></td>
 
-				<button class="increase-btn">+</button>
+						<td class="page-form__input-table-cell  page-form__input-table-cell--button"><button class="increase-btn">+</button></td>
+					</tr>
+				</table>
 
 				<div class="page-form__table-wrapper">
 					<table class="page-form__table">
 						<tr>
-							<th>№</th>
+							<th class="page-form__companion-number">№</th>
 							<th>
-								<label for="name-1">Имя: *</label>
+								<label for="name-1" class="page-form__text-input-label  page-form__text-input-label--companion-name">Имя: *</label>
 							</th>
 						</tr>
 						<tr>
-							<td>
-								<p>1</p>
+							<td class="page-form__input-table-cell  page-form__input-table-cell--button">
+								<p class="page-form__companion">1</p>
 							</td>
 							<td>
-								<input id="name-1" placeholder="Введите ваше имя" required>
+								<input type="text" id="name-1" name="input-companion" placeholder="Введите ваше имя" required>
 							</td>
 						</tr>
 						<tr>
-							<th></th>
-							<th><label for="nickname-1">Прозвище:</label></th>
+							<th class="page-form__companion-number"></th>
+							<th><label for="nickname-1" class="page-form__text-input-label  page-form__text-input-label--companion-name">Прозвище:</label></th>
 						</tr>
 						<tr>
 							<td></td>
@@ -171,22 +180,22 @@
 				<div class="page-form__table-wrapper">
 					<table class="page-form__table">
 						<tr>
-							<th>№</th>
+							<th class="page-form__companion-number">№</th>
 							<th>
-								<label for="name-2">Имя: *</label>
+								<label for="name-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Имя: *</label>
 							</th>
 						</tr>
 						<tr>
-							<td>
-								<p>1</p>
+							<td class="page-form__input-table-cell  page-form__input-table-cell--button">
+								<p class="page-form__companion">1</p>
 							</td>
 							<td>
-								<input id="name-2" placeholder="Введите ваше имя" required>
+								<input type="text" id="name-2" name="input-companion" placeholder="Введите ваше имя" required>
 							</td>
 						</tr>
 						<tr>
 							<th></th>
-							<th><label for="nickname-2">Прозвище:</label></th>
+							<th><label for="nickname-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Прозвище:</label></th>
 						</tr>
 						<tr>
 							<td></td>
@@ -209,22 +218,22 @@
 				<h2 class="page-form__block-title">Ваши безбашенные достижения в путешествии</h2>
 
 				<input type="checkbox" id="selfie-shark" checked>
-				<label for="selfie-shark">Сделал селфи с акулой</label>
+				<label class="page-form__checkbox-label" for="selfie-shark">Сделал селфи с акулой</label>
 
 				<input type="checkbox" id="sunburn" checked>
-				<label for="sunburn">Обгорел на пляже</label>
+				<label class="page-form__checkbox-label" for="sunburn">Обгорел на пляже</label>
 
 				<input type="checkbox" id="chuck-norris">
-				<label for="chuck-norris">Видел Чака Норриса</label>
+				<label class="page-form__checkbox-label" for="chuck-norris">Видел Чака Норриса</label>
 
 				<input type="checkbox" id="souvenirs">
-				<label for="souvenirs">Накупил сувениров</label>
+				<label class="page-form__checkbox-label" for="souvenirs">Накупил сувениров</label>
 
 				<input type="checkbox" id="leaning-tower" checked>
-				<label for="leaning-tower">Удержал башню</label>
+				<label class="page-form__checkbox-label" for="leaning-tower">Удержал башню</label>
 
 				<input type="checkbox" id="ruined-hotel">
-				<label for="ruined-hotel">Разгромил отель</label>
+				<label class="page-form__checkbox-label" for="ruined-hotel">Разгромил отель</label>
 	
 			</div>
 
@@ -236,55 +245,58 @@
 			<div class="container">
 
 				<h2 class="page-form__block-title">Ваши фотографии из поездки *</h2>
-
-				<input type="file" id="upload-images-btn">
+				
+				<div class="page-form__fileform">
+					<div class="page-form__selectbutton">Загрузить фото</div>
+					<input type="file" id="upload-images-btn" name="upload-images-btn">
+				</div>
 
 				<div class="images">
 
 					<figure class="image">
-						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<img src="img/gallery-img-1.jpg" width="68" height="68" alt="">
 						<button class="delete-btn">Удалить картинку</button>
 						<figcaption class="image__caption">Img-1.jpg</figcaption>
 					</figure>
 
 					<figure class="image">
-						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<img src="img/gallery-img-2.jpg" width="68" height="68" alt="">
 						<button class="delete-btn">Удалить картинку</button>
 						<figcaption class="image__caption">Img-2.jpg</figcaption>
 					</figure>
 
 					<figure class="image">
-						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<img src="img/gallery-img-3.jpg" width="68" height="68" alt="">
 						<button class="delete-btn">Удалить картинку</button>
 						<figcaption class="image__caption">Img-3.jpg</figcaption>
 					</figure>
 
 					<figure class="image">
-						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<img src="img/gallery-img-4.jpg" width="68" height="68" alt="">
 						<button class="delete-btn">Удалить картинку</button>
 						<figcaption class="image__caption">Img-4.jpg</figcaption>
 					</figure>
 
 					<figure class="image">
-						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<img src="img/gallery-img-5.jpg" width="68" height="68" alt="">
 						<button class="delete-btn">Удалить картинку</button>
 						<figcaption class="image__caption">Img-5.jpg</figcaption>
 					</figure>
 
 					<figure class="image">
-						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<img src="img/gallery-img-6.jpg" width="68" height="68" alt="">
 						<button class="delete-btn">Удалить картинку</button>
 						<figcaption class="image__caption">Img-6.jpg</figcaption>
 					</figure>
 
 					<figure class="image">
-						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<img src="img/gallery-img-7.jpg" width="68" height="68" alt="">
 						<button class="delete-btn">Удалить картинку</button>
 						<figcaption class="image__caption">Img-7.jpg</figcaption>
 					</figure>
 
 					<figure class="image">
-						<img src="http://placehold.it/68x68" width="68" height="68" alt="">
+						<img src="img/gallery-img-8.jpg" width="68" height="68" alt="">
 						<button class="delete-btn">Удалить картинку</button>
 						<figcaption class="image__caption">Img-8.jpg</figcaption>
 					</figure>
@@ -317,8 +329,8 @@
 		
 		<div class="container">
 
-			<div class="logo  logo--footer  clearfix">
-				<img class="logo__image" src="http://placehold.it/60x40" width="60" height="40" alt="">
+			<div class="logo  logo--footer">
+				<img class="logo__image" src="img/logo__image.png" width="59" height="40" alt="">
 				<p class="logo__text">Pink</p>
 			</div>
 			
@@ -328,13 +340,12 @@
 				<a href="#" class="social-btn  social-btn__youtube-btn">Youtube</a>
 			</div>
 
-			<div class="copyright clearfix">
-				<p class="copyright__text">
-					Разработано 
-					<a href="https://htmlacademy.ru/" class="copyright__link">
-						<img class="copyright__image" src="http://placehold.it/28x34" width="28" height="34" alt="">
-					</a>
-				</p>
+			<div class="copyright">
+				<p class="copyright__text">Разработано</p>
+				<a href="https://htmlacademy.ru/" class="copyright__link">
+					<img class="copyright__image" src="img/htmlacademy-logo.png" width="27" height="34" alt="">
+				</a>
+				
 				
 			</div>
 

@@ -1,0 +1,38 @@
+/* блок пагинации на странице блога */
+.pagination {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 40px;
+
+	/* отдельная кнопка на странице блога */
+	&__page-item {
+		
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 16px 26px 13px 24px;
+		text-decoration: none;
+		font: 700 18px/30px $font;
+		color: $darkblue;
+		border: 2px solid $lightgray;
+		border-radius: 3px;
+
+		&:hover {
+			border: 2px solid $darkgray;
+			color: $purple;
+		}
+
+		&--current {
+			border: 2px solid $purple;
+		}
+	}
+}
+
+.pagination__page-item--current:hover {
+	border: 2px solid $purple;
+	color: $darkblue;
+	cursor: default;
+}

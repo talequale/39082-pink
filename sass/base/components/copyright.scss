@@ -1,0 +1,26 @@
+.copyright {
+
+	&__text {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 15px;
+		font: 400 14px/18px $font;
+	}
+
+	&__link {
+		display: inline-block;
+		vertical-align: middle;
+		height: auto;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	&__image {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+		padding: 0;
+	}
+}
