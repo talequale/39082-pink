@@ -6,9 +6,18 @@
 	width: 63px;
 	font: 700 27px/27px $font;
 	background-color: $white;
-	border: 2px solid $lightgray;
+	border: 2px solid $gray;
 	border-radius: 3px 0 0 3px;
 	outline: none;
+
+	&:hover {
+		border: 2px solid $darkblue;
+	}
+
+	&:active {
+		color: $white;
+		background-color: $darkblue;
+	}
 }
 
 /* кнопка плюс */
@@ -17,6 +26,15 @@
 	font-weight: 300;
 	font-size: 48px;
 	border-radius: 0 3px 3px 0;
+
+	&:hover {
+		border: 2px solid $darkblue;
+	}
+
+	&:active {
+		color: $white;
+		background-color: $darkblue;
+	}
 }
 
 /* кнопка удалить картинку */
@@ -27,9 +45,67 @@
 	width: 31px;
 	height: 31px;
 	background-color: $white;
-	border: 2px solid $lightgray;
+	border: 2px solid $gray;
 	border-radius: 50%;
 	font-size: 0;
+
+	&:hover {
+		border: 2px solid $darkblue;
+
+		/* крестик на кнопке */
+		&:before {
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 6px;
+			width: 14px;
+			height: 2px;
+			background-color: $darkblue;
+			transform: rotate(45deg);
+		}
+
+		/* крестик на кнопке */
+		&:after {
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 6px;
+			width: 14px;
+			height: 2px;
+			background-color: $darkblue;
+			transform: rotate(135deg);
+		}
+	}
+
+	&:active {
+		background-color: $darkblue;
+		border: 2px solid $darkblue;
+		outline: none;
+
+		/* крестик на кнопке */
+		&:before {
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 6px;
+			width: 14px;
+			height: 2px;
+			background-color: $white;
+			transform: rotate(45deg);
+		}
+
+		/* крестик на кнопке */
+		&:after {
+			content: "";
+			position: absolute;
+			top: 12px;
+			left: 6px;
+			width: 14px;
+			height: 2px;
+			background-color: $white;
+			transform: rotate(135deg);
+		}
+	}
 
 	/* крестик на кнопке */
 	&:before {
@@ -64,12 +140,20 @@
 	text-transform: uppercase;
 	font: 700 18px/30px $font;
 	color: $white;
-	background-color: $btn--green;
+	background-color: $btn-green;
 	border: none;
 	border-radius: 3px;
 	outline: none;
 
 	&:hover {
-		background-color: $green;
+		background-color: $btn-green--hvr;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+	}
+
+	&:disabled {
+		background-color: $gray;
 	}
 }

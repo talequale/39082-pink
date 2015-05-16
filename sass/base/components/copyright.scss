@@ -8,19 +8,32 @@
 	}
 
 	&__link {
+		position: relative;
 		display: inline-block;
 		vertical-align: middle;
-		height: auto;
+		width: 27px;
+		height: 34px;
+		font-size: 0;
+
+		&:after {
+			content: url("../img/htmlacademy-logo.png");
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+		}
 
 		&:hover {
-			opacity: 0.5;
-		}
-	}
 
-	&__image {
-		display: inline-block;
-		vertical-align: middle;
-		margin: 0;
-		padding: 0;
+			&:after {
+				content: url("../img/htmlacademy-logo--hvr.png");
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		&:active {
+			opacity: 0.3;
+		}
 	}
 }

@@ -1,4 +1,4 @@
-/* логотип в хедере */
+/* логотип в хедере главной*/
 .logo {
   float: left;
   text-transform: uppercase;
@@ -11,13 +11,27 @@
   	vertical-align: top;
   	margin: 0;
   	padding-top: 12px;
-  	color: $darkblue;
+  }
+  
+  /* лого-ссылка в футере */
+  &__link {
+    &--footer {
+      text-decoration: none;
+      color: $darkblue;
+
+      &:hover {
+        color: $purple;
+      }
+
+      &:active {
+        color: $darkblue;
+        opacity: 0.3;
+      }
+    }
   }
 
 	/* лого-картинка в футере */
-  &--image {
-  	display: inline-block;
-  	vertical-align: top;
+  &__image {
   	margin-right: 13px;
   }
 	
@@ -37,8 +51,13 @@
   	color: $white;
 
   	&:hover {
-  		opacity: 0.5;
+  		color: $purple;
   	}
+
+    &:active {
+      color: $white;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -49,8 +68,13 @@
   	color: $white;
 
   	&:hover {
-  		opacity: 0.5;
+  		color: $purple;
   	}
+
+    &:active {
+      color: $white;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -61,7 +85,12 @@
   	color: $white;
 
   	&:hover {
-  		opacity: 0.5;
+  		color: $purple;
   	}
+
+    &:active {
+      color: $white;
+      opacity: 0.3;
+    }
   }
 }

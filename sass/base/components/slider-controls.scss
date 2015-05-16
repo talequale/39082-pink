@@ -30,9 +30,17 @@
 	margin-right: 9px;
 	width: 6px;
 	height: 6px;
-	background-color: $darkgray;
+	background-color: $bullet-gray;
 	border: 3px solid $white;
 	border-radius: 50%;
+
+	&:hover {
+		background-color: $bullet-dgray;
+	}
+
+	&:active {
+		background-color: $bullet-lgray;
+	}
 }
 
 /* изменение состояний лейблов при отмеченной радиокнопке */
@@ -49,5 +57,5 @@
 
 /* в неактивном состоянии лейблы в блоке цен имеют серый, совпадающий с фоном блока, бордер */
 .table-prices .control-label {
-	border: 3px solid $gray;
+	border: 3px solid $lightgray;
 }

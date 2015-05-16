@@ -17,7 +17,13 @@
     border-radius: 37px; 
 
     &:hover {
-      opacity: 0.5;
+      background-color: $white;
+      color: $purple;
+    }
+
+    &:active {
+      background-color: $white;
+      color: rgba(209, 39, 85, 0.3);
     }
   }
 

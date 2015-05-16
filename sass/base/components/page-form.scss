@@ -16,7 +16,7 @@
 		&--bg-gray {
 			padding-top: 37px;
 			padding-bottom: 1px;
-			background-color: $gray;
+			background-color: $lightgray;
 		}
 
 		/* маргины для лейблов, которые идут после своих текстовых инпутов */
@@ -81,8 +81,38 @@
 			width: 35px;
 			height: 35px;
 			background-color: $white;
-			border: 2px solid $lightgray;
+			border: 2px solid $gray;
 			border-radius: 50%;
+		}
+
+		&:hover {
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				width: 35px;
+				height: 35px;
+				background-color: $white;
+				border: 2px solid $darkblue;
+				border-radius: 50%;
+			}
+		}
+
+		&:active {
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				width: 35px;
+				height: 35px;
+				background-color: $white;
+				border: 2px solid $purple;
+				border-radius: 50%;
+			}
 		}
 	}
 
@@ -93,9 +123,17 @@
 		padding: 17px 20px 13px 20px;
 		width: 100%;
 		font: 400 18px/30px $font;
-		border: 2px solid $lightgray;
+		border: 2px solid $gray;
 		border-radius: 3px;
 		outline: none;
+
+		&:hover {
+			border: 2px solid $darkblue;
+		}
+
+		&:focus {
+			border: 2px solid $purple;
+		}
 	}
 
 	/* все радиокнопки */
@@ -137,11 +175,25 @@
 	input[name="input-number"] {
 		margin-bottom: 0;
 		padding: 16px 20px 13px 20px;
-		border-top: 2px solid $lightgray;
-		border-bottom: 2px solid $lightgray;
+		border-top: 2px solid $gray;
+		border-bottom: 2px solid $gray;
 		border-left: none;
 		border-right: none;
 		border-radius: 0;
+
+		&:hover {
+			border-top: 2px solid $darkblue;
+			border-bottom: 2px solid $darkblue;
+			border-left: none;
+			border-right: none;
+		} 
+
+		&:focus {
+			border-top: 2px solid $purple;
+			border-bottom: 2px solid $purple;
+			border-left: none;
+			border-right: none;
+		} 
 	}
 
 	/* нестандартный нижний маргин у лейбла для инпута с числом попутчиков + псевдоэлемент на нем */
@@ -156,7 +208,7 @@
 			left: 0;
 			right: 0;
 			height: 2px;
-			background-color: $lightgray;
+			background-color: $gray;
 		}
 	}
 	/* стили ячеек таблицы попутчиков с номерами */
@@ -184,7 +236,8 @@
 		margin: 0;
 		padding: 15px 0 14px 0;
 		width: 63px;
-		border: 2px solid $lightgray;
+		border: 2px solid $gray;
+		border-right: none;
 		border-radius: 3px 0 0 3px;
 	}
 
@@ -192,8 +245,7 @@
 	input[name="input-companion"] {
 		margin-bottom: 0;
 		padding: 16px 20px 13px 20px;
-		border: 2px solid $lightgray;
-		border-left: none;
+		border: 2px solid $gray;
 		border-radius: 0 3px 3px 0;
 	}
 	
@@ -221,8 +273,36 @@
 			top: -5px;
 			width: 35px;
 			height: 35px;
-			border: 2px solid $lightgray;
+			border: 2px solid $gray;
 			border-radius: 2px;
+		}
+
+		&:hover {
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				width: 35px;
+				height: 35px;
+				border: 2px solid $darkblue;
+				border-radius: 2px;
+			}
+		}
+
+		&:active {
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				width: 35px;
+				height: 35px;
+				border: 2px solid $purple;
+				border-radius: 2px;
+			}
 		}
 	}
 	
@@ -239,7 +319,7 @@
 			left: 0;
 			right: 0;
 			height: 2px;
-			background-color: $lightgray;
+			background-color: $gray;
 		}
 	}
 
@@ -252,7 +332,7 @@
 		text-transform: uppercase;
 		font: 700 18px/30px $font;
 		background-color: $white;
-		border: 2px solid $lightgray;
+		border: 2px solid $gray;
 		border-radius: 3px;
 	}
 	
@@ -266,6 +346,17 @@
 		height: 100%;
 		opacity: 0;
 		z-index: 1000;
+		cursor: pointer;
+
+		&:hover ~ .page-form__selectbutton {
+			border: 2px solid $darkblue;
+		}
+
+		&:active ~ .page-form__selectbutton {
+			color: $white;
+			background-color: $darkblue;
+			border: 2px solid $darkblue;
+		}
 	}
 	
 	/* примечание о необходимых полях * */
