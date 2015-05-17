@@ -1,0 +1,455 @@
+@media (min-width: $breakpoint-phone + 1) and (max-width: $breakpoint-tablet) {
+  
+  /* в планшетной версии паддинг центровщика 40пх */
+  .container {
+    display: block;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+    
+  /* кнопка мобильного меню перемещается на 20пх по сравнению с моб.версией */
+  .menu-toggle { 
+    right: 40px;
+  }
+  
+  /* логотип в хедере главной*/
+  .logo__link {
+    position: relative;
+    padding-left: 70px;
+    
+    /* белый логотип в обычном состоянии */
+    &:before {
+      content: url("../img/logo__image--white.png");
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* розовый логотип по ховеру */
+    &:hover {
+
+      &:before {
+        content: url("../img/logo__image.png");
+      }
+    }
+    
+    /* полупрозрачный белый логотип при нажатии */
+    &:active {
+      &:before {
+        content: url("../img/logo__image--white.png");
+      }
+    }
+  }
+
+  /* фоны хедера */
+  .page-header {
+    max-height: 770px;
+    background-image: 
+      url("../img/bg-header__content-tablet.png"),
+      url("../img/bg-header-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom right, center -140px;
+
+    /* паддинги полоски меню */
+    &__top-menu {
+      padding: 39px 0px 34px;
+    }
+    
+    /* заголовок в хедере */
+    &__title {
+      margin-bottom: 30px;
+      padding: 0 60px;
+      font: 300 40px/44px $font;
+    }
+    
+    /* контейнер сдвигает контент хедера влево */
+    .container {
+      padding-right: 50%;
+    }
+    
+    /* убирается фиксированная высота контента */
+    &__content {
+      padding: 0;
+      padding-top: 95px;
+      height: auto;
+    }
+  }
+
+  /* блок "скачать приложение" */
+  .downloads {
+    padding: 0;
+    padding-bottom: 110px;
+    background-color: transparent;
+
+    &__btn {
+      margin-bottom: 40px;
+    }
+
+    &__icon {
+      margin-bottom: 32px;
+    }
+
+    &__information {
+      padding: 0;
+      font: 300 18px/24px $font;
+    }
+  }
+  
+  /* блок information */
+  .information {
+    padding: 55px 0 35px 0;
+
+    &__text {
+      margin: 0;
+      padding: 0;
+      font: 300 40px/44px $font;
+
+      &--2nd-line {
+        padding: 0 140px;
+      }
+    }
+  }
+
+  /* блок features */
+  .features {
+    padding: 85px 0 1px 0;
+    background-image: 
+      url(../img/bg-features-phone--tablet.png),
+      url("../img/bg-triangle--features.svg");
+    background-repeat: no-repeat;
+    background-size: 268px auto, 100% 60px;
+    background-position: left 40px top 5px, center -1px;
+
+    .container {
+      padding-left: 50%;
+      text-align: left;
+    }
+  }
+
+  /* блок research */
+  .research {
+    position: relative;
+    display: block;
+    min-height: 360px;
+    background-image: url(../img/bg-research-diagram.png);
+    background-repeat: no-repeat;
+    background-position: left 40px top 50px;
+
+    &:before {
+      content: "24";
+      position: absolute;
+      top: 114px;
+      left: 64px;
+      display: block;
+      padding-top: 20px;
+      width: 193px;
+      height: 173px;
+      font: 700 104.6px/162.87px $font;
+      color: $purple;
+      background-color: $white;
+      border: 11px solid $purple;
+      border-radius: 50%;
+    }
+    
+    /* паддинг сдвигает содержимое контейнера вправо */
+    .container {
+      padding-top: 95px;
+      padding-bottom: 65px;
+      padding-left: 50%;
+      text-align: left;
+    }
+
+    &__title {
+      margin: 0;
+      margin-bottom: 10px;
+      padding-right: 140px;
+      font: 700 30px/36px $font;
+    }
+
+    &__content {
+      margin: 0;
+      margin-bottom: 8px;
+      font: 400 14px/24px $font;
+    }
+
+    &__link {
+      margin: 0;
+      font: 400 14px/24px $font;
+      color: $purple;
+
+      &:hover {
+        color: $darkblue;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+  
+  /* прячутся контролы прайса */
+  .control-labels {
+    display: none;
+  }
+  
+  /* слайдер с отзывами */
+  .reviews {
+    background-image: url("../img/bg-gray-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 60px;
+    background-position: center bottom;
+
+    .slider-controls {
+      padding-bottom: 70px;
+    }
+
+    .control-labels {
+      display: block;
+      bottom: 65px;
+    }
+  }
+  /* переключение слайдов */
+
+  #review-1:checked ~ .slide-1 { 
+    display: flex;
+  }
+  #review-2:checked ~ .slide-2 { 
+    display: flex;
+  }
+  #review-3:checked ~ .slide-3 { 
+    display: flex;
+  }
+  
+  /* в слайде отзыва меняется порядок абзцев */
+  .review {
+    flex-direction: column;
+
+    &__author {
+      order: 2;
+      margin: 0;
+      margin-bottom: 2px;
+      font: 700 20px/30px $font;
+    }
+
+    &__subtitle {
+      order: 3;
+      margin: 0;
+      margin-bottom: 40px;
+      font: 400 14px/30px $font;
+    }
+
+    &__text {
+      order: 1;
+      margin-bottom: 35px;
+      font: 400 18px/30px $font;
+    }
+  }
+
+  /* таблица с ценами */
+  .prices {
+    padding-top: 35px;
+    padding-bottom: 70px;
+    
+    /* обертка таблицы */
+    &__wrapper {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    
+    /* таблица */
+    &__table {
+      margin: 0;
+      width: 100%;
+    }
+
+    /* скрываются подписи в ячейках */
+    &__feature {
+      display: none;
+    }
+    
+    /* новый отдельный столбец с features */
+    &__feature-cell {
+      display: block;
+      padding: 9px 15px 8px 15px;
+      font: 400 14px/30px $font;
+    }
+
+    /* выравнивание ширины столбцов */
+    th {
+      width: 25%;
+      
+      /* прозрачная первая ячейка */
+      &.prices__first-col-tablet {
+        background-color: transparent;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+      }
+    }
+
+    &__title {
+      font: 700 16px/30px $font;
+    }
+
+    &__amount {
+      font: 300 18px/30px $font;
+    }
+
+    &__checkbox {
+      left: 50%;
+      margin-left: -15px;
+    }
+  }
+  
+  /* внутренняя обертка ячейки с флажком */
+  .flag-hit__inner-wrapper {
+
+    /* флажок в заголовке таблицы */
+    &:before {
+      content: "";
+      position: absolute;
+      top: -61.5px;
+      left: -44.5px;
+      width: 29px;
+      height: 29px;
+      border-style: solid;
+      border-width: 30px;
+      border-color: transparent $purple transparent transparent;
+      transform: rotate(45deg);
+    }
+
+    /* текст на флажке */
+    &:after {
+      content: "хит";
+      position: absolute;
+      top: 3px;
+      left: 11px;
+      text-transform: uppercase;
+      font: 400 12px/14px $font;
+      color: $white;
+      transform: rotate(-45deg);
+      z-index: 100;
+    }
+  }
+
+  /* переключение слайдов */
+  #price-table-1:checked ~ .prices__wrapper .prices__table {
+    transform: translate(0);
+  }
+  #price-table-2:checked ~ .prices__wrapper .prices__table {
+    transform: translate(0);
+  }
+  #price-table-3:checked ~ .prices__wrapper .prices__table {
+    transform: translate(0);
+  }
+
+  .footer-contacts {
+
+    .container {
+      padding-bottom: 0;
+    }
+
+    .map-wrapper {
+      height: 380px;
+
+      /* двойной фон - карта и белый треугольник */
+      background-image: 
+        url("../img/bg-white-triangle.svg"),
+        url("../img/bg-map--tablet.jpg");
+      background-repeat: 
+        no-repeat,
+        no-repeat;
+      background-position: 
+        top center,
+        center bottom 30%;
+      background-size: 
+        100% auto, 
+        100% auto;
+      overflow: hidden;
+
+      /* маркер карты */
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 145px;
+        left: 50%;
+        margin-top: -18px;
+        margin-left: -18px;
+        width: 16px;
+        height: 16px;
+        background-color: $purple;
+        border: 10px solid $white;
+        border-radius: 50%;
+      }
+    }
+
+    &__title {
+      font: 300 40px/44px $font;
+
+      &--2 {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__wrapper--halfwidth {
+      display: inline-block;
+      vertical-align: top;
+      width: 45%;
+    }
+
+    &__information {
+      margin-bottom: 46px;
+
+      &--last-line {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .page-footer {
+    padding-bottom: 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+  }
+
+  .logo {
+    width: 29.5%;
+    
+    &__text {
+      padding: 0;
+    }
+
+    &--footer {
+      margin-bottom: 0;
+    }
+  }
+
+  .social-btns {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    width: 29.5%;
+
+    .social-btn {
+      margin: 0;
+    }
+  }
+
+  .copyright {
+    width: 29.5%;
+
+    &__text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+  
+

@@ -24,7 +24,7 @@
 			<div class="container clearfix">
 
 
-				<div class="logo">Pink</div>
+				<div class="logo"><a href="index.html"  class="logo__link">Pink</a></div>
 
 
 				<button class="menu-toggle">Меню</button>
@@ -78,7 +78,7 @@
 	<div class="information">
 		<div class="container">
 			<h2 class="information__text">Устали от серости мегаполиса?</h2>
-			<h2 class="information__text">Нам есть, что вам предложить!</h2>
+			<h2 class="information__text  information__text--2nd-line">Нам есть, что вам предложить!</h2>
 		</div>
 	</div>
 
@@ -111,6 +111,19 @@
 
 
 
+	<!-- research - белый фон -->	
+	<div class="research">
+		<div class="container">
+			<h3 class="research__title">Эффект на 24 часа!</h3>
+			<p class="research__content">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+			<a href="#" class="research__link">Узнать больше об исследовании</a>
+		</div>
+	</div>
+
+
+
+
+
 	<!-- reviews - белый фон + серый треугольник вторым фоном-->
 	<div class="reviews">
 
@@ -131,14 +144,16 @@
 			<!-- переключающиеся слайды -->
 			<section class="review  slide-1">
 				<h2 class="review__author">Николай Петров</h2>
+				<p class="review__subtitle">25 лет, водитель трамвая</p>
 				<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 			</section>
 			<section class="review  slide-2">
 				<h2 class="review__author">Иван Сидоров</h2>
+				<p class="review__subtitle">37 лет, уличный музыкант</p>
 				<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 			</section>
 			<section class="review  slide-3">
-				<h2 class="review__author">Василий Кузнецов</h2>
+				<h2 class="review__author">Василий Кузнецов</h2><p class="review__subtitle">130 лет, долгожитель</p>
 				<p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
 			</section>
 		</div>
@@ -161,10 +176,11 @@
 			<label class="control-label" for="price-table-2"></label>
 			<label class="control-label" for="price-table-3"></label>
 		</div>
-		<!-- prices__wrapper - контейнер для таблицы, превышающей ширину вьюпорта. переключение с одного столбца на другой трансформациями -->
+		<!-- prices__wrapper - контейнер для таблицы, в мобильной версии превышающей ширину вьюпорта. переключение с одного столбца на другой трансформациями -->
 		<div class="prices__wrapper">
 			<table class="prices__table">
 				<tr>
+					<th class="prices__first-col-tablet"></th>
 					<th>
 						<p class="prices__title">База</p>
 						<p class="prices__amount">1,99 USD</p>
@@ -181,6 +197,7 @@
 					</th>
 				</tr>
 				<tr>
+					<td class="prices__first-col-tablet"><span class="prices__feature-cell">Розовый фильтр</span></td>
 					<td>
 						<div class="checkbox-inner-wrapper">
 							<span class="prices__feature">Розовый фильтр</span>
@@ -201,6 +218,7 @@
 					</td>
 				</tr>
 				<tr>
+					<td class="prices__first-col-tablet"><span class="prices__feature-cell">Смайлики</span></td>
 					<td>
 						<div class="checkbox-inner-wrapper">
 							<span class="prices__feature">Смайлики</span>
@@ -221,6 +239,7 @@
 					</td>
 				</tr>
 				<tr>
+					<td class="prices__first-col-tablet"><span class="prices__feature-cell">Комментарии</span></td>
 					<td>
 						<div class="checkbox-inner-wrapper">
 							<span class="prices__feature">Комментарии</span>
@@ -255,21 +274,54 @@
 
 			<h2 class="footer-contacts__title  footer-contacts__title--2">Свяжитесь с нами!</h2>
 
-			<p class="footer-contacts__paragraph">Звоните:</p>
+			<div class="footer-contacts__wrapper--halfwidth">
+				<p class="footer-contacts__paragraph">Звоните:</p>
 
-			<p class="footer-contacts__information">+7 (812) 555-66-66</p>
+				<p class="footer-contacts__information">+7 (812) 555-66-66</p>
+			</div>
 
-			<p class="footer-contacts__paragraph">Пишите:</p>
+			<div class="footer-contacts__wrapper--halfwidth">
+				<p class="footer-contacts__paragraph">Пишите:</p>
 
-			<p class="footer-contacts__information">mail@htmlacademy.ru</p>
+				<p class="footer-contacts__information">mail@htmlacademy.ru</p>
+			</div>
 
 			<p class="footer-contacts__paragraph">Приезжайте в гости:</p>
 
-			<p class="footer-contacts__information">ул. Большая Конюшенная, 19/8</p>
+			<p class="footer-contacts__information  footer-contacts__information--last-line">ул. Большая Конюшенная, 19/8</p>
 		</div>
 
 		<div id="map-canvas" class="map-wrapper"></div>
 	</footer>	
+
+	<footer class="page-footer">
+		
+		<div class="container">
+
+			<div class="logo  logo--footer">
+				
+				<p class="logo__text">
+					<a href="index.html" class="logo__link--footer">
+						<img class="logo__image" src="img/logo__image.png" width="59" height="40" alt="">Pink
+					</a>
+				</p>
+			</div>
+			
+			<div class="social-btns">
+				<a href="#" class="social-btn  social-btn__twitter-btn">Twitter</a>
+				<a href="#" class="social-btn  social-btn__facebook-btn">Facebook</a>
+				<a href="#" class="social-btn  social-btn__youtube-btn">Youtube</a>
+			</div>
+
+			<div class="copyright">
+				<p class="copyright__text">Разработано</p>
+				<a href="https://htmlacademy.ru/" class="copyright__link">HTML Academy</a>
+				
+			</div>
+
+		</div>
+
+	</footer>
 
 
 

@@ -1,9 +1,23 @@
-/* логотип в хедере главной*/
+/* логотип в хедере */
 .logo {
   float: left;
   text-transform: uppercase;
   font: 300 32px/36px $font;
   letter-spacing: 1.4px;
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+      color: $purple;
+    }
+
+    &:active {
+      color: $white;
+      opacity: 0.3;
+    }
+  }
 
 	/* лого в футере */
   &__text {
@@ -43,54 +57,3 @@
   }
 }
 
-/* логотип-ссылка на внутренних страницах */
-.pink-blog .logo {
-
-  &__link {
-  	text-decoration: none;
-  	color: $white;
-
-  	&:hover {
-  		color: $purple;
-  	}
-
-    &:active {
-      color: $white;
-      opacity: 0.3;
-    }
-  }
-}
-
-.pink-post .logo {
-
-	&__link {
-  	text-decoration: none;
-  	color: $white;
-
-  	&:hover {
-  		color: $purple;
-  	}
-
-    &:active {
-      color: $white;
-      opacity: 0.3;
-    }
-  }
-}
-
-.pink-form .logo {
-
-	&__link {
-  	text-decoration: none;
-  	color: $white;
-
-  	&:hover {
-  		color: $purple;
-  	}
-
-    &:active {
-      color: $white;
-      opacity: 0.3;
-    }
-  }
-}
