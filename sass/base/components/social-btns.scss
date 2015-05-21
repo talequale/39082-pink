@@ -16,7 +16,7 @@
 		width: 45px;
 		height: 45px;
 		font-size: 0;
-		border: 3px solid $lightgray;
+		border: 3px solid $gray;
 		border-radius: 50%;
 		background-repeat: no-repeat;
 			background-position: center;
@@ -34,7 +34,11 @@
 		}
 
 		&:hover {
-			border: 3px solid $purple;
+			border: 3px solid $darkblue;
+		}
+
+		&:active {
+			opacity: 0.3;
 		}
 	}
 }

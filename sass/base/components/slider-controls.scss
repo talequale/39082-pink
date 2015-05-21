@@ -30,9 +30,18 @@
 	margin-right: 9px;
 	width: 6px;
 	height: 6px;
-	background-color: $darkgray;
-	border: 3px solid $white;
+	background-color: $bullet-gray;
+	background-clip: content-box;
+	border: 3px solid transparent;
 	border-radius: 50%;
+
+	&:hover {
+		background-color: $bullet-dgray;
+	}
+
+	&:active {
+		background-color: $bullet-lgray;
+	}
 }
 
 /* изменение состояний лейблов при отмеченной радиокнопке */
@@ -44,10 +53,4 @@
 #review-3:checked ~ .control-labels label[for="review-3"] {
 	background-color: transparent;
 	border: 3px solid $darkblue;
-}
-
-
-/* в неактивном состоянии лейблы в блоке цен имеют серый, совпадающий с фоном блока, бордер */
-.table-prices .control-label {
-	border: 3px solid $gray;
 }

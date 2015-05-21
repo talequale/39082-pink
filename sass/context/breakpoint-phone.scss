@@ -1,6 +1,8 @@
-/* фоновые картинки хедера */
+
 
 @media (max-width: $breakpoint-phone) {
+
+  /* фоновые картинки хедера */
   .page-header {
     background-image: url("../img/bg-header-phone.jpg");
     background-repeat: no-repeat;
@@ -12,15 +14,83 @@
       background-position: right bottom;
     }
   }
-}
-
-
-/* фоновая картинка с улыбающимся смартфоном в блоке features на главной */
-@media (max-width: $breakpoint-phone) {
+  
+  /* фоновая картинка с улыбающимся смартфоном в блоке features на главной */
   .features {
     background-image: url("../img/bg-features-phone.png");
     background-repeat: no-repeat;
     background-size: 160px auto;
     background-position: center bottom -45px;
   }
+  
+  /* блок research в мобильной версии скрыт */
+  .research {
+    display: none;
+  }
+
+  .review {
+
+    &__subtitle {
+      display: none;
+    }
+  }
+
+  .prices {
+
+    &__first-col-tablet {
+      display: none;
+    }    
+  }
+
+  .map-wrapper {
+    height: 200px;
+
+    /* двойной фон - карта и белый треугольник */
+    background-image: 
+      url("../img/bg-white-triangle.svg"),
+      url("../img/bg-map.jpg");
+    background-repeat: 
+      no-repeat,
+      no-repeat;
+    background-position: 
+      top center,
+      bottom center;
+    background-size: 
+      100% auto, 
+      100% auto;
+      overflow: hidden;
+
+    /* маркер карты */
+    /*&:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -18px;
+      margin-left: -18px;
+      width: 16px;
+      height: 16px;
+      background-color: $purple;
+      border: 10px solid $white;
+      border-radius: 50%;
+    }*/
+  }
+  
+  /* текст про форму ниже в мобильной версии не виден */
+  .page-form {
+
+    &__block-description {
+
+      &--2-line {
+        display: none;
+      }
+    }
+    
+    /* столбец с текстом "удалить" в таблице попутчиков не виден */
+    &__col-delete {
+      display: none;
+    }
+  }
 }
+
+

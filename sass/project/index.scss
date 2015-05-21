@@ -2,11 +2,14 @@
 	padding: 45px 0 30px 0;
 	color: $darkblue;
 	background-color: $white;
-	/* серый треугольник над следующим блоком */
-	background-image: url("../img/bg-gray-triangle.svg");
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-position: bottom center;
+
+	@media (max-width: $breakpoint-phone) {
+		/* серый треугольник над следующим блоком только для моб.версии */
+		background-image: url("../img/bg-gray-triangle.svg");
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: bottom center;
+	}
 
 	&__text {
 		@include block-title($font);
@@ -19,9 +22,8 @@
 
 /* нижний паддинг блока features - пространство для фона */
 .features {
-	position: relative;
 	padding: 55px 0 286px 0;
-	background-color: $gray;
+	background-color: $lightgray;
 }
 
 .reviews {

@@ -28,5 +28,13 @@
     color: $white;
     border-top: 1px solid #485461;
     border-bottom: 1px solid $black;
+
+    &:hover {
+      color: $purple;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

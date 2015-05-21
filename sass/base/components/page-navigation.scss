@@ -6,6 +6,7 @@
 	/* резиновая обертка для кнопок половинной ширины */
 	&__wrapper {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
@@ -15,16 +16,21 @@
 		margin: 0;
 		margin-bottom: 20px;
 		padding: 16px 0 13px 0;
+		width: 100%;
 		text-transform: uppercase;
 		text-decoration: none;
 		font: 700 18px/30px $font;
 		color: $darkblue;
-		border: 2px solid $lightgray;
+		border: 2px solid $gray;
 		border-radius: 3px;
 
 		&:hover {
-			color: $purple;
-			border: 2px solid $darkgray;
+			border: 2px solid $darkblue;
+		}
+
+		&:active {
+			color: $white;
+			background-color: $darkblue;
 		}
 	}
 

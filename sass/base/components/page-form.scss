@@ -16,10 +16,10 @@
 		&--bg-gray {
 			padding-top: 37px;
 			padding-bottom: 1px;
-			background-color: $gray;
+			background-color: $lightgray;
 		}
 
-		/* маргины для лейблов, которые идут после своих текстовых инпутов */
+		/* маргины для лейблов, которые идут после своих текстовых инпутов, блок "когда вы путешествовали" */
 		&--labels-to-bottom {
 	
 			label {
@@ -27,15 +27,23 @@
 				margin-bottom: 16px;
 			}
 		}
+		
+		&--upload {
+			
+			/* o:h прячет отрицательный правый маргин у контейнера с картинками, компенсирующий правый маргин у последней картинки в ряду */
+			.container {
+				overflow: hidden;
+			}
+		}
 	}
 
-	/* описание верхнего блока */
+	/* параграф-описание верхнего блока */
 	&__block-description {
 		margin: 0;
 		margin-bottom: 35px;
 	}
 
-	/* все лейблы на странице форм */
+	/* все лейблы на странице форм - блочные */
 	label {
 		display: block;
 	}
@@ -56,7 +64,8 @@
 		text-transform: uppercase;
 		font: 400 14px/30px $font;
 		color: $purple;
-
+		
+		/* лейблы в таблице имен и никнеймов попутчиков сдвинуты влево с отступом */
 		&--companion-name {
 			padding-left: 20px;
 			text-align: left;
@@ -81,8 +90,40 @@
 			width: 35px;
 			height: 35px;
 			background-color: $white;
-			border: 2px solid $lightgray;
+			border: 2px solid $gray;
 			border-radius: 50%;
+		}
+		
+		/* кастомная радиокнопка при наведении */
+		&:hover {
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				width: 35px;
+				height: 35px;
+				background-color: $white;
+				border: 2px solid $darkblue;
+				border-radius: 50%;
+			}
+		}
+		
+		/* кастомная радиокнопка при нажатии */
+		&:active {
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				width: 35px;
+				height: 35px;
+				background-color: $white;
+				border: 2px solid $purple;
+				border-radius: 50%;
+			}
 		}
 	}
 
@@ -93,12 +134,24 @@
 		padding: 17px 20px 13px 20px;
 		width: 100%;
 		font: 400 18px/30px $font;
-		border: 2px solid $lightgray;
+		border: 2px solid $gray;
 		border-radius: 3px;
 		outline: none;
+
+		&:hover {
+			border: 2px solid $darkblue;
+		}
+
+		&:focus {
+			border: 2px solid $purple;
+		}
+
+		&:disabled {
+			border: 2px solid $gray;
+		}
 	}
 
-	/* все радиокнопки */
+	/* все стандартные радиокнопки скрыты */
 	input[type="radio"] {
 		display: none;
 	}
@@ -113,16 +166,7 @@
 		color: $darkblue;
 	}
 
-	/* инпут с кнопками по бокам */
-	&__input-table {
-		margin-bottom: 16px;
-		width: 100%;
-		
-		&--companions {
-			margin-bottom: 79px;
-		}
-	}
-
+	/* пустые ячейки без бордера в таблице с именами и никнеймами попутчиков */
 	&__input-table-cell {
 		background-color: transparent;
 		
@@ -132,32 +176,10 @@
 			font-size: 18px;
 		}
 	}
-	
-	/* нулевой нижний маргин у инпутов с боковыми кнопками и бордер */
-	input[name="input-number"] {
-		margin-bottom: 0;
-		padding: 16px 20px 13px 20px;
-		border-top: 2px solid $lightgray;
-		border-bottom: 2px solid $lightgray;
-		border-left: none;
-		border-right: none;
-		border-radius: 0;
-	}
 
-	/* нестандартный нижний маргин у лейбла для инпута с числом попутчиков + псевдоэлемент на нем */
+	/* нестандартный нижний маргин у лейбла для инпута с числом попутчиков */
 	label[for="number-of-companions"] {
-		position: relative;
 		margin-bottom: 26px;
-
-		&:after {
-			content: "";
-			position: absolute;
-			top: 168px;
-			left: 0;
-			right: 0;
-			height: 2px;
-			background-color: $lightgray;
-		}
 	}
 	/* стили ячеек таблицы попутчиков с номерами */
 	&__companion-number {
@@ -184,21 +206,29 @@
 		margin: 0;
 		padding: 15px 0 14px 0;
 		width: 63px;
-		border: 2px solid $lightgray;
+		border: 2px solid $gray;
+		border-right: none;
 		border-radius: 3px 0 0 3px;
+	}
+	
+	/* колонка таблицы попутчиков с текстом "удалить", невидимая в мобильной версии */
+	&__col-delete {
+		width: 116px;
+		text-align: right;
+		text-transform: uppercase;
+		font: 400 14px/30px $font;
 	}
 
 	/* нулевой нижний маргин у инпутов в таблице с попутчиками. и бордер */
 	input[name="input-companion"] {
 		margin-bottom: 0;
 		padding: 16px 20px 13px 20px;
-		border: 2px solid $lightgray;
-		border-left: none;
+		border: 2px solid $gray;
 		border-radius: 0 3px 3px 0;
 	}
 	
 
-	/* чекбоксы */
+	/* стандартные чекбоксы скрыты */
 	input[type="checkbox"] {
 		display: none;
 	}
@@ -221,8 +251,38 @@
 			top: -5px;
 			width: 35px;
 			height: 35px;
-			border: 2px solid $lightgray;
+			border: 2px solid $gray;
 			border-radius: 2px;
+		}
+		
+		/* кастомный неотмеченный чекбокс при наведении */
+		&:hover {
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				width: 35px;
+				height: 35px;
+				border: 2px solid $darkblue;
+				border-radius: 2px;
+			}
+		}
+		
+		/* кастомный неотмеченный чекбокс при нажатии */
+		&:active {
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				width: 35px;
+				height: 35px;
+				border: 2px solid $purple;
+				border-radius: 2px;
+			}
 		}
 	}
 	
@@ -231,7 +291,7 @@
 		position: relative;
 		margin-bottom: 70px;
 
-		/* серый разделитель под кнопкой */
+		/* серый разделитель под кнопкой загрузки файлов */
 		&:after {
 			content: "";
 			position: absolute;
@@ -239,12 +299,12 @@
 			left: 0;
 			right: 0;
 			height: 2px;
-			background-color: $lightgray;
+			background-color: $gray;
 		}
 	}
 
 	/* кнопка загрузки файлов */
-	&__selectbutton {
+	&__select-button {
 		box-sizing: border-box;
 		margin: 0;
 		padding: 17px 0 12px 0;
@@ -252,11 +312,11 @@
 		text-transform: uppercase;
 		font: 700 18px/30px $font;
 		background-color: $white;
-		border: 2px solid $lightgray;
+		border: 2px solid $gray;
 		border-radius: 3px;
 	}
 	
-	/* невидимый инпут для загрузки файлов */
+	/* невидимый инпут для загрузки файлов, лежащий поверх кнопки */
 	input[type="file"] {
 		position: absolute;
 		left: 0;
@@ -266,13 +326,27 @@
 		height: 100%;
 		opacity: 0;
 		z-index: 1000;
+		cursor: pointer;
+		
+		/* при наведении на инпут кнопка меняет состояние */
+		&:hover ~ .page-form__select-button {
+			border: 2px solid $darkblue;
+		}
+		
+		/* при нажатии на инпут кнопка меняет состояние */
+		&:active ~ .page-form__select-button {
+			color: $white;
+			background-color: $darkblue;
+			border: 2px solid $darkblue;
+		}
 	}
 	
 	/* примечание о необходимых полях * */
 	&__footnote {
 		margin-bottom: 25px;
 		text-transform: uppercase;
-
+		
+		/* цвет звездочки в примечании */
 		span {
 			color: $purple;
 		}

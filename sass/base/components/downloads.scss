@@ -17,7 +17,13 @@
     border-radius: 37px; 
 
     &:hover {
-      opacity: 0.5;
+      background-color: $white;
+      color: $purple;
+    }
+
+    &:active {
+      background-color: $white;
+      color: rgba(209, 39, 85, 0.3);
     }
   }
 
@@ -39,5 +45,10 @@
     margin: 0;
     padding: 0 20px;
     font: 300 14px/24px $font;
+  }
+  
+  /* o:h прячет отрицательный правый маргин у контейнера с картинками, компенсирующий правый маргин у последней картинки в ряду */
+  .container {
+    overflow: hidden;
   }
 }

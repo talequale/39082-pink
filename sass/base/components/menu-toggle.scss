@@ -15,6 +15,58 @@
   font-size: 0;
   background-color: $white;
 
+  &:hover {
+    background-color: $purple;
+
+    /* верхняя полоска :hover */
+    &:before { 
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background-color: $purple;
+    }
+
+    /* нижняя полоска :hover */
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background-color: $purple;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    /* верхняя полоска :active */
+    &:before { 
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background-color: $purple;
+    }
+
+    /* нижняя полоска :active */
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background-color: $purple;
+    }
+  }
+
   /* верхняя полоска */
   &:before { 
     content: "";
@@ -37,20 +89,19 @@
     background-color: $white;
   }
 
-  &:hover {
-    opacity: 0.5;
-  }
-
   /* крестик вместо гамбургера по модификатору active */
   &--active { 
     position: absolute;
     right: 20px;
     top: 50%;
     margin-top: -2px;
+    width: 20px;
+    height: 20px;
     font-size: 0;
     border: none;
     outline: none;
     background-color: transparent;
+    cursor: pointer;
 
     /* элемент крестика, наклон вправо */
     &:before {
@@ -87,7 +138,44 @@
     }
 
     &:hover {
-      opacity: 0.5;
+      
+      /* элемент крестика, наклон вправо :hover */
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 25px;
+        height: 3px;
+        border: none;
+        outline: none;
+        border-radius: 0;
+        font-size: 0;
+        background-color: $purple;
+        transform: rotate(135deg);
+      }
+
+      /* элемент крестика, наклон влево */
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 25px;
+        height: 3px;
+        border: none;
+        outline: none;
+        border-radius: 0;
+        font-size: 0;
+        background-color: $purple;
+        transform: rotate(45deg);
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

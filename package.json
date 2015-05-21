@@ -25,6 +25,7 @@
     "grunt-contrib-less": "^1.0.1",
     "grunt-githooks": "^0.3.1",
     "grunt-lintspaces": "^0.6.2",
-    "grunt-sass": "^0.18.1"
+    "grunt-sass": "^0.18.1",
+    "grunt-autoprefixer": "^1.0"
   }
 }

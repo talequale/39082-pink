@@ -1,15 +1,21 @@
 $black: #000;
 $white: #fff;
 $purple: #d12755;
-$gray: #f2f2f2;
+$lightgray: #f2f2f2;
 $darkblue: #283645;
 $darkblue--header: #1d2631; /*  цвет фона хедера и блока downloads  */
 $darkgray: #b5b9be; /* неактивные контролы слайдера */
 $green: #3dc643; /* заленые галочки в слайдере с ценами */
 $red: #f25b26; /* красные крестики в слайдере с ценами  */
-$lightgray: #e5e5e5; /* декоративные элементы на странице блога */
-$btn--green: #2aab6d;
+$gray: #e5e5e5; /* декоративные элементы на странице блога */
+$btn-green: #2aab6d;
+$btn-green--hvr: #1c9b5e;
+
+$bullet-gray: #bec2c7; /* контролы слайдера */
+$bullet-dgray: #7e868f; /* контролы слайдера по ховеру */
+$bullet-lgray: #e9ebec; /* активные контролы слайдера */
 
 $font: OpenSans, Helvetica, Arial, sans-serif;
 
 $breakpoint-phone: 480px;
+$breakpoint-tablet:  960px;
