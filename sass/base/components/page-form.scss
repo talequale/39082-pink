@@ -219,6 +219,11 @@
 		font: 400 14px/30px $font;
 	}
 
+  &__col-delete-link {
+    text-decoration: none;
+    color: $darkblue;
+  }
+
 	/* нулевой нижний маргин у инпутов в таблице с попутчиками. и бордер */
 	input[name="input-companion"] {
 		margin-bottom: 0;
