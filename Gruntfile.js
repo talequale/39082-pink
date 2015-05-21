@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-sass');
@@ -23,6 +24,16 @@ module.exports = function(grunt) {
         files: {
           'css/style.css': 'sass/style.scss'
         }
+      }
+    },
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 30 versions'],
+        map: false,
+      },
+      style: {
+        src: 'css/style.css'
       }
     },
 
@@ -72,9 +83,9 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['lintspaces:test']);
 
   if (grunt.file.exists(__dirname, 'less', 'style.less')) {
-    grunt.registerTask('gosha', ['less:style', 'copy:gosha', 'clean:gosha']);
+    grunt.registerTask('gosha', ['less:style', 'autoprefixer', 'copy:gosha', 'clean:gosha']);
   } else if (grunt.file.exists(__dirname, 'sass', 'style.scss')) {
-    grunt.registerTask('gosha', ['sass:style', 'copy:gosha', 'clean:gosha']);
+    grunt.registerTask('gosha', ['sass:style', 'autoprefixer', 'copy:gosha', 'clean:gosha']);
   } else {
     grunt.registerTask('gosha', ['copy:gosha', 'clean:gosha']);
   }

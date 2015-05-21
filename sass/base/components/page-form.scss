@@ -27,15 +27,23 @@
 				margin-bottom: 16px;
 			}
 		}
+		
+		&--upload {
+			
+			/* o:h прячет отрицательный правый маргин у контейнера с картинками, компенсирующий правый маргин у последней картинки в ряду */
+			.container {
+				overflow: hidden;
+			}
+		}
 	}
 
-	/* описание верхнего блока */
+	/* параграф-описание верхнего блока */
 	&__block-description {
 		margin: 0;
 		margin-bottom: 35px;
 	}
 
-	/* все лейблы на странице форм - блочные*/
+	/* все лейблы на странице форм - блочные */
 	label {
 		display: block;
 	}
@@ -143,7 +151,7 @@
 		}
 	}
 
-	/* все стандартные радиокнопки скрыты*/
+	/* все стандартные радиокнопки скрыты */
 	input[type="radio"] {
 		display: none;
 	}
@@ -201,6 +209,14 @@
 		border: 2px solid $gray;
 		border-right: none;
 		border-radius: 3px 0 0 3px;
+	}
+	
+	/* колонка таблицы попутчиков с текстом "удалить", невидимая в мобильной версии */
+	&__col-delete {
+		width: 116px;
+		text-align: right;
+		text-transform: uppercase;
+		font: 400 14px/30px $font;
 	}
 
 	/* нулевой нижний маргин у инпутов в таблице с попутчиками. и бордер */
@@ -313,12 +329,12 @@
 		cursor: pointer;
 		
 		/* при наведении на инпут кнопка меняет состояние */
-		&:hover ~ .page-form__selectbutton {
+		&:hover ~ .page-form__select-button {
 			border: 2px solid $darkblue;
 		}
 		
 		/* при нажатии на инпут кнопка меняет состояние */
-		&:active ~ .page-form__selectbutton {
+		&:active ~ .page-form__select-button {
 			color: $white;
 			background-color: $darkblue;
 			border: 2px solid $darkblue;

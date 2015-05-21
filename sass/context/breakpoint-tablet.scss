@@ -733,10 +733,20 @@
 
       /* расположение элементов в блоке "отправить форму" */
       &--submit {
+        padding-top: 65px;
 
         .container {
           display: flex;
           justify-content: space-between;
+        }
+      }
+
+      /* заголовок этого блока позиционируется абсолютно */
+      &--upload {
+        position: relative;
+
+        .container {
+          padding-top: 42px;
         }
       }
     }
@@ -793,11 +803,71 @@
         width: 260px;
         height: 18px;
       }
+      
+
+      /* абсолютно позиционированный заголовок блока "загрузить файлы" */
+      &--upload {
+        position: absolute;
+        top: 30px;
+        left: 45%;
+        margin-left: -150px;
+        margin-bottom: 0;
+        width: 300px;
+        height: 18px;
+        z-index: 100;
+      }
     }
 
     /* обертка для инпута и его лейбла, потомок флексконтейнера */
     &__label-input-wrapper {
-      width: 50%;
+      width: 46%;
+      
+      /* нижний маргин у инпута с кнопками в блоке попутчиков */
+      &--companions {
+        margin-bottom: 70px;
+      }
+    }
+
+    &__table-wrapper {
+
+      &--companion-1 {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: -30px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $gray;
+        }
+      }
+    }
+
+    /* отступ средней ячейки в таблице попутчиков */
+    input[name="input-companion"] {
+      margin-left: 20px;
+      border-radius: 3px;
+    }
+    
+    /* отступ средней ячейки в таблице попутчиков */
+    input[name="nickname"] {
+      margin-left: 20px;
+    }
+
+    &__companion {
+      border: 2px solid $gray;
+      border-radius: 3px;
+    }
+
+    &__fileform {
+      margin-bottom: 110px;
+
+      &:after {
+        top: 105px;
+      }
     }
   }
   
@@ -806,19 +876,23 @@
     width: 50%;
   }
 
+  /* отрицательный маргин обертки галереи */
   .images {
     margin-right: -70px;
   }
 
+  /* маргин у картинок */
   .image {
     margin-right: 70px;
-
+    
+    /* размер картинок в планшетной версии больше */
     img {
       width: 120px;
       height: 120px;
     }
   }
-
+  
+  /* кнопка удалить картинку */
   .delete-btn {
     top: -27px;
     right: -27px;

@@ -58,7 +58,7 @@
     background-size: 
       100% auto, 
       100% auto;
-    overflow: hidden;
+      overflow: hidden;
 
     /* маркер карты */
     &:after {
@@ -75,7 +75,8 @@
       border-radius: 50%;
     }
   }
-
+  
+  /* текст про форму ниже в мобильной версии не виден */
   .page-form {
 
     &__block-description {
@@ -83,6 +84,11 @@
       &--2-line {
         display: none;
       }
+    }
+    
+    /* столбец с текстом "удалить" в таблице попутчиков не виден */
+    &__col-delete {
+      display: none;
     }
   }
 }

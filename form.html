@@ -143,20 +143,22 @@
 				<label for="number-of-companions" class="page-form__text-input-title  page-form__block-title">Количество попутчиков *</label>
 
 				<!-- инпут с кнопками в блоке попутчиков -->
-				<div class="page-form__input-table">	
-					<button class="decrease-btn">&mdash;</button>
-					<input type="text" id="number-of-companions" name="input-number" placeholder="2 чел" required>
-					<button class="increase-btn">+</button>
+				<div class="page-form__label-input-wrapper  page-form__label-input-wrapper--companions">
+					<div class="page-form__input-table">	
+						<button class="decrease-btn">&mdash;</button>
+						<input type="text" id="number-of-companions" name="input-number" placeholder="2 чел" required>
+						<button class="increase-btn">+</button>
+					</div>
 				</div>
 
-				<div class="page-form__table-wrapper">
+				<div class="page-form__table-wrapper  page-form__table-wrapper--companion-1">
 					<table class="page-form__table">
 						<tr>
 							<th class="page-form__companion-number">№</th>
 							<th>
 								<label for="name-1" class="page-form__text-input-label  page-form__text-input-label--companion-name">Имя: *</label>
 							</th>
-							<th></th>
+							<th class="page-form__col-delete"></th>
 						</tr>
 						<tr>
 							<td class="page-form__input-table-cell  page-form__input-table-cell--button">
@@ -165,19 +167,19 @@
 							<td>
 								<input type="text" id="name-1" name="input-companion" placeholder="Введите ваше имя" required>
 							</td>
-							<td>Удалить</td>
+							<td class="page-form__col-delete">Удалить</td>
 						</tr>
 						<tr>
 							<th class="page-form__companion-number"></th>
 							<th><label for="nickname-1" class="page-form__text-input-label  page-form__text-input-label--companion-name">Прозвище:</label></th>
-							<th></th>
+							<th class="page-form__col-delete"></th>
 						</tr>
 						<tr>
 							<td></td>
 							<td>
-								<input type="text" id="nickname-1" placeholder="Ну как же без этого!">
+								<input type="text" id="nickname-1" name="nickname" placeholder="Ну как же без этого!">
 							</td>
-							<td></td>
+							<td class="page-form__col-delete"></td>
 						</tr>
 					</table>
 				</div>
@@ -189,7 +191,7 @@
 							<th>
 								<label for="name-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Имя: *</label>
 							</th>
-							<th></th>
+							<th class="page-form__col-delete"></th>
 						</tr>
 						<tr>
 							<td class="page-form__input-table-cell  page-form__input-table-cell--button">
@@ -198,19 +200,19 @@
 							<td>
 								<input type="text" id="name-2" name="input-companion" placeholder="Введите ваше имя" required>
 							</td>
-							<td>Удалить</td>
+							<td class="page-form__col-delete">Удалить</td>
 						</tr>
 						<tr>
 							<th></th>
 							<th><label for="nickname-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Прозвище:</label></th>
-							<th></th>
+							<th class="page-form__col-delete"></th>
 						</tr>
 						<tr>
 							<td></td>
 							<td>
-								<input type="text" id="nickname-2" placeholder="Ну как же без этого!">
+								<input type="text" id="nickname-2" name="nickname" placeholder="Ну как же без этого!">
 							</td>
-							<td></td>
+							<td class="page-form__col-delete"></td>
 						</tr>
 					</table>
 				</div>
@@ -249,11 +251,11 @@
 		</div>
 
 		<!-- серый фон -->
-		<div class="page-form__block  page-form__block--bg-gray">
+		<div class="page-form__block  page-form__block--bg-gray  page-form__block--upload">
+
+			<h2 class="page-form__block-title  page-form__block-title--upload">Ваши фотографии из поездки *</h2>
 			
 			<div class="container">
-
-				<h2 class="page-form__block-title">Ваши фотографии из поездки *</h2>
 				
 				<div class="page-form__fileform">
 					<input type="file" id="upload-images-btn" name="upload-images-btn">
