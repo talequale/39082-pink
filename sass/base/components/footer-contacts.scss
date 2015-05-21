@@ -39,4 +39,17 @@
 		position: relative;
 		width: 100%;
 	}
+
+  &__map-wrapper {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    z-index: 1000;
+  }
 }

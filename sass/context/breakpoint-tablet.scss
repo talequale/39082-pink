@@ -135,7 +135,7 @@
       url(../img/bg-features-phone--tablet.png),
       url("../img/bg-triangle--features.svg");
     background-repeat: no-repeat;
-    background-size: 268px auto, 100% 60px;
+    background-size: 268px auto, 105%;
     background-position: left 40px top 5px, center -1px;
 
     .container {
@@ -214,7 +214,7 @@
   .reviews {
     background-image: url("../img/bg-gray-triangle.svg");
     background-repeat: no-repeat;
-    background-size: 100% 60px;
+    background-size: 105%;
     background-position: center bottom;
 
     .slider-controls {
@@ -387,7 +387,7 @@
       overflow: hidden;
 
       /* маркер карты */
-      &:after {
+      /*&:after {
         content: "";
         position: absolute;
         bottom: 145px;
@@ -399,7 +399,7 @@
         background-color: $purple;
         border: 10px solid $white;
         border-radius: 50%;
-      }
+      }*/
     }
 
     &__title {

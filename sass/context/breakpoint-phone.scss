@@ -61,7 +61,7 @@
       overflow: hidden;
 
     /* маркер карты */
-    &:after {
+    /*&:after {
       content: "";
       position: absolute;
       top: 50%;
@@ -73,7 +73,7 @@
       background-color: $purple;
       border: 10px solid $white;
       border-radius: 50%;
-    }
+    }*/
   }
   
   /* текст про форму ниже в мобильной версии не виден */

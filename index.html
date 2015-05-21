@@ -291,7 +291,10 @@
 			<p class="footer-contacts__information  footer-contacts__information--last-line">ул. Большая Конюшенная, 19/8</p>
 		</div>
 
-		<div id="map-canvas" class="map-wrapper"></div>
+		<div class="footer-contacts__map-wrapper">
+			<img src="img/bg-white-triangle.svg" class="footer-contacts__img" alt="">
+			<div id="map-canvas" class="map-wrapper"></div>
+		</div>
 	</div>	
 
 	<footer class="page-footer">
@@ -331,7 +334,28 @@
 	
   
 
-  <!-- <script src="js/script.js"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
+    <script type="text/javascript">
+function initialize() {
+  var mapOptions = {
+    zoom: 17,
+    center: new google.maps.LatLng(59.939027, 30.323065)
+  }
+  var map = new google.maps.Map(document.getElementById("map-canvas"),
+                                mapOptions);
+
+  var image = "img/map-marker.png";
+  var myLatLng = new google.maps.LatLng(59.938794,30.323083);
+  var nerdsMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+}
+
+google.maps.event.addDomListener(window, "load", initialize);
+
+    </script>
 
 </body>
 </html>
