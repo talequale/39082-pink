@@ -75,6 +75,16 @@
       border-radius: 50%;
     }
   }
+
+  .page-form {
+
+    &__block-description {
+
+      &--2-line {
+        display: none;
+      }
+    }
+  }
 }
 
 

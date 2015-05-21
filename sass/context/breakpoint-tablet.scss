@@ -65,7 +65,6 @@
     
     /* заголовок в хедере */
     &__title {
-      margin-bottom: 30px;
       padding: 0 60px;
       font: 300 40px/44px $font;
     }
@@ -80,6 +79,17 @@
       padding: 0;
       padding-top: 95px;
       height: auto;
+    }
+  }
+  
+  /* маргин заголовка на главной */
+  .index-page {
+
+    .page-header {
+
+      &__title {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -429,6 +439,7 @@
 
   .logo {
     width: 29.5%;
+    text-align: left;
     
     &__text {
       padding: 0;
@@ -452,9 +463,414 @@
 
   .copyright {
     width: 29.5%;
+    text-align: right;
 
     &__text {
       margin-bottom: 0;
+    }
+  }
+
+  /* размер и паддинги заголовка хедера на внутренних страницах */
+  .pink-blog {
+
+    .page-header {
+      background-image: url("../img/bg-header-tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: center -140px;
+
+      &__title {
+        padding: 75px 40px;
+        font: 300 50px/54px $font;
+      }
+    }
+  }
+
+  .pink-post { 
+
+    .page-header {
+      background-image: url("../img/bg-header-tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: center -140px;
+
+      &__text {
+        padding: 75px 40px;
+        font: 300 50px/54px $font;
+      }
+    }
+  }
+
+  .pink-form {
+
+    .page-header {
+      background-image: url("../img/bg-header-tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: center -140px;
+
+      &__title {
+        padding: 75px 40px;
+        font: 300 50px/54px $font;
+      }
+    }
+  }
+
+  //////////////// blog.html ///////////////////
+  
+  /* изменение верхнего паддинга контейнера записей */
+  .page-content {
+    padding-top: 95px;
+
+    &__container {
+      display: block;
+      margin: 0 auto;
+      padding: 0 100px;
+    }
+  }
+
+  .blog-entry {
+    padding-bottom: 45px;
+
+    &__title {
+      margin-bottom: 5px;
+      font: 700 27px/30px $font;
+    }
+
+    &__date {
+      margin-bottom: 25px;
+      font: 300 14px/30px $font;
+    }
+
+    &__review {
+      padding-bottom: 45px;
+      font: 400 18px/30px $font;
+      border-bottom: 2px dotted $gray;
+
+      &--last-review {
+        padding-bottom: 15px;
+        border-bottom: none;
+      }
+    }
+  }
+  
+  /* блок пагинации на странице блога */
+  .pagination {
+    display: block;
+
+    &__page-item {
+      margin-right: 11px;
+    }
+  }
+
+  /* иконка в заголовках записей на странице блога */
+  .pink-blog {
+
+    .blog-entry {
+
+      &__title {
+        position: relative;
+
+        &:before {
+          content: url("../img/link-icon.png");
+          position: absolute;
+          left: -60px;
+          top: 2px;
+        }
+      }
+    }
+  }
+  
+
+  //////////////// post.html ///////////////////
+  /* стили записи на странице поста */
+  .pink-post {
+
+    .page-content {
+      padding-top: 85px;
+    }
+
+    .blog-entry {
+      padding-bottom: 20px;
+
+      &__inner-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__title {
+        margin-bottom: 30px;
+        padding: 0 100px;
+        font: 700 50px/54px $font;
+      }
+
+      &__date {
+        position: relative;
+        bottom: 35px;
+        left: 50%;
+        margin-bottom: 0;
+        margin-left: -150px;
+        width: 300px;
+        font: 300 14px/30px $font;
+        background-color: $white;
+        order: 3;
+      }
+
+      &__review {
+        margin-bottom: 20px;
+        padding-bottom: 45px;
+        font: 400 24px/40px $font;
+      }
+
+      &__content {
+
+        h2 {
+          margin: 0;
+          margin-bottom: 20px;
+          font: 700 24px/30px $font;
+        }
+
+        p {
+          margin: 0;
+          margin-bottom: 25px;
+          font: 400 18px/30px $font;
+
+          &.last-of-block {
+            margin-bottom: 50px;
+          }
+        }
+
+        ul {
+          padding-bottom: 25px;
+        }
+
+        li {
+          margin: 0;
+          margin-bottom: 25px;
+          padding: 0;
+          padding-left: 35px;
+          font: 400 18px/30px $font;
+        }
+
+        blockquote {
+          margin: 0;
+          margin-bottom: 50px;
+          padding-left: 35px;
+          font: 400 18px/30px $font;
+        }
+      }
+    }
+
+    .page-navigation {
+      margin-bottom: 0;
+
+      &__wrapper {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .navigation-btn {
+
+      &--next {
+        margin-left: 20px;
+        order: 3;
+      }
+
+      &--prev {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  //////////////// form.html ///////////////////
+  .page-form {
+
+    &__block {
+      
+      /* контейнер с серым бордером */
+      .container {
+        position: relative;
+        margin: 0 40px;
+        padding: 0 58px;
+        border: 2px solid $gray;
+        border-radius: 3px;
+      }
+      
+      /* у блоков без бордера контейнер шире */
+      &--no-border {
+        padding-bottom: 0;
+
+        .container {
+          margin: 0;
+          margin-bottom: 12px;
+          padding: 0 40px;
+          border: none;
+        }
+      }
+      
+      /* распределение элементов в блоке дат */
+      &--dates {
+        position: relative;
+
+        .container {
+          display: flex;
+          padding-top: 45px;
+          padding-bottom: 20px;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+      }
+      
+      /* все блоки на странице имеют белый фон */
+      &--bg-gray {
+        background-color: $white;
+      }
+      
+      /* верхний паддинг контейнера в блоке попутчиков */
+      &--companions {
+
+        .container {
+          padding-top: 40px;
+        }
+      }
+
+      /* расположение элементов в блоке "отправить форму" */
+      &--submit {
+
+        .container {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    
+    /* заголовок формы и верхнего блока */
+    &__block-description {
+      font: 400 18px/30px $font;
+      
+      /* второй параграф заголовка */
+      &--2-line {
+        margin-bottom: 35px;
+      }
+      
+      /* первый параграф заголовка */
+      &--1-line {
+        margin-bottom: 0;
+        padding: 0 60px;
+      }
+    }
+
+    /* лейблы для текстовых инпутов сдвинуты влево с отступом */
+    &__text-input-label {
+      padding-left: 22px;
+      text-align: left;
+    }
+    
+    /* заголовки блоков в планшетной версии наезжают на бордер блока через pos: r */
+    &__block-title {
+      position: relative;
+      bottom: 9px;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 30px;
+      background-color: $white;
+      
+      /* заголовок блока длительности путешествия вынесен из контейнера, чтоб не вмешиваться в поток флекс-элементов */
+      &--absolute {
+        position: absolute;
+        top: 41px;
+        left: 45%;
+        margin: 0;
+        margin-left: -130px;
+        width: 260px;
+        height: 18px;
+        z-index: 100;
+      }
+
+      /* заголовок блока попутчиков ведет себя нестандартно, т.к. является лейблом текстового инпута */
+      &.page-form__text-input-title {
+        position: absolute;
+        top: -9px;
+        left: 45%;
+        margin-left: -130px;
+        width: 260px;
+        height: 18px;
+      }
+    }
+
+    /* обертка для инпута и его лейбла, потомок флексконтейнера */
+    &__label-input-wrapper {
+      width: 50%;
+    }
+  }
+  
+  /* кнопка отправить форму имеет половинную ширину */
+  .submit-form-btn {
+    width: 50%;
+  }
+
+  .images {
+    margin-right: -70px;
+  }
+
+  .image {
+    margin-right: 70px;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .delete-btn {
+    top: -27px;
+    right: -27px;
+    width: 51px;
+    height: 51px;
+
+    &:before {
+      top: 22px;
+      left: 11px;
+      width: 24px;
+      height: 2px;
+    }
+
+    &:after {
+      top: 22px;
+      left: 11px;
+      width: 24px;
+      height: 2px;
+    }
+
+    &:hover {
+
+      &:before {
+        top: 22px;
+        left: 11px;
+        width: 24px;
+        height: 2px;
+      }
+
+      &:after {
+        top: 22px;
+        left: 11px;
+        width: 24px;
+        height: 2px;
+      }
+    }
+
+    &:active {
+
+      &:before {
+        top: 22px;
+        left: 11px;
+        width: 24px;
+        height: 2px;
+      }
+
+      &:after {
+        top: 22px;
+        left: 11px;
+        width: 24px;
+        height: 2px;
+      }
     }
   }
 }

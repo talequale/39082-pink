@@ -19,7 +19,7 @@
 			background-color: $lightgray;
 		}
 
-		/* маргины для лейблов, которые идут после своих текстовых инпутов */
+		/* маргины для лейблов, которые идут после своих текстовых инпутов, блок "когда вы путешествовали" */
 		&--labels-to-bottom {
 	
 			label {
@@ -35,7 +35,7 @@
 		margin-bottom: 35px;
 	}
 
-	/* все лейблы на странице форм */
+	/* все лейблы на странице форм - блочные*/
 	label {
 		display: block;
 	}
@@ -56,7 +56,8 @@
 		text-transform: uppercase;
 		font: 400 14px/30px $font;
 		color: $purple;
-
+		
+		/* лейблы в таблице имен и никнеймов попутчиков сдвинуты влево с отступом */
 		&--companion-name {
 			padding-left: 20px;
 			text-align: left;
@@ -84,7 +85,8 @@
 			border: 2px solid $gray;
 			border-radius: 50%;
 		}
-
+		
+		/* кастомная радиокнопка при наведении */
 		&:hover {
 
 			&:before {
@@ -99,7 +101,8 @@
 				border-radius: 50%;
 			}
 		}
-
+		
+		/* кастомная радиокнопка при нажатии */
 		&:active {
 
 			&:before {
@@ -134,9 +137,13 @@
 		&:focus {
 			border: 2px solid $purple;
 		}
+
+		&:disabled {
+			border: 2px solid $gray;
+		}
 	}
 
-	/* все радиокнопки */
+	/* все стандартные радиокнопки скрыты*/
 	input[type="radio"] {
 		display: none;
 	}
@@ -151,16 +158,7 @@
 		color: $darkblue;
 	}
 
-	/* инпут с кнопками по бокам */
-	&__input-table {
-		margin-bottom: 16px;
-		width: 100%;
-		
-		&--companions {
-			margin-bottom: 79px;
-		}
-	}
-
+	/* пустые ячейки без бордера в таблице с именами и никнеймами попутчиков */
 	&__input-table-cell {
 		background-color: transparent;
 		
@@ -170,46 +168,10 @@
 			font-size: 18px;
 		}
 	}
-	
-	/* нулевой нижний маргин у инпутов с боковыми кнопками и бордер */
-	input[name="input-number"] {
-		margin-bottom: 0;
-		padding: 16px 20px 13px 20px;
-		border-top: 2px solid $gray;
-		border-bottom: 2px solid $gray;
-		border-left: none;
-		border-right: none;
-		border-radius: 0;
 
-		&:hover {
-			border-top: 2px solid $darkblue;
-			border-bottom: 2px solid $darkblue;
-			border-left: none;
-			border-right: none;
-		} 
-
-		&:focus {
-			border-top: 2px solid $purple;
-			border-bottom: 2px solid $purple;
-			border-left: none;
-			border-right: none;
-		} 
-	}
-
-	/* нестандартный нижний маргин у лейбла для инпута с числом попутчиков + псевдоэлемент на нем */
+	/* нестандартный нижний маргин у лейбла для инпута с числом попутчиков */
 	label[for="number-of-companions"] {
-		position: relative;
 		margin-bottom: 26px;
-
-		&:after {
-			content: "";
-			position: absolute;
-			top: 168px;
-			left: 0;
-			right: 0;
-			height: 2px;
-			background-color: $gray;
-		}
 	}
 	/* стили ячеек таблицы попутчиков с номерами */
 	&__companion-number {
@@ -250,7 +212,7 @@
 	}
 	
 
-	/* чекбоксы */
+	/* стандартные чекбоксы скрыты */
 	input[type="checkbox"] {
 		display: none;
 	}
@@ -276,7 +238,8 @@
 			border: 2px solid $gray;
 			border-radius: 2px;
 		}
-
+		
+		/* кастомный неотмеченный чекбокс при наведении */
 		&:hover {
 
 			&:before {
@@ -290,7 +253,8 @@
 				border-radius: 2px;
 			}
 		}
-
+		
+		/* кастомный неотмеченный чекбокс при нажатии */
 		&:active {
 
 			&:before {
@@ -311,7 +275,7 @@
 		position: relative;
 		margin-bottom: 70px;
 
-		/* серый разделитель под кнопкой */
+		/* серый разделитель под кнопкой загрузки файлов */
 		&:after {
 			content: "";
 			position: absolute;
@@ -324,7 +288,7 @@
 	}
 
 	/* кнопка загрузки файлов */
-	&__selectbutton {
+	&__select-button {
 		box-sizing: border-box;
 		margin: 0;
 		padding: 17px 0 12px 0;
@@ -336,7 +300,7 @@
 		border-radius: 3px;
 	}
 	
-	/* невидимый инпут для загрузки файлов */
+	/* невидимый инпут для загрузки файлов, лежащий поверх кнопки */
 	input[type="file"] {
 		position: absolute;
 		left: 0;
@@ -347,11 +311,13 @@
 		opacity: 0;
 		z-index: 1000;
 		cursor: pointer;
-
+		
+		/* при наведении на инпут кнопка меняет состояние */
 		&:hover ~ .page-form__selectbutton {
 			border: 2px solid $darkblue;
 		}
-
+		
+		/* при нажатии на инпут кнопка меняет состояние */
 		&:active ~ .page-form__selectbutton {
 			color: $white;
 			background-color: $darkblue;
@@ -363,7 +329,8 @@
 	&__footnote {
 		margin-bottom: 25px;
 		text-transform: uppercase;
-
+		
+		/* цвет звездочки в примечании */
 		span {
 			color: $purple;
 		}
