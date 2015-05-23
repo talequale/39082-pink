@@ -7,14 +7,14 @@
     background-image: url("../img/bg-header-phone.jpg");
     background-repeat: no-repeat;
     background-position: center -60px;
-    
+
     &__content {
       background-image: url("../img/bg-header__content-phone.png");
       background-repeat: no-repeat;
       background-position: right bottom;
     }
   }
-  
+
   /* фоновая картинка с улыбающимся смартфоном в блоке features на главной */
   .features {
     background-image: url("../img/bg-features-phone.png");
@@ -22,7 +22,7 @@
     background-size: 160px auto;
     background-position: center bottom -45px;
   }
-  
+
   /* блок research в мобильной версии скрыт */
   .research {
     display: none;
@@ -39,24 +39,24 @@
 
     &__first-col-tablet {
       display: none;
-    }    
+    }
   }
 
   .map-wrapper {
     height: 200px;
 
     /* двойной фон - карта и белый треугольник */
-    background-image: 
+    background-image:
       url("../img/bg-white-triangle.svg"),
       url("../img/bg-map.jpg");
-    background-repeat: 
+    background-repeat:
       no-repeat,
       no-repeat;
-    background-position: 
+    background-position:
       top center,
       bottom center;
-    background-size: 
-      100% auto, 
+    background-size:
+      100% auto,
       100% auto;
       overflow: hidden;
 
@@ -75,7 +75,7 @@
       border-radius: 50%;
     }*/
   }
-  
+
   /* текст про форму ниже в мобильной версии не виден */
   .page-form {
 
@@ -85,7 +85,7 @@
         display: none;
       }
     }
-    
+
     /* столбец с текстом "удалить" в таблице попутчиков не виден */
     &__col-delete {
       display: none;

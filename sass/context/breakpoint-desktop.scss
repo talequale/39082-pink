@@ -1,0 +1,456 @@
+@media (min-width: $breakpoint-tablet + 1) {
+
+  .container {
+    display: block;
+    margin: 0 auto;
+    width: 940px;
+  }
+
+  .page-header {
+    max-height: 850px;
+    background-image: 
+    url("../img/iphone-hand-desktop@1x.png"),
+    url("../img/bg-fullsize.jpg");
+    background-repeat: no-repeat;
+    background-size: 80%, cover;
+    background-position: bottom right 50px, bottom center;
+
+    /* переопределение паддингов в контейнере хедера */
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+      
+      /* контент в хедере сдвинут влево */
+      &--to-left {
+        float: left;
+        width: 300px;
+      }
+    }
+
+    /* паддинг контентной области хедера */
+    &__content {
+      padding-top: 115px;
+    }
+
+    &__title {
+      padding: 0 10px;
+      font: 300 50px/59px $font;
+      letter-spacing: 0.5px;
+
+      .index-page & {
+        margin-bottom: 49px;
+      }
+    }
+
+    /* кнопка меню спрятана */
+    .menu-toggle {
+      display: none;
+    }
+
+    /* переопределение ширины лого */
+    .logo {
+      width: auto;
+    }
+
+    /* позиционирование меню */
+    .mobile-menu {
+      position: static;
+      display: block;
+      float: right;
+      width: auto;
+      text-align: right;
+
+      /* пункты меню */
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+        background-color: transparent;
+      }
+      
+      /* стили ссылок в пунктах меню */
+      &__link {
+        position: relative;
+        margin: 0;
+        margin-left: 70px;
+        padding: 0;
+        padding-top: 8px;
+        text-transform: none;
+        font: 400 18px/18px $font;
+        border: none;
+
+        &:hover {
+          color: $white;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $white;
+          }
+        }
+
+        &:active {
+          opacity: 0.3;
+
+          &:after {
+            background-color: transparent;
+          }
+        }
+        
+        /* стили ссылки текущей страницы */
+        &--current {
+          opacity: 0.3;
+          cursor: default;
+
+          &:hover {
+
+            &:after {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .downloads {
+    padding-bottom: 123px;
+
+    &__btn {
+      margin-bottom: 65px;
+      max-width: 100%;
+      font: 700 21px/21px $font;
+    }
+
+    &__icons {
+      margin-bottom: 27px;
+    }
+  }
+
+  .information {
+    padding-top: 72px;
+
+    &__text {
+      font: 300 50px/59px $font;
+    }
+  }
+
+  .features {
+    padding-top: 0;
+    background-image: url("../img/bg-triangle--features.svg");
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center top -2px;
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .feature-item {
+    padding: 0 30px;
+    padding-top: 398px;
+    width: 300px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: left 14px top 36px;
+
+    &__title {
+      margin-bottom: 23px;
+      font: 700 30px/30px $font ;
+    }
+
+    &__description {
+      font: 400 18px/30px $font;
+    }
+
+    &--1 {
+      background-image: url("../img/iphone-screen-desktop-1@1x.png");
+    }
+
+    &--2 {
+      background-image: url("../img/iphone-screen-desktop-2@1x.png");
+    }
+
+    &--3 {
+      background-image: url("../img/iphone-screen-desktop-3@1x.png");
+    }
+  }
+
+  .research {
+    background-color: $lightgray;
+
+    .container {
+      position: relative;
+      padding-left: 0;
+      padding-bottom: 0;
+      padding-top: 124px;
+      min-height: 318px;
+      background-image: url(../img/timer.svg);
+      background-repeat: no-repeat;
+      background-size: 301px;
+      background-position: left 20px top 28px;
+
+      &:before {
+        content: "24";
+        position: absolute;
+        top: 102px;
+        left: 46px;
+        display: block;
+        padding-top: 24px;
+        width: 220px;
+        height: 196px;
+        text-align: center;
+        font: 700 120px/186.84px $font;
+        color: $purple;
+        background-color: $white;
+        border: 13px solid $purple;
+        border-radius: 50%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 19px;
+      padding-left: 385px;
+    }
+
+
+    &__content {
+      margin-bottom: 32px;
+      padding-left: 385px;
+      font: 400 18px/30px $font;
+    }
+
+
+    &__link {
+      padding-left: 385px;
+      font: 400 18px/30px $font;
+    }
+  }
+  
+  .reviews {
+    position: relative;
+
+    .control-labels {
+      display: none;
+    }
+  }
+
+  .review {
+    padding-top: 185px;
+
+    &__text {
+      position: relative;
+      margin-bottom: 37px;
+      padding-left: 130px;
+      padding-right: 130px;
+
+      &:before {
+        content: "“";
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        margin-left: -45px;
+        width: 90px;
+        height: 80px;
+        font: 400 240px/80px Georgia;
+        color: $lightgray;
+      }
+    }
+
+    &__author {
+      font: 700 24px/30px $font;
+    }
+
+    &__subtitle {
+      margin-bottom: 80px;
+      font: 400 18px/30px $font;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 211px;
+    width: 22px;
+    height: 42px;
+
+    &--left {
+      left: 42px;
+
+      &:hover {
+
+        &:before {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+
+        &:before {
+          opacity: 0.1;
+        }
+      }
+
+      &:before {
+        content: url("../img/review-arrow-left.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        opacity: 0.3;
+        z-index: 100;
+      }
+    }
+
+    &--right {
+      right: 42px;
+
+      &:hover {
+
+        &:before {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+
+        &:before {
+          opacity: 0.1;
+        }
+      }
+
+      &:before {
+        content: url("../img/review-arrow-right.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        opacity: 0.3;
+        z-index: 100;
+      }
+    }
+  }
+
+  .prices {
+    padding-bottom: 96px;
+
+    &__wrapper {
+      padding-left: 0;
+      padding-right: 0;
+      width: 940px;
+    }
+
+    &__title {
+      margin-bottom: 3px;
+      font: 700 18px/30px $font;
+    }
+
+    &__amount {
+      font: 300 24px/30px $font;
+    }
+
+    &__feature-cell {
+      padding-top: 15px;
+      padding-bottom: 13px;
+      padding-left: 20px;
+      font: 400 18px/30px $font;
+    }
+  }
+
+  .flag-hit__inner-wrapper {
+
+    /* флажок в заголовке таблицы */
+    &:before {
+      content: "";
+      position: absolute;
+      top: -67px;
+      left: -50.5px;
+      width: 46px;
+      height: 46px;
+      border-style: solid;
+      border-width: 28px;
+      border-color: transparent $purple transparent transparent;
+      transform: rotate(45deg);
+    }
+
+    /* текст на флажке */
+    &:after {
+      content: "хит";
+      position: absolute;
+      top: 3px;
+      left: 11px;
+      text-transform: uppercase;
+      font: 400 14px/14px $font;
+      color: $white;
+      transform: rotate(-45deg);
+      z-index: 100;
+    }
+  }
+
+  .footer-contacts {
+    padding-top: 70px;
+
+    &__title {
+      font: 300 50px/60px $font;
+
+      &--2 {
+        margin-bottom: 55px;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__wrapper {
+      width: 33%;
+
+      &--title {
+        width: 100%;
+        order: 1;
+      }
+
+      &--phone {
+        order: 2;
+      }
+
+      &--address {
+        order: 3;
+
+        .footer-contacts__information {
+          padding: 0 30px;
+        }
+      }
+
+      &--email {
+        order: 4;
+      }
+    }
+
+    &__paragraph {
+      margin-bottom: 25px;
+    }
+
+    &__information {
+
+      &--last-line {
+        margin-bottom: 0;
+      }
+    }
+
+    .map-wrapper {
+      height: 520px;
+    }
+  }
+}
+
