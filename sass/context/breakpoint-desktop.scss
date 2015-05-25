@@ -15,7 +15,7 @@
         url("../img/bg-fullsize.jpg");
       background-repeat: no-repeat;
       background-size: 1050px, cover;
-      background-position: bottom right, bottom center;
+      background-position: 65% bottom, bottom center;
     }
 
     /* переопределение паддингов в контейнере хедера */
@@ -147,7 +147,7 @@
     background-image: url("../img/bg-triangle--features.svg");
     background-repeat: no-repeat;
     background-size: 105%;
-    background-position: center top -2px;
+    background-position: center -4px;
 
     .container {
       display: flex;
@@ -284,6 +284,7 @@
     top: 211px;
     width: 22px;
     height: 42px;
+    font-size: 0;
 
     &--left {
       left: 42px;
@@ -609,10 +610,10 @@
       background-position: top center;
 
       &__title {
-        padding-left: 185px;
-        padding-right: 185px;
+        margin: 0 auto;
         padding-top: 68px;
         padding-bottom: 95px;
+        width: 750px;
         line-height: 60px;
       }
     }
@@ -670,7 +671,7 @@
     &__block-description {
       display: none;
 
-      &--1-line {
+      &--first-line {
         position: relative;
         display: block;
         margin-bottom: 65px;

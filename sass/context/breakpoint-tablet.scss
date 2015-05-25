@@ -122,7 +122,7 @@
       padding: 0;
       font: 300 40px/44px $font;
 
-      &--2nd-line {
+      &--second-line {
         padding: 0 140px;
       }
     }
@@ -232,6 +232,11 @@
       display: block;
       bottom: 65px;
     }
+  }
+
+  .arrow {
+    display: none;
+    font-size: 0;
   }
   /* переключение слайдов */
 
@@ -773,12 +778,12 @@
       font: 400 18px/30px $font;
 
       /* второй параграф заголовка */
-      &--2-line {
+      &--second-line {
         margin-bottom: 35px;
       }
 
       /* первый параграф заголовка */
-      &--1-line {
+      &--first-line {
         margin-bottom: 0;
         padding: 0 60px;
       }
@@ -921,15 +926,15 @@
     height: 51px;
 
     &:before {
-      top: 22px;
-      left: 11px;
+      top: 24px;
+      left: 13px;
       width: 24px;
       height: 2px;
     }
 
     &:after {
-      top: 22px;
-      left: 11px;
+      top: 24px;
+      left: 13px;
       width: 24px;
       height: 2px;
     }
@@ -937,15 +942,15 @@
     &:hover {
 
       &:before {
-        top: 22px;
-        left: 11px;
+        top: 24px;
+        left: 13px;
         width: 24px;
         height: 2px;
       }
 
       &:after {
-        top: 22px;
-        left: 11px;
+        top: 24px;
+        left: 13px;
         width: 24px;
         height: 2px;
       }
@@ -954,15 +959,15 @@
     &:active {
 
       &:before {
-        top: 22px;
-        left: 11px;
+        top: 24px;
+        left: 13px;
         width: 24px;
         height: 2px;
       }
 
       &:after {
-        top: 22px;
-        left: 11px;
+        top: 24px;
+        left: 13px;
         width: 24px;
         height: 2px;
       }

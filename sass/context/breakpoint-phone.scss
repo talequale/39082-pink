@@ -28,6 +28,11 @@
     display: none;
   }
 
+  .arrow {
+    display: none;
+    font-size: 0;
+  }
+
   .review {
 
     &__subtitle {
@@ -58,22 +63,7 @@
     background-size:
       100% auto,
       100% auto;
-      overflow: hidden;
-
-    /* маркер карты */
-    /*&:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -18px;
-      margin-left: -18px;
-      width: 16px;
-      height: 16px;
-      background-color: $purple;
-      border: 10px solid $white;
-      border-radius: 50%;
-    }*/
+    overflow: hidden;
   }
 
   /* текст про форму ниже в мобильной версии не виден */
@@ -89,7 +79,7 @@
 
     &__block-description {
 
-      &--2-line {
+      &--second-line {
         display: none;
       }
     }
@@ -104,6 +94,13 @@
       &--desktop {
         display: none;
       }
+    }
+  }
+
+  .index-page {
+
+    .page-footer {
+      display: none;
     }
   }
 }
