@@ -57,9 +57,9 @@
 
 
 			<!-- белый фон, нет рамки в планшетной версии -->
-			<div class="page-form__block  page-form__block--bg-white  page-form__block--no-border">
+			<div class="page-form__block  page-form__block--bg-white  page-form__block--no-border  page-form__block--first-block">
 
-				<div class="container">
+				<div class="container container--first-block">
 
 					<p class="page-form__block-description  page-form__block-description--1-line">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
 					<p class="page-form__block-description  page-form__block-description--2-line">Пожалуйста, заполните форму ниже:</p>
@@ -78,13 +78,13 @@
 			</div>
 
 
-		
+
 			<!-- серый фон -->
-			<div class="page-form__block  page-form__block--bg-gray">
+			<div class="page-form__block  page-form__block--bg-gray  page-form__block--app-block">
 
-				<div class="container">
+				<div class="container  container--app-block">
 
-					<h2 class="page-form__block-title">С каким приложением путешествовали?</h2>
+					<h2 class="page-form__block-title  page-form__block-title--app-block">С каким приложением путешествовали?</h2>
 
 					<input type="radio" id="ios" name="platform" checked>
 					<label for="ios" class="page-form__radiobutton-label">Pink для iOS</label>
@@ -103,17 +103,17 @@
 
 			<!-- белый фон -->
 			<div class="page-form__block  page-form__block--bg-white  page-form__block--labels-to-bottom  page-form__block--dates">
-			
-				<h2 class="page-form__block-title  page-form__block-title--absolute">Когда вы путешествовали? *</h2>
-				<div class="container">
 
-					
-					
+				<h2 class="page-form__block-title  page-form__block-title--absolute  page-form__block-title--dates">Когда вы путешествовали? *</h2>
+				<div class="container  container--dates">
+
+
+
 					<div class="page-form__label-input-wrapper">
 						<input type="text" id="departure-date" name="departure-date" placeholder="1 апреля 2015" required>
-						<label for="departure-date" class="page-form__text-input-label">Дата выезда</label>
+						<label for="departure-date" class="page-form__text-input-label  page-form__text-input-label--dates">Дата выезда</label>
 					</div>
-					
+
 					<!-- инпут с кнопками -->
 					<div class="page-form__label-input-wrapper">
 						<div class="page-form__input-table">
@@ -121,12 +121,12 @@
 							<input type="text" id="trip-length" name="input-number" placeholder="10 дней" required>
 							<button class="increase-btn">+</button>
 						</div>
-						<label for="trip-length" class="page-form__text-input-label">Продолжительность</label>
+						<label for="trip-length" class="page-form__text-input-label  page-form__text-input-label--dates">Продолжительность</label>
 					</div>
 
 					<div class="page-form__label-input-wrapper">
 						<input type="text" id="return-date" name="return-date" placeholder="15 апреля 2015" disabled>
-						<label for="return-date" class="page-form__text-input-label">Дата возвращения</label>
+						<label for="return-date" class="page-form__text-input-label  page-form__text-input-label--dates">Дата возвращения</label>
 					</div>
 
 			</div>
@@ -136,21 +136,23 @@
 
 		<!-- серый фон -->
 		<div class="page-form__block  page-form__block--bg-gray  page-form__block--companions">
-			
-			<div class="container">
+
+			<div class="container  container--companions">
 
 				<!-- лейбл для инпута с кнопками в блоке попутчиков, он же заголовок всего блока -->
-				<label for="number-of-companions" class="page-form__text-input-title  page-form__block-title">Количество попутчиков *</label>
+				<label for="number-of-companions" class="page-form__text-input-title  page-form__block-title  page-form__block-title--companions">Количество попутчиков *</label>
 
 				<!-- инпут с кнопками в блоке попутчиков -->
 				<div class="page-form__label-input-wrapper  page-form__label-input-wrapper--companions">
-					<div class="page-form__input-table">	
+					<div class="page-form__input-table">
 						<button class="decrease-btn">&mdash;</button>
 						<input type="text" id="number-of-companions" name="input-number" placeholder="2 чел" required>
 						<button class="increase-btn">+</button>
 					</div>
 				</div>
 
+
+				<!-- в десктопной версии блок не виден -->
 				<div class="page-form__table-wrapper  page-form__table-wrapper--companion-1">
 					<table class="page-form__table">
 						<tr>
@@ -217,16 +219,79 @@
 					</table>
 				</div>
 
+				<!-- версия для десктопа -->
+				<div class="page-form__table-wrapper  page-form__table-wrapper--desktop">
+
+					<table class="page-form__table">
+
+						<tr>
+							<th class="page-form__companion-number">№</th>
+							<th>
+								<label for="name-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Имя: *</label>
+							</th>
+							<th>
+								<label for="nickname-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Прозвище:</label>
+							</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td class="page-form__input-table-cell  page-form__input-table-cell--button">
+								<p class="page-form__companion">1</p>
+							</td>
+							<td>
+								<input type="text" id="name-3" name="input-companion" placeholder="Введите ваше имя" required>
+							</td>
+							<td>
+								<input type="text" id="nickname-3" name="nickname" placeholder="Ну как же без этого!">
+							</td>
+							<td class="page-form__col-delete">
+								<a href="#" class="page-form__col-delete-link">Удалить</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="page-form__table-wrapper  page-form__table-wrapper--desktop">
+
+					<table class="page-form__table">
+
+						<tr>
+							<th class="page-form__companion-number">№</th>
+							<th>
+								<label for="name-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Имя: *</label>
+							</th>
+							<th>
+								<label for="nickname-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Прозвище:</label>
+							</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td class="page-form__input-table-cell  page-form__input-table-cell--button">
+								<p class="page-form__companion">1</p>
+							</td>
+							<td>
+								<input type="text" id="name-4" name="input-companion" placeholder="Введите ваше имя" required>
+							</td>
+							<td>
+								<input type="text" id="nickname-4" name="nickname" placeholder="Ну как же без этого!">
+							</td>
+							<td class="page-form__col-delete">
+								<a href="#" class="page-form__col-delete-link">Удалить</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+
 			</div>
 
 		</div>
 
 		<!-- белый фон -->
-		<div class="page-form__block  page-form__block--bg-white">
+		<div class="page-form__block  page-form__block--bg-white  page-form__block--achievements">
 
-			<div class="container">
+			<div class="container  container--achievements">
 
-				<h2 class="page-form__block-title">Ваши безбашенные достижения в путешествии</h2>
+				<h2 class="page-form__block-title  page-form__block-title--achievements">Ваши безбашенные достижения в путешествии</h2>
 
 				<input type="checkbox" id="selfie-shark" checked>
 				<label class="page-form__checkbox-label" for="selfie-shark">Сделал селфи с акулой</label>
@@ -245,7 +310,7 @@
 
 				<input type="checkbox" id="ruined-hotel">
 				<label class="page-form__checkbox-label" for="ruined-hotel">Разгромил отель</label>
-	
+
 			</div>
 
 		</div>
@@ -254,9 +319,9 @@
 		<div class="page-form__block  page-form__block--bg-gray  page-form__block--upload">
 
 			<h2 class="page-form__block-title  page-form__block-title--upload">Ваши фотографии из поездки *</h2>
-			
-			<div class="container">
-				
+
+			<div class="container  container--upload">
+
 				<div class="page-form__fileform">
 					<input type="file" id="upload-images-btn" name="upload-images-btn">
 					<div class="page-form__select-button">Загрузить фото</div>
@@ -319,11 +384,41 @@
 		<!-- белый фон -->
 		<div class="page-form__block  page-form__block--bg-white  page-form__block--no-border  page-form__block--submit">
 
-			<div class="container">
-				
+			<div class="container  container--submit">
+
 				<button class="submit-form-btn" type="submit" id="submit-btn">Отправить форму</button>
 
-				<p class="page-form__footnote"><span>*</span> &mdash; обязательные поля</p>
+				<p class="page-form__footnote"><span>*</span> &mdash; обязательные <span class="hidden-text">для заполнения</span> поля</p>
+
+			</div>
+
+			<div class="success-pop-up">
+
+				<div class="success-pop-up__block">
+					<div class="success-pop-up__wrapper">
+						<h3 class="success-pop-up__title">Ваша заявка отправлена</h3>
+						<p class="success-pop-up__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+					</div>
+				</div>
+
+				<div class="success-pop-up__block  success-pop-up__block--bg-gray">
+					<div class="success-pop-up__wrapper  success-pop-up__wrapper--close-btn">
+						<a href="#" class="success-pop-up__close-btn">Закрыть окно</a>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="failure-pop-up">
+
+				<div class="failure-pop-up__block">
+					<div class="failure-pop-up__wrapper">
+						<h3 class="failure-pop-up__title">Что-то пошло не так!</h3>
+						<p class="failure-pop-up__description">Проверьте поля, выделенные красным, скорее всего, вы забыли их заполнить.</p>
+						<a href="#" class="failure-pop-up__close-btn">Ок</a>
+					</div>
+				</div>
 
 			</div>
 
@@ -337,18 +432,18 @@
 
 
 	<footer class="page-footer">
-		
+
 		<div class="container">
 
 			<div class="logo  logo--footer">
-				
+
 				<p class="logo__text">
 					<a href="index.html" class="logo__link--footer">
 						<img class="logo__image" src="img/logo__image.png" width="59" height="40" alt="">Pink
 					</a>
 				</p>
 			</div>
-			
+
 			<div class="social-btns">
 				<a href="#" class="social-btn  social-btn__twitter-btn">Twitter</a>
 				<a href="#" class="social-btn  social-btn__facebook-btn">Facebook</a>
@@ -358,7 +453,7 @@
 			<div class="copyright">
 				<p class="copyright__text">Разработано</p>
 				<a href="https://htmlacademy.ru/" class="copyright__link">HTML Academy</a>
-				
+
 			</div>
 
 		</div>

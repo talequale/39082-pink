@@ -79,6 +79,14 @@
   /* текст про форму ниже в мобильной версии не виден */
   .page-form {
 
+
+    &__footnote {
+
+      span.hidden-text {
+        display: none;
+      }
+    }
+
     &__block-description {
 
       &--2-line {
@@ -89,6 +97,13 @@
     /* столбец с текстом "удалить" в таблице попутчиков не виден */
     &__col-delete {
       display: none;
+    }
+
+    &__table-wrapper {
+
+      &--desktop {
+        display: none;
+      }
     }
   }
 }

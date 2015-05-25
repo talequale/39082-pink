@@ -19,15 +19,6 @@
 			background-color: $lightgray;
 		}
 
-		/* маргины для лейблов, которые идут после своих текстовых инпутов, блок "когда вы путешествовали" */
-		&--labels-to-bottom {
-
-			label {
-				margin-top: -8px;
-				margin-bottom: 16px;
-			}
-		}
-
 		&--upload {
 
 			/* o:h прячет отрицательный правый маргин у контейнера с картинками, компенсирующий правый маргин у последней картинки в ряду */
@@ -69,6 +60,11 @@
 		&--companion-name {
 			padding-left: 20px;
 			text-align: left;
+		}
+
+		&--dates {
+			margin-top: -8px;
+			margin-bottom: 16px;
 		}
 	}
 
@@ -385,6 +381,13 @@ input[type="checkbox"]:checked + label {
 		border-left: 3px solid $purple;
 		border-bottom: 3px solid $purple;
 		transform: rotate(-45deg);
+	}
+
+	&__table-wrapper {
+
+		&--desktop {
+			display: none;
+		}
 	}
 }
 

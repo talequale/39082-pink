@@ -474,7 +474,8 @@
     text-align: right;
 
     &__text {
-      margin-bottom: 0;
+      margin: 0;
+      margin-right: 15px;
     }
   }
 
@@ -690,6 +691,14 @@
   //////////////// form.html ///////////////////
   .page-form {
 
+
+    &__footnote {
+
+      span.hidden-text {
+        display: none;
+      }
+    }
+
     &__block {
 
       /* контейнер с серым бордером */
@@ -851,6 +860,10 @@
           height: 2px;
           background-color: $gray;
         }
+      }
+
+      &--desktop {
+        display: none;
       }
     }
 
