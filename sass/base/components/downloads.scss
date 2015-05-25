@@ -14,7 +14,7 @@
     font: 700 18px/22px $font;
     color: $white;
     border: 3px solid $white;
-    border-radius: 37px; 
+    border-radius: 37px;
 
     &:hover {
       background-color: $white;
@@ -29,7 +29,7 @@
 
   /* контейнер с иконками платформ */
   &__icons {
-    margin-right: -36px;
+    margin-right: -31px;
     margin-bottom: 22px;
   }
 
@@ -37,7 +37,7 @@
   &__icon {
     display: inline-block;
     vertical-align: bottom;
-    margin-right: 36px;
+    margin-right: 31px;
   }
 
   /* текст под кнопкой "скачать приложение" */
@@ -46,7 +46,7 @@
     padding: 0 20px;
     font: 300 14px/24px $font;
   }
-  
+
   /* o:h прячет отрицательный правый маргин у контейнера с картинками, компенсирующий правый маргин у последней картинки в ряду */
   .container {
     overflow: hidden;

@@ -30,6 +30,8 @@
 @import "base/components/page-form.scss"; /* форма на странице конкурса */
 @import "base/components/images.scss"; /* галерея картинок */
 @import "base/components/input-with-buttons.scss"; /* инпут с кнопками плюс и минус */
+@import "base/components/success-pop-up.scss"; /* модальное окно успешной отправки */
+@import "base/components/failure-pop-up.scss"; /* модальное окно неуспешной отправки */
 
 
 
@@ -42,6 +44,7 @@
 
 @import "context/breakpoint-phone.scss"; /* медиавыражения для мобильной версии */
 @import "context/breakpoint-tablet.scss"; /* медиавыражения для планшетной версии */
+@import "context/breakpoint-desktop.scss"; /* медиавыражения для планшетной версии */
 
 
 

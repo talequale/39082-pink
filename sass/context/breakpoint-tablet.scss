@@ -1,31 +1,31 @@
-@media (min-width: $breakpoint-phone + 1) and (max-width: $breakpoint-tablet) {
-  
+@media (min-width: $breakpoint-phone + 1) {
+
   /* в планшетной версии паддинг центровщика 40пх */
   .container {
     display: block;
     margin: 0 auto;
     padding: 0 40px;
   }
-    
+
   /* кнопка мобильного меню перемещается на 20пх по сравнению с моб.версией */
-  .menu-toggle { 
+  .menu-toggle {
     right: 40px;
 
     &--active {
       right: 40px;
     }
   }
-  
+
   /* логотип в хедере главной*/
   .logo__link {
     position: relative;
     padding-left: 70px;
-    
+
     /* белый логотип в обычном состоянии */
     &:before {
       content: url("../img/logo__image--white.png");
       position: absolute;
-      bottom: 0;
+      bottom: -1px;
       left: 0;
     }
 
@@ -36,7 +36,7 @@
         content: url("../img/logo__image.png");
       }
     }
-    
+
     /* полупрозрачный белый логотип при нажатии */
     &:active {
       &:before {
@@ -48,7 +48,7 @@
   /* фоны хедера */
   .page-header {
     max-height: 770px;
-    background-image: 
+    background-image:
       url("../img/bg-header__content-tablet.png"),
       url("../img/bg-header-tablet.jpg");
     background-repeat: no-repeat;
@@ -62,18 +62,18 @@
         padding: 39px 0px 34px;
       }
     }
-    
+
     /* заголовок в хедере */
     &__title {
       padding: 0 60px;
       font: 300 40px/44px $font;
     }
-    
+
     /* контейнер сдвигает контент хедера влево */
     .container {
       padding-right: 50%;
     }
-    
+
     /* убирается фиксированная высота контента */
     &__content {
       padding: 0;
@@ -81,7 +81,7 @@
       height: auto;
     }
   }
-  
+
   /* маргин заголовка на главной */
   .index-page {
 
@@ -112,7 +112,7 @@
       font: 300 18px/24px $font;
     }
   }
-  
+
   /* блок information */
   .information {
     padding: 55px 0 35px 0;
@@ -122,7 +122,7 @@
       padding: 0;
       font: 300 40px/44px $font;
 
-      &--2nd-line {
+      &--second-line {
         padding: 0 140px;
       }
     }
@@ -131,12 +131,16 @@
   /* блок features */
   .features {
     padding: 85px 0 1px 0;
-    background-image: 
+
+    @media (max-width: $breakpoint-tablet) {
+
+      background-image:
       url(../img/bg-features-phone--tablet.png),
       url("../img/bg-triangle--features.svg");
-    background-repeat: no-repeat;
-    background-size: 268px auto, 105%;
-    background-position: left 40px top 5px, center -1px;
+      background-repeat: no-repeat;
+      background-size: 268px auto, 105%;
+      background-position: left 40px top 5px, center -1px;
+    }
 
     .container {
       padding-left: 50%;
@@ -149,26 +153,29 @@
     position: relative;
     display: block;
     min-height: 360px;
-    background-image: url(../img/bg-research-diagram.png);
-    background-repeat: no-repeat;
-    background-position: left 40px top 50px;
+    @media (max-width: $breakpoint-tablet) {
+      background-image: url(../img/timer.svg);
+      background-repeat: no-repeat;
+      background-size: 262px;
+      background-position: left 40px top 50px;
 
-    &:before {
-      content: "24";
-      position: absolute;
-      top: 114px;
-      left: 64px;
-      display: block;
-      padding-top: 20px;
-      width: 193px;
-      height: 173px;
-      font: 700 104.6px/162.87px $font;
-      color: $purple;
-      background-color: $white;
-      border: 11px solid $purple;
-      border-radius: 50%;
+      &:before {
+        content: "24";
+        position: absolute;
+        top: 114px;
+        left: 64px;
+        display: block;
+        padding-top: 20px;
+        width: 193px;
+        height: 173px;
+        font: 700 104.6px/162.87px $font;
+        color: $purple;
+        background-color: $white;
+        border: 11px solid $purple;
+        border-radius: 50%;
+      }
     }
-    
+
     /* паддинг сдвигает содержимое контейнера вправо */
     .container {
       padding-top: 95px;
@@ -204,12 +211,12 @@
       }
     }
   }
-  
+
   /* прячутся контролы прайса */
   .control-labels {
     display: none;
   }
-  
+
   /* слайдер с отзывами */
   .reviews {
     background-image: url("../img/bg-gray-triangle.svg");
@@ -226,18 +233,23 @@
       bottom: 65px;
     }
   }
+
+  .arrow {
+    display: none;
+    font-size: 0;
+  }
   /* переключение слайдов */
 
-  #review-1:checked ~ .slide-1 { 
+  #review-1:checked ~ .slide-1 {
     display: flex;
   }
-  #review-2:checked ~ .slide-2 { 
+  #review-2:checked ~ .slide-2 {
     display: flex;
   }
-  #review-3:checked ~ .slide-3 { 
+  #review-3:checked ~ .slide-3 {
     display: flex;
   }
-  
+
   /* в слайде отзыва меняется порядок абзцев */
   .review {
     flex-direction: column;
@@ -267,7 +279,7 @@
   .prices {
     padding-top: 35px;
     padding-bottom: 70px;
-    
+
     /* обертка таблицы */
     &__wrapper {
       box-sizing: border-box;
@@ -275,7 +287,7 @@
       margin: 0 auto;
       padding: 0 40px;
     }
-    
+
     /* таблица */
     &__table {
       margin: 0;
@@ -286,7 +298,7 @@
     &__feature {
       display: none;
     }
-    
+
     /* новый отдельный столбец с features */
     &__feature-cell {
       display: block;
@@ -297,7 +309,7 @@
     /* выравнивание ширины столбцов */
     th {
       width: 25%;
-      
+
       /* прозрачная первая ячейка */
       &.prices__first-col-tablet {
         background-color: transparent;
@@ -319,7 +331,7 @@
       margin-left: -15px;
     }
   }
-  
+
   /* внутренняя обертка ячейки с флажком */
   .flag-hit__inner-wrapper {
 
@@ -372,17 +384,17 @@
       height: 380px;
 
       /* двойной фон - карта и белый треугольник */
-      background-image: 
-        url("../img/bg-white-triangle.svg"),
+      background-image:
+        url("../img/triangle-white-footer.svg"),
         url("../img/bg-map--tablet.jpg");
-      background-repeat: 
+      background-repeat:
         no-repeat,
         no-repeat;
-      background-position: 
+      background-position:
         top center,
         center bottom 30%;
-      background-size: 
-        100% auto, 
+      background-size:
+        100% auto,
         100% auto;
       overflow: hidden;
 
@@ -440,7 +452,7 @@
   .logo {
     width: 29.5%;
     text-align: left;
-    
+
     &__text {
       padding: 0;
     }
@@ -452,12 +464,13 @@
 
   .social-btns {
     display: flex;
-    justify-content: space-around;
-    margin: 0;
+    justify-content: center;
+    margin-right: -13px;
+    margin-bottom: 0;
     width: 29.5%;
 
     .social-btn {
-      margin: 0;
+      margin-right: 13px;
     }
   }
 
@@ -466,7 +479,8 @@
     text-align: right;
 
     &__text {
-      margin-bottom: 0;
+      margin: 0;
+      margin-right: 15px;
     }
   }
 
@@ -485,7 +499,7 @@
     }
   }
 
-  .pink-post { 
+  .pink-post {
 
     .page-header {
       background-image: url("../img/bg-header-tablet.jpg");
@@ -514,7 +528,7 @@
   }
 
   //////////////// blog.html ///////////////////
-  
+
   /* изменение верхнего паддинга контейнера записей */
   .page-content {
     padding-top: 95px;
@@ -550,7 +564,7 @@
       }
     }
   }
-  
+
   /* блок пагинации на странице блога */
   .pagination {
     display: block;
@@ -577,7 +591,7 @@
       }
     }
   }
-  
+
 
   //////////////// post.html ///////////////////
   /* стили записи на странице поста */
@@ -682,8 +696,16 @@
   //////////////// form.html ///////////////////
   .page-form {
 
+
+    &__footnote {
+
+      span.hidden-text {
+        display: none;
+      }
+    }
+
     &__block {
-      
+
       /* контейнер с серым бордером */
       .container {
         position: relative;
@@ -692,7 +714,7 @@
         border: 2px solid $gray;
         border-radius: 3px;
       }
-      
+
       /* у блоков без бордера контейнер шире */
       &--no-border {
         padding-bottom: 0;
@@ -704,7 +726,7 @@
           border: none;
         }
       }
-      
+
       /* распределение элементов в блоке дат */
       &--dates {
         position: relative;
@@ -717,12 +739,12 @@
           justify-content: space-between;
         }
       }
-      
+
       /* все блоки на странице имеют белый фон */
       &--bg-gray {
         background-color: $white;
       }
-      
+
       /* верхний паддинг контейнера в блоке попутчиков */
       &--companions {
 
@@ -750,18 +772,18 @@
         }
       }
     }
-    
+
     /* заголовок формы и верхнего блока */
     &__block-description {
       font: 400 18px/30px $font;
-      
+
       /* второй параграф заголовка */
-      &--2-line {
+      &--second-line {
         margin-bottom: 35px;
       }
-      
+
       /* первый параграф заголовка */
-      &--1-line {
+      &--first-line {
         margin-bottom: 0;
         padding: 0 60px;
       }
@@ -772,7 +794,7 @@
       padding-left: 22px;
       text-align: left;
     }
-    
+
     /* заголовки блоков в планшетной версии наезжают на бордер блока через pos: r */
     &__block-title {
       position: relative;
@@ -781,7 +803,7 @@
       vertical-align: middle;
       padding: 0 30px;
       background-color: $white;
-      
+
       /* заголовок блока длительности путешествия вынесен из контейнера, чтоб не вмешиваться в поток флекс-элементов */
       &--absolute {
         position: absolute;
@@ -803,7 +825,7 @@
         width: 260px;
         height: 18px;
       }
-      
+
 
       /* абсолютно позиционированный заголовок блока "загрузить файлы" */
       &--upload {
@@ -821,7 +843,7 @@
     /* обертка для инпута и его лейбла, потомок флексконтейнера */
     &__label-input-wrapper {
       width: 46%;
-      
+
       /* нижний маргин у инпута с кнопками в блоке попутчиков */
       &--companions {
         margin-bottom: 70px;
@@ -844,6 +866,10 @@
           background-color: $gray;
         }
       }
+
+      &--desktop {
+        display: none;
+      }
     }
 
     /* отступ средней ячейки в таблице попутчиков */
@@ -851,7 +877,7 @@
       margin-left: 20px;
       border-radius: 3px;
     }
-    
+
     /* отступ средней ячейки в таблице попутчиков */
     input[name="nickname"] {
       margin-left: 20px;
@@ -870,7 +896,7 @@
       }
     }
   }
-  
+
   /* кнопка отправить форму имеет половинную ширину */
   .submit-form-btn {
     width: 50%;
@@ -884,14 +910,14 @@
   /* маргин у картинок */
   .image {
     margin-right: 70px;
-    
+
     /* размер картинок в планшетной версии больше */
     img {
       width: 120px;
       height: 120px;
     }
   }
-  
+
   /* кнопка удалить картинку */
   .delete-btn {
     top: -27px;
@@ -900,15 +926,15 @@
     height: 51px;
 
     &:before {
-      top: 22px;
-      left: 11px;
+      top: 24px;
+      left: 13px;
       width: 24px;
       height: 2px;
     }
 
     &:after {
-      top: 22px;
-      left: 11px;
+      top: 24px;
+      left: 13px;
       width: 24px;
       height: 2px;
     }
@@ -916,15 +942,15 @@
     &:hover {
 
       &:before {
-        top: 22px;
-        left: 11px;
+        top: 24px;
+        left: 13px;
         width: 24px;
         height: 2px;
       }
 
       &:after {
-        top: 22px;
-        left: 11px;
+        top: 24px;
+        left: 13px;
         width: 24px;
         height: 2px;
       }
@@ -933,15 +959,15 @@
     &:active {
 
       &:before {
-        top: 22px;
-        left: 11px;
+        top: 24px;
+        left: 13px;
         width: 24px;
         height: 2px;
       }
 
       &:after {
-        top: 22px;
-        left: 11px;
+        top: 24px;
+        left: 13px;
         width: 24px;
         height: 2px;
       }
@@ -949,5 +975,5 @@
   }
 }
 
-  
+
 

@@ -1,17 +1,17 @@
 .page-form {
 	font: 400 14px/30px $font;
 	color: $darkblue;
-	
+
 	/* отдельные блоки формы */
 	&__block {
-		
+
 		/* блок с белым фоном */
 		&--bg-white {
 			padding-bottom: 27px;
 			padding-top: 50px;
 			background-color: $white;
 		}
-		
+
 		/* блок с серым фоном */
 		&--bg-gray {
 			padding-top: 37px;
@@ -19,17 +19,8 @@
 			background-color: $lightgray;
 		}
 
-		/* маргины для лейблов, которые идут после своих текстовых инпутов, блок "когда вы путешествовали" */
-		&--labels-to-bottom {
-	
-			label {
-				margin-top: -8px;
-				margin-bottom: 16px;
-			}
-		}
-		
 		&--upload {
-			
+
 			/* o:h прячет отрицательный правый маргин у контейнера с картинками, компенсирующий правый маргин у последней картинки в ряду */
 			.container {
 				overflow: hidden;
@@ -47,7 +38,7 @@
 	label {
 		display: block;
 	}
-	
+
 	/* заголовки блоков. lh в двухстрочных заголовках равен 18, в однострочных 30. изменила все на 18 */
 	&__block-title {
 		margin: 0;
@@ -64,11 +55,16 @@
 		text-transform: uppercase;
 		font: 400 14px/30px $font;
 		color: $purple;
-		
+
 		/* лейблы в таблице имен и никнеймов попутчиков сдвинуты влево с отступом */
 		&--companion-name {
 			padding-left: 20px;
 			text-align: left;
+		}
+
+		&--dates {
+			margin-top: -8px;
+			margin-bottom: 16px;
 		}
 	}
 
@@ -93,7 +89,7 @@
 			border: 2px solid $gray;
 			border-radius: 50%;
 		}
-		
+
 		/* кастомная радиокнопка при наведении */
 		&:hover {
 
@@ -109,7 +105,7 @@
 				border-radius: 50%;
 			}
 		}
-		
+
 		/* кастомная радиокнопка при нажатии */
 		&:active {
 
@@ -169,7 +165,7 @@
 	/* пустые ячейки без бордера в таблице с именами и никнеймами попутчиков */
 	&__input-table-cell {
 		background-color: transparent;
-		
+
 		/* фиксированная ширина для ячеек с кнопками */
 		&--button {
 			width: 63px;
@@ -187,7 +183,7 @@
 		font: 400 14px/30px $font;
 		color: $purple;
 	}
-	
+
 	/* таблица с именами попутчиков */
 	&__table {
 		margin-bottom: 22px;
@@ -210,7 +206,7 @@
 		border-right: none;
 		border-radius: 3px 0 0 3px;
 	}
-	
+
 	/* колонка таблицы попутчиков с текстом "удалить", невидимая в мобильной версии */
 	&__col-delete {
 		width: 116px;
@@ -219,6 +215,11 @@
 		font: 400 14px/30px $font;
 	}
 
+  &__col-delete-link {
+    text-decoration: none;
+    color: $darkblue;
+  }
+
 	/* нулевой нижний маргин у инпутов в таблице с попутчиками. и бордер */
 	input[name="input-companion"] {
 		margin-bottom: 0;
@@ -226,7 +227,7 @@
 		border: 2px solid $gray;
 		border-radius: 0 3px 3px 0;
 	}
-	
+
 
 	/* стандартные чекбоксы скрыты */
 	input[type="checkbox"] {
@@ -242,7 +243,7 @@
 		padding-left: 60px;
 		text-align: left;
 		font: 400 18px/30px $font;
-		
+
 		/* кастомный неотмеченный чекбокс */
 		&:before {
 			content: "";
@@ -254,7 +255,7 @@
 			border: 2px solid $gray;
 			border-radius: 2px;
 		}
-		
+
 		/* кастомный неотмеченный чекбокс при наведении */
 		&:hover {
 
@@ -269,7 +270,7 @@
 				border-radius: 2px;
 			}
 		}
-		
+
 		/* кастомный неотмеченный чекбокс при нажатии */
 		&:active {
 
@@ -285,7 +286,7 @@
 			}
 		}
 	}
-	
+
 	/* обертка для кнопки загрузки файлов */
 	&__fileform {
 		position: relative;
@@ -315,7 +316,7 @@
 		border: 2px solid $gray;
 		border-radius: 3px;
 	}
-	
+
 	/* невидимый инпут для загрузки файлов, лежащий поверх кнопки */
 	input[type="file"] {
 		position: absolute;
@@ -327,12 +328,12 @@
 		opacity: 0;
 		z-index: 1000;
 		cursor: pointer;
-		
+
 		/* при наведении на инпут кнопка меняет состояние */
 		&:hover ~ .page-form__select-button {
 			border: 2px solid $darkblue;
 		}
-		
+
 		/* при нажатии на инпут кнопка меняет состояние */
 		&:active ~ .page-form__select-button {
 			color: $white;
@@ -340,12 +341,12 @@
 			border: 2px solid $darkblue;
 		}
 	}
-	
+
 	/* примечание о необходимых полях * */
 	&__footnote {
 		margin-bottom: 25px;
 		text-transform: uppercase;
-		
+
 		/* цвет звездочки в примечании */
 		span {
 			color: $purple;
@@ -380,6 +381,13 @@ input[type="checkbox"]:checked + label {
 		border-left: 3px solid $purple;
 		border-bottom: 3px solid $purple;
 		transform: rotate(-45deg);
+	}
+
+	&__table-wrapper {
+
+		&--desktop {
+			display: none;
+		}
 	}
 }
 

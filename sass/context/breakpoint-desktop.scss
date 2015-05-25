@@ -1,0 +1,885 @@
+@media (min-width: $breakpoint-tablet + 1) {
+
+  .container {
+    display: block;
+    margin: 0 auto;
+    width: 940px;
+  }
+
+  .page-header {
+    max-height: 850px;
+
+    .index-page & {
+      background-image:
+        url("../img/iphone-hand-desktop@1x.png"),
+        url("../img/bg-fullsize.jpg");
+      background-repeat: no-repeat;
+      background-size: 1050px, cover;
+      background-position: 65% bottom, bottom center;
+    }
+
+    /* переопределение паддингов в контейнере хедера */
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+
+      /* контент в хедере сдвинут влево */
+      &--to-left {
+        float: left;
+        width: 300px;
+      }
+    }
+
+    /* паддинг контентной области хедера */
+    &__content {
+      padding-top: 115px;
+    }
+
+    &__title {
+      padding: 0 10px;
+      font: 300 50px/59px $font;
+      letter-spacing: 0.5px;
+
+      .index-page & {
+        margin-bottom: 49px;
+      }
+    }
+
+    /* кнопка меню спрятана */
+    .menu-toggle {
+      display: none;
+    }
+
+    /* переопределение ширины лого */
+    .logo {
+      width: auto;
+    }
+
+    /* позиционирование меню */
+    .mobile-menu {
+      position: static;
+      display: block;
+      float: right;
+      width: auto;
+      text-align: right;
+
+      /* пункты меню */
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+        background-color: transparent;
+      }
+
+      /* стили ссылок в пунктах меню */
+      &__link {
+        position: relative;
+        margin: 0;
+        margin-left: 70px;
+        padding: 0;
+        padding-top: 8px;
+        text-transform: none;
+        font: 400 18px/18px $font;
+        border: none;
+
+        &:hover {
+          color: $white;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $white;
+          }
+        }
+
+        &:active {
+          opacity: 0.3;
+
+          &:after {
+            background-color: transparent;
+          }
+        }
+
+        /* стили ссылки текущей страницы */
+        &--current {
+          opacity: 0.3;
+          cursor: default;
+
+          &:hover {
+
+            &:after {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .downloads {
+    padding-bottom: 123px;
+
+    &__btn {
+      margin-bottom: 65px;
+      max-width: 100%;
+      font: 700 21px/21px $font;
+    }
+
+    &__icons {
+      margin-bottom: 27px;
+    }
+  }
+
+  .information {
+    padding-top: 72px;
+
+    &__text {
+      font: 300 50px/59px $font;
+    }
+  }
+
+  .features {
+    padding-top: 0;
+    background-image: url("../img/bg-triangle--features.svg");
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center -4px;
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .feature-item {
+    padding: 0 30px;
+    padding-top: 398px;
+    width: 300px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: left 14px top 36px;
+
+    &__title {
+      margin-bottom: 23px;
+      font: 700 30px/30px $font ;
+    }
+
+    &__description {
+      font: 400 18px/30px $font;
+    }
+
+    &--1 {
+      background-image: url("../img/iphone-screen-desktop-1@1x.png");
+    }
+
+    &--2 {
+      background-image: url("../img/iphone-screen-desktop-2@1x.png");
+    }
+
+    &--3 {
+      background-image: url("../img/iphone-screen-desktop-3@1x.png");
+    }
+  }
+
+  .research {
+    background-color: $lightgray;
+
+    .container {
+      position: relative;
+      padding-left: 0;
+      padding-bottom: 0;
+      padding-top: 124px;
+      min-height: 318px;
+      background-image: url(../img/timer.svg);
+      background-repeat: no-repeat;
+      background-size: 301px;
+      background-position: left 20px top 28px;
+
+      &:before {
+        content: "24";
+        position: absolute;
+        top: 102px;
+        left: 46px;
+        display: block;
+        padding-top: 24px;
+        width: 220px;
+        height: 196px;
+        text-align: center;
+        font: 700 120px/186.84px $font;
+        color: $purple;
+        background-color: $white;
+        border: 13px solid $purple;
+        border-radius: 50%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 19px;
+      padding-left: 385px;
+    }
+
+
+    &__content {
+      margin-bottom: 32px;
+      padding-left: 385px;
+      font: 400 18px/30px $font;
+    }
+
+
+    &__link {
+      padding-left: 385px;
+      font: 400 18px/30px $font;
+    }
+  }
+
+  .reviews {
+    position: relative;
+
+    .control-labels {
+      display: none;
+    }
+  }
+
+  .review {
+    padding-top: 185px;
+
+    &__text {
+      position: relative;
+      margin-bottom: 37px;
+      padding-left: 130px;
+      padding-right: 130px;
+
+      &:before {
+        content: "“";
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        margin-left: -45px;
+        width: 90px;
+        height: 80px;
+        font: 400 240px/80px Georgia;
+        color: $lightgray;
+      }
+    }
+
+    &__author {
+      font: 700 24px/30px $font;
+    }
+
+    &__subtitle {
+      margin-bottom: 80px;
+      font: 400 18px/30px $font;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 211px;
+    width: 22px;
+    height: 42px;
+    font-size: 0;
+
+    &--left {
+      left: 42px;
+
+      &:hover {
+
+        &:before {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+
+        &:before {
+          opacity: 0.1;
+        }
+      }
+
+      &:before {
+        content: url("../img/review-arrow-left.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        opacity: 0.3;
+        z-index: 100;
+      }
+    }
+
+    &--right {
+      right: 42px;
+
+      &:hover {
+
+        &:before {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+
+        &:before {
+          opacity: 0.1;
+        }
+      }
+
+      &:before {
+        content: url("../img/review-arrow-right.svg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        opacity: 0.3;
+        z-index: 100;
+      }
+    }
+  }
+
+  .prices {
+    padding-bottom: 96px;
+
+    &__wrapper {
+      padding-left: 0;
+      padding-right: 0;
+      width: 940px;
+    }
+
+    &__title {
+      margin-bottom: 3px;
+      font: 700 18px/30px $font;
+    }
+
+    &__amount {
+      font: 300 24px/30px $font;
+    }
+
+    &__feature-cell {
+      padding-top: 15px;
+      padding-bottom: 13px;
+      padding-left: 20px;
+      font: 400 18px/30px $font;
+    }
+  }
+
+  .flag-hit__inner-wrapper {
+
+    /* флажок в заголовке таблицы */
+    &:before {
+      content: "";
+      position: absolute;
+      top: -67px;
+      left: -50.5px;
+      width: 46px;
+      height: 46px;
+      border-style: solid;
+      border-width: 28px;
+      border-color: transparent $purple transparent transparent;
+      transform: rotate(45deg);
+    }
+
+    /* текст на флажке */
+    &:after {
+      content: "хит";
+      position: absolute;
+      top: 3px;
+      left: 11px;
+      text-transform: uppercase;
+      font: 400 14px/14px $font;
+      color: $white;
+      transform: rotate(-45deg);
+      z-index: 100;
+    }
+  }
+
+  .footer-contacts {
+    padding-top: 70px;
+
+    &__title {
+      font: 300 50px/60px $font;
+
+      &--2 {
+        margin-bottom: 55px;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__wrapper {
+      width: 33%;
+
+      &--title {
+        width: 100%;
+        order: 1;
+      }
+
+      &--phone {
+        order: 2;
+      }
+
+      &--address {
+        order: 3;
+
+        .footer-contacts__information {
+          padding: 0 30px;
+        }
+      }
+
+      &--email {
+        order: 4;
+      }
+    }
+
+    &__paragraph {
+      margin-bottom: 25px;
+    }
+
+    &__information {
+
+      &--last-line {
+        margin-bottom: 0;
+      }
+    }
+
+    .map-wrapper {
+      height: 520px;
+    }
+  }
+
+  .page-footer {
+
+    .copyright {
+
+      &__text {
+        font: 400 18px/18px $font;
+      }
+    }
+  }
+
+  /////////////// blog.html ////////////////
+
+  .pink-blog {
+
+    .page-header {
+      background-image: url("../img/bg-fullsize.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+
+      &__title {
+        padding-left: 185px;
+        padding-right: 185px;
+        padding-top: 68px;
+        padding-bottom: 95px;
+        line-height: 60px;
+      }
+    }
+
+    .blog-entry {
+      padding-bottom: 52px;
+
+      &__title {
+        margin-bottom: 2px;
+      }
+
+      &__date {
+        margin-bottom: 19px;
+      }
+
+      &__review {
+        padding-bottom: 43px;
+      }
+    }
+  }
+
+  .page-content {
+    padding-top: 110px;
+
+    &__container {
+      padding-left: 60px;
+      padding-right: 60px;
+      display: block;
+      margin: 0 auto;
+      width: 820px;
+    }
+  }
+
+  .pagination {
+    position: relative;
+    margin-bottom: 57px;
+
+    &:before {
+      content: "Стр.";
+      position: absolute;
+      left: -60px;
+      top: 20px;
+      text-transform: uppercase;
+      font: 700 18px/30px $font;
+    }
+  }
+
+  /////////////// post.html ////////////////
+
+  .pink-post {
+
+    .page-header {
+      background-image: url("../img/bg-fullsize.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+
+      &__text {
+        padding-left: 185px;
+        padding-right: 185px;
+        padding-top: 68px;
+        padding-bottom: 95px;
+        line-height: 60px;
+      }
+    }
+
+    .page-content {
+      padding-top: 107px;
+
+      .container {
+        padding-left: 60px;
+        padding-right: 60px;
+        width: 820px;
+      }
+    }
+
+    .blog-entry {
+
+      &__title {
+        margin-bottom: 25px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      &__review {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      &__content {
+
+        p {
+          margin-bottom: 30px;
+
+          &.last-of-block {
+            margin-bottom: 60px;
+          }
+        }
+
+        li {
+          margin-bottom: 30px;
+        }
+
+        ul {
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+    .page-navigation {
+
+      .navigation-btn {
+        margin-bottom: 50px;
+        width: 30%;
+      }
+    }
+  }
+
+  /////////////// blog.html ////////////////
+  .pink-form {
+
+    .page-header {
+      background-image: url("../img/bg-fullsize.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+
+      &__title {
+        margin: 0 auto;
+        padding-top: 68px;
+        padding-bottom: 95px;
+        width: 750px;
+        line-height: 60px;
+      }
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 940px;
+
+      &--first-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &--app-block {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 57px;
+        padding-bottom: 13px;
+        width: 824px;
+      }
+
+      &--dates {
+        width: 824px;
+      }
+
+      &--companions {
+        padding-bottom: 54px;
+        width: 824px;
+      }
+
+      &--achievements {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 55px;
+        padding-bottom: 10px;
+        width: 824px;
+      }
+
+      &--upload {
+        padding-bottom: 32px;
+        width: 824px;
+      }
+
+      &--submit {
+        padding-bottom: 13px;
+      }
+    }
+  }
+
+  .page-form {
+
+    &__block-description {
+      display: none;
+
+      &--first-line {
+        position: relative;
+        display: block;
+        margin-bottom: 65px;
+        width: 100%;
+        color: $white;
+        order: 1;
+
+        &:before {
+          content: "Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:";
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 0 95px;
+          font: 400 18px/30px $font;
+          color: $darkblue;
+          z-index: 100;
+        }
+      }
+    }
+
+    &__block {
+
+      &--first-block {
+        padding-top: 95px;
+      }
+
+      &--app-block {
+        padding-top: 49px;
+      }
+
+      &--dates {
+        padding-top: 64px;
+      }
+
+      &--companions {
+        padding-top: 35px;
+      }
+
+      &--achievements {
+        padding-top: 65px;
+      }
+
+      &--submit {
+        position: relative;
+      }
+    }
+
+    &__text-input-label {
+      width: 30%;
+
+      &--dates {
+        margin-bottom: 0;
+        width: 240px;
+        line-height: 26px;
+      }
+
+      &--companion-name {
+        padding-top: 18px;
+      }
+    }
+
+    label[for="first-name"] {
+      order: 2;
+    }
+
+    label[for="last-name"] {
+      order: 3;
+    }
+
+    label[for="middle-name"] {
+      order: 4;
+    }
+
+    input[name="first-name"] {
+      width: 300px;
+      order: 5;
+    }
+
+    input[name="last-name"] {
+      width: 300px;
+      order: 6;
+    }
+
+    input[name="middle-name"] {
+      width: 300px;
+      order: 7;
+    }
+
+    &__block-title {
+
+      &--app-block {
+        position: absolute;
+        top: -9px;
+        left: 270px;
+        margin: 0;
+        padding: 0;
+        width: 400px;
+        height: 18px;
+      }
+
+      &--dates {
+        top: 58px;
+        left: 470px;
+        margin-left: 0;
+      }
+
+      &--achievements {
+        position: absolute;
+        top: -9px;
+        left: 240px;
+        margin: 0;
+        width: 400px;
+        line-height: 18px;
+      }
+    }
+
+    &__radiobutton-label {
+      width: 16%;
+    }
+
+    &__label-input-wrapper {
+      width: 240px;
+
+      &--companions {
+        width: 250px;
+      }
+    }
+
+    &__table-wrapper {
+      display: none;
+
+      &--desktop {
+        display: block;
+      }
+    }
+
+    input[name="input-companion"] {
+      margin: 0;
+      padding-bottom: 14px;
+      width: 297px;
+    }
+
+    input[name="nickname"] {
+      margin: 0;
+      width: 297px;
+    }
+
+    &__input-table-cell {
+      padding-right: 10px;
+    }
+
+    &__companion {
+      padding-top: 16px;
+      background-color: $lightgray;
+    }
+
+    &__label-input-wrapper {
+
+      &--companions {
+        position: relative;
+        margin-bottom: 55px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 104px;
+          left: 0;
+          width: 824px;
+          height: 2px;
+          background-color: $gray;
+        }
+      }
+    }
+
+    &__companion-number {
+      padding-top: 18px;
+    }
+
+    &__table {
+      margin-bottom: 4px;
+    }
+
+    &__checkbox-label {
+      width: 210px;
+      text-align: left;
+    }
+
+    .image {
+      margin-right: 55px;
+      margin-bottom: 22px;
+
+      &__caption {
+        text-align: left;
+        font-size: 14px;
+        line-height: 25.7px;
+      }
+    }
+
+    .submit-form-btn {
+      width: 300px;
+    }
+
+    &__footnote {
+
+      span.hidden-text {
+        color: $darkblue;
+      }
+    }
+  }
+}
+

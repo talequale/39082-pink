@@ -6,7 +6,7 @@
 	.container {
 		padding-bottom: 15px;
 	}
-	
+
 	&__title {
 		@include block-title($font);
 		color: $darkblue;

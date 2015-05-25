@@ -36,9 +36,9 @@
 
 						<li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link  mobile-menu__link--current">Главная</a></li>
 
-						<li class="mobile-menu__item"><a href="form.html"  class="mobile-menu__link">Конкурс для путешественников</a></li>
+						<li class="mobile-menu__item"><a href="form.html"  class="mobile-menu__link">Конкурс</a></li>
 
-						<li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Блог путешественников</a></li>
+						<li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Блог</a></li>
 
 					</ul>
 				</nav>
@@ -49,22 +49,26 @@
 
 		<!-- в фоне header-content лежит картинка со смартфоном-->
 		<div class="page-header__content">
-			<div class="container">
-				<h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
+			<div class="container  clearfix">
+				<div class="container--to-left">
+					<h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
+				</div>
 			</div>
 		</div>
 
 
 		<!-- downloads - темно-синий фон -->
 		<div class="downloads">
-			<div class="container">
-				<a href="#" class="downloads__btn">Скачать приложение</a>
-				<div class="downloads__icons">
-					<img class="downloads__icon" src="img/downloads__apple-logo.png" width="46" height="57" alt="apple">
-					<img class="downloads__icon" src="img/downloads__android-logo.png" width="42" height="47" alt="android">
-					<img class="downloads__icon" src="img/downloads__windows-logo.png" width="44" height="42" alt="windows">
+			<div class="container  clearfix">
+				<div class="container--to-left">
+					<a href="#" class="downloads__btn">Скачать приложение</a>
+					<div class="downloads__icons">
+						<img class="downloads__icon" src="img/apple-logo.svg" width="46" height="57" alt="apple">
+						<img class="downloads__icon" src="img/android-logo.svg" width="42" height="47" alt="android">
+						<img class="downloads__icon" src="img/microsoft-logo.svg" width="44" height="42" alt="windows">
+					</div>
+					<p class="downloads__information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
 				</div>
-				<p class="downloads__information">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
 			</div>
 		</div>
 
@@ -78,7 +82,7 @@
 	<div class="information">
 		<div class="container">
 			<h2 class="information__text">Устали от серости мегаполиса?</h2>
-			<h2 class="information__text  information__text--2nd-line">Нам есть, что вам предложить!</h2>
+			<h2 class="information__text  information__text--second-line">Нам есть, что вам предложить!</h2>
 		</div>
 	</div>
 
@@ -89,17 +93,17 @@
 	<div class="features">
 		<div class="container">
 
-			<section class="feature-item">
+			<section class="feature-item  feature-item--1">
 				<h2 class="feature-item__title">Поднимает настроение</h2>
 				<p class="feature-item__description">Приложение поможет вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
 			</section>
 
-			<section class="feature-item">
+			<section class="feature-item  feature-item--2">
 				<h2 class="feature-item__title">Меняет мир вокруг</h2>
 				<p class="feature-item__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
 			</section>
 
-			<section class="feature-item">
+			<section class="feature-item  feature-item--3">
 				<h2 class="feature-item__title">Заводит новых друзей</h2>
 				<p class="feature-item__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
 			</section>
@@ -111,7 +115,7 @@
 
 
 
-	<!-- research - белый фон -->	
+	<!-- research - белый фон -->
 	<div class="research">
 		<div class="container">
 			<h3 class="research__title">Эффект на 24 часа!</h3>
@@ -133,14 +137,17 @@
 			<input type="radio" name="review-toggle" id="review-1" checked>
 			<input type="radio" name="review-toggle" id="review-2">
 			<input type="radio" name="review-toggle" id="review-3">
-			
+
 			<!-- лейблы стилизуются под управляющие кнопки -->
 			<div class="control-labels">
 				<label class="control-label" for="review-1"></label>
 				<label class="control-label" for="review-2"></label>
 				<label class="control-label" for="review-3"></label>
 			</div>
-			
+
+			<a href="#" class="arrow  arrow--left">Пред.</a>
+			<a href="#" class="arrow  arrow--right">След.</a>
+
 			<!-- переключающиеся слайды -->
 			<section class="review  slide-1">
 				<h2 class="review__author">Николай Петров</h2>
@@ -270,56 +277,60 @@
 
 		<div class="container">
 
-			<h2 class="footer-contacts__title  footer-contacts__title--1">Остались вопросы?</h2>
+			<div class="footer-contacts__wrapper  footer-contacts__wrapper--title">
+				<h2 class="footer-contacts__title  footer-contacts__title--1">Остались вопросы?</h2>
 
-			<h2 class="footer-contacts__title  footer-contacts__title--2">Свяжитесь с нами!</h2>
+				<h2 class="footer-contacts__title  footer-contacts__title--2">Свяжитесь с нами!</h2>
+			</div>
 
-			<div class="footer-contacts__wrapper--halfwidth">
+			<div class="footer-contacts__wrapper  footer-contacts__wrapper--halfwidth  footer-contacts__wrapper--phone">
 				<p class="footer-contacts__paragraph">Звоните:</p>
 
 				<p class="footer-contacts__information">+7 (812) 555-66-66</p>
 			</div>
 
-			<div class="footer-contacts__wrapper--halfwidth">
+			<div class="footer-contacts__wrapper  footer-contacts__wrapper--halfwidth  footer-contacts__wrapper--email">
 				<p class="footer-contacts__paragraph">Пишите:</p>
 
 				<p class="footer-contacts__information">mail@htmlacademy.ru</p>
 			</div>
 
-			<p class="footer-contacts__paragraph">Приезжайте в гости:</p>
+			<div class="footer-contacts__wrapper  footer-contacts__wrapper--address">
+				<p class="footer-contacts__paragraph">Приезжайте в гости:</p>
 
-			<p class="footer-contacts__information  footer-contacts__information--last-line">ул. Большая Конюшенная, 19/8</p>
+				<p class="footer-contacts__information  footer-contacts__information--last-line">ул. Большая Конюшенная, 19/8</p>
+			</div>
 		</div>
 
 		<div class="footer-contacts__map-wrapper">
 			<img src="img/bg-white-triangle.svg" class="footer-contacts__img" alt="">
 			<div id="map-canvas" class="map-wrapper"></div>
 		</div>
-	</div>	
+	</div>
 
 	<footer class="page-footer">
-		
+
 		<div class="container">
 
 			<div class="logo  logo--footer">
-				
+
 				<p class="logo__text">
 					<a href="index.html" class="logo__link--footer">
 						<img class="logo__image" src="img/logo__image.png" width="59" height="40" alt="">Pink
 					</a>
 				</p>
 			</div>
-			
+
 			<div class="social-btns">
-				<a href="#" class="social-btn  social-btn__twitter-btn">Twitter</a>
-				<a href="#" class="social-btn  social-btn__facebook-btn">Facebook</a>
-				<a href="#" class="social-btn  social-btn__youtube-btn">Youtube</a>
+				<a href="#" class="social-btn  social-btn--twitter">Twitter</a>
+				<a href="#" class="social-btn  social-btn--facebook">Facebook</a>
+				<a href="#" class="social-btn  social-btn--youtube">Youtube</a>
 			</div>
 
 			<div class="copyright">
 				<p class="copyright__text">Разработано</p>
 				<a href="https://htmlacademy.ru/" class="copyright__link">HTML Academy</a>
-				
+
 			</div>
 
 		</div>
@@ -327,35 +338,9 @@
 	</footer>
 
 
-
-
-	
-	
-	
-  
-
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
-    <script type="text/javascript">
-function initialize() {
-  var mapOptions = {
-    zoom: 17,
-    center: new google.maps.LatLng(59.939027, 30.323065)
-  }
-  var map = new google.maps.Map(document.getElementById("map-canvas"),
-                                mapOptions);
+  <script src="js/map-script.js"></script>
 
-  var image = "img/map-marker.png";
-  var myLatLng = new google.maps.LatLng(59.938794,30.323083);
-  var nerdsMarker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      icon: image
-  });
-}
-
-google.maps.event.addDomListener(window, "load", initialize);
-
-    </script>
 
 </body>
 </html>

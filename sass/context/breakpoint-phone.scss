@@ -7,14 +7,14 @@
     background-image: url("../img/bg-header-phone.jpg");
     background-repeat: no-repeat;
     background-position: center -60px;
-    
+
     &__content {
       background-image: url("../img/bg-header__content-phone.png");
       background-repeat: no-repeat;
       background-position: right bottom;
     }
   }
-  
+
   /* фоновая картинка с улыбающимся смартфоном в блоке features на главной */
   .features {
     background-image: url("../img/bg-features-phone.png");
@@ -22,10 +22,15 @@
     background-size: 160px auto;
     background-position: center bottom -45px;
   }
-  
+
   /* блок research в мобильной версии скрыт */
   .research {
     display: none;
+  }
+
+  .arrow {
+    display: none;
+    font-size: 0;
   }
 
   .review {
@@ -39,55 +44,62 @@
 
     &__first-col-tablet {
       display: none;
-    }    
+    }
   }
 
   .map-wrapper {
     height: 200px;
 
     /* двойной фон - карта и белый треугольник */
-    background-image: 
+    background-image:
       url("../img/bg-white-triangle.svg"),
       url("../img/bg-map.jpg");
-    background-repeat: 
+    background-repeat:
       no-repeat,
       no-repeat;
-    background-position: 
+    background-position:
       top center,
       bottom center;
-    background-size: 
-      100% auto, 
+    background-size:
+      100% auto,
       100% auto;
-      overflow: hidden;
-
-    /* маркер карты */
-    /*&:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -18px;
-      margin-left: -18px;
-      width: 16px;
-      height: 16px;
-      background-color: $purple;
-      border: 10px solid $white;
-      border-radius: 50%;
-    }*/
+    overflow: hidden;
   }
-  
+
   /* текст про форму ниже в мобильной версии не виден */
   .page-form {
 
-    &__block-description {
 
-      &--2-line {
+    &__footnote {
+
+      span.hidden-text {
         display: none;
       }
     }
-    
+
+    &__block-description {
+
+      &--second-line {
+        display: none;
+      }
+    }
+
     /* столбец с текстом "удалить" в таблице попутчиков не виден */
     &__col-delete {
+      display: none;
+    }
+
+    &__table-wrapper {
+
+      &--desktop {
+        display: none;
+      }
+    }
+  }
+
+  .index-page {
+
+    .page-footer {
       display: none;
     }
   }
