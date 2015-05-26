@@ -117,9 +117,9 @@
 					<!-- инпут с кнопками -->
 					<div class="page-form__label-input-wrapper">
 						<div class="page-form__input-table">
-							<button class="decrease-btn">&mdash;</button>
-							<input type="text" id="trip-length" name="input-number" placeholder="10 дней" required>
-							<button class="increase-btn">+</button>
+							<button class="decrease-btn" id="decrease-1">&mdash;</button>
+							<input type="text" id="trip-length" name="input-number" value="10" required>
+							<button class="increase-btn" id="increase-1">+</button>
 						</div>
 						<label for="trip-length" class="page-form__text-input-label  page-form__text-input-label--dates">Продолжительность</label>
 					</div>
@@ -145,9 +145,9 @@
 				<!-- инпут с кнопками в блоке попутчиков -->
 				<div class="page-form__label-input-wrapper  page-form__label-input-wrapper--companions">
 					<div class="page-form__input-table">
-						<button class="decrease-btn">&mdash;</button>
-						<input type="text" id="number-of-companions" name="input-number" placeholder="2 чел" required>
-						<button class="increase-btn">+</button>
+						<button class="decrease-btn" id="decrease-2">&mdash;</button>
+						<input type="text" id="number-of-companions" name="input-number" value="2" required>
+						<button class="increase-btn" id="increase-2">+</button>
 					</div>
 				</div>
 
@@ -485,7 +485,7 @@
 
 
 
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/number-btns-script.js"></script>
 
 </body>
 </html>
