@@ -11,7 +11,7 @@
 		font: 700 18px/30px $font;
 		letter-spacing: 0.5px;
 	}
-	
+
 	/* текст отзыва */
 	&__text {
 		margin: 0;
@@ -22,12 +22,12 @@
 
 /* переключение слайдов */
 
-#review-1:checked ~ .slide-1 { 
+#review-1:checked ~ .slide-1 {
   display: block;
 }
-#review-2:checked ~ .slide-2 { 
+#review-2:checked ~ .slide-2 {
   display: block;
 }
-#review-3:checked ~ .slide-3 { 
+#review-3:checked ~ .slide-3 {
   display: block;
 }

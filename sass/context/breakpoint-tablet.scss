@@ -19,33 +19,62 @@
   /* логотип в хедере главной*/
   .logo__link {
     position: relative;
-    padding-left: 70px;
+    font-size: 0;
 
-    /* белый логотип в обычном состоянии */
-    &:before {
-      content: url("../img/logo__image--white.png");
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-    }
+    @media (max-width: $breakpoint-tablet + 1) {
 
-    /* розовый логотип по ховеру */
-    &:hover {
-
-      &:before {
-        content: url("../img/logo__image.png");
+      /* белый логотип в обычном состоянии */
+      &:after {
+        content: url("../img/logotype-white-tablet.svg");
+        position: absolute;
+        top: -35px;
+        left: 0;
       }
-    }
 
-    /* полупрозрачный белый логотип при нажатии */
-    &:active {
-      &:before {
-        content: url("../img/logo__image--white.png");
+      /* розовый логотип по ховеру */
+      &:hover {
+
+        &:after {
+          content: url("../img/logotype-purple-tablet.svg");
+        }
+      }
+
+      /* полупрозрачный белый логотип при нажатии */
+      &:active {
+        &:after {
+          content: url("../img/logotype-white-tablet.svg");
+        }
       }
     }
   }
 
   /* фоны хедера */
+  @media (min-resolution: 144dpi),
+          (min-resolution: 1.5dppx) {
+
+    .page-header {
+      max-height: 770px;
+      background-image:
+        url("../img/iphone-hand-tablet@1x.png"),
+        url("../img/bg-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom right, center -140px;
+    }
+  }
+
+  @media (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+
+    .page-header {
+      max-height: 770px;
+      background-image:
+        url("../img/iphone-hand-tablet@2x.png"),
+        url("../img/bg-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom right, center -140px;
+    }
+  }
+
   .page-header {
     max-height: 770px;
     background-image:
@@ -135,11 +164,39 @@
     @media (max-width: $breakpoint-tablet) {
 
       background-image:
-      url(../img/bg-features-phone--tablet.png),
+      url("../img/bg-features-phone--tablet.png"),
       url("../img/bg-triangle--features.svg");
       background-repeat: no-repeat;
       background-size: 268px auto, 105%;
       background-position: left 40px top 5px, center -1px;
+    }
+
+    @media (min-resolution: 144dpi),
+          (min-resolution: 1.5dppx) {
+
+      @media (max-width: $breakpoint-tablet) {
+
+        background-image:
+          url("../img/iphone-screen-tablet-3@1x.png"),
+          url("../img/bg-triangle--features.svg");
+        background-repeat: no-repeat;
+        background-size: 268px auto, 105%;
+        background-position: left 40px top 5px, center -1px;
+      }
+    }
+
+    @media (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+
+      @media (max-width: $breakpoint-tablet) {
+
+        background-image:
+          url("../img/iphone-screen-tablet-3@2x.png"),
+          url("../img/bg-triangle--features.svg");
+        background-repeat: no-repeat;
+        background-size: 268px auto, 105%;
+        background-position: left 40px top 5px, center -1px;
+      }
     }
 
     .container {
@@ -455,6 +512,47 @@
 
     &__text {
       padding: 0;
+
+      &--footer {
+        font-size: 0;
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+
+      &__link {
+
+        &--footer {
+          position: relative;
+
+          &:after {
+            content: url("../img/logotype-blue-tablet.svg");
+            position: absolute;
+            top: -25px;
+            left: 0;
+          }
+
+          &:hover {
+
+            &:after {
+              content: url("../img/logotype-blue-tablet-hover.svg");
+              position: absolute;
+              top: -25px;
+              left: 0;
+            }
+          }
+
+          &:active {
+
+            &:after {
+              content: url("../img/logotype-blue-tablet.svg");
+              position: absolute;
+              top: -25px;
+              left: 0;
+            }
+          }
+        }
+      }
     }
 
     &--footer {
@@ -583,7 +681,7 @@
         position: relative;
 
         &:before {
-          content: url("../img/link-icon.png");
+          content: url("../img/blog-post-icon.svg");
           position: absolute;
           left: -60px;
           top: 2px;
@@ -808,9 +906,10 @@
       &--absolute {
         position: absolute;
         top: 41px;
-        left: 45%;
+        left: 50%;
         margin: 0;
         margin-left: -130px;
+        padding: 0;
         width: 260px;
         height: 18px;
         z-index: 100;
@@ -820,8 +919,9 @@
       &.page-form__text-input-title {
         position: absolute;
         top: -9px;
-        left: 45%;
+        left: 50%;
         margin-left: -130px;
+        padding: 0;
         width: 260px;
         height: 18px;
       }
@@ -831,9 +931,10 @@
       &--upload {
         position: absolute;
         top: 30px;
-        left: 45%;
+        left: 50%;
         margin-left: -150px;
         margin-bottom: 0;
+        padding: 0;
         width: 300px;
         height: 18px;
         z-index: 100;
