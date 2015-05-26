@@ -17,13 +17,13 @@ function add(tripLength) {
 
 };
 
-function substract(tripLength) {
+function substract(tripLength, minValue) {
 
   event.preventDefault();
 
   var a = tripLength.value;
 
-  if (a >= 2) {
+  if (a > minValue) {
 
   a = a - 1;
 
@@ -31,7 +31,7 @@ function substract(tripLength) {
 
   } else {
 
-    a = 1;
+    a = minValue;
   }
 
 };
@@ -45,7 +45,7 @@ increase1.addEventListener("click", function(event) {
 
 decrease1.addEventListener("click", function(event) {
 
-  substract(tripLength);
+  substract(tripLength, 1);
 
 });
 
@@ -57,6 +57,6 @@ increase2.addEventListener("click", function(event) {
 
 decrease2.addEventListener("click", function(event) {
 
-  substract(companions);
+  substract(companions, 0);
 
 });
