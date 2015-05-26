@@ -2,25 +2,151 @@
 
 @media (max-width: $breakpoint-phone) {
 
-  /* фоновые картинки хедера */
+  @media (min-resolution: 144dpi),
+          (min-resolution: 1.5dppx) {
+
+    /* фоновые картинки хедера */
+    .page-header {
+      background-image: url("../img/bg-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center -120px;
+
+      &__content {
+        background-image: url("../img/iphone-hand-mobile@2x.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
+    }
+  }
+
+  @media (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+
+    /* фоновые картинки хедера */
+    .page-header {
+      background-image: url("../img/bg-mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center -120px;
+
+      &__content {
+        background-image: url("../img/iphone-hand-mobile@3x.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
+    }
+  }
+
   .page-header {
+
     background-image: url("../img/bg-header-phone.jpg");
     background-repeat: no-repeat;
-    background-position: center -60px;
+    background-size: cover;
+    background-position: center -120px;
 
     &__content {
-      background-image: url("../img/bg-header__content-phone.png");
+      background-image: url("../img/iphone-hand-mobile.png");
       background-repeat: no-repeat;
-      background-position: right bottom;
+      background-position: center bottom;
+    }
+  }
+
+  .logo {
+
+    &__link {
+      position: relative;
+      font-size: 0;
+
+      &:after {
+        content: url("../img/logotype-white-mobile.svg");
+        position: absolute;
+        top: -20px;
+        left: 0;
+      }
+
+      &:hover {
+
+        &:after {
+          content: url("../img/logotype-purple-mobile.svg");
+          position: absolute;
+          top: -20px;
+          left: 0;
+        }
+      }
+
+      &:active {
+
+        &:after {
+          content: url("../img/logotype-white-mobile.svg");
+          position: absolute;
+          top: -20px;
+          left: 0;
+          opacity: 0.3;
+        }
+      }
+
+      &--footer {
+        position: relative;
+
+        &:after {
+          content: url("../img/logotype-blue-tablet.svg");
+          position: absolute;
+          top: -25px;
+          left: -72px;
+        }
+
+        &:hover {
+
+          &:after {
+            content: url("../img/logotype-blue-tablet-hover.svg");
+            position: absolute;
+            top: -25px;
+            left: -72px;
+          }
+        }
+
+        &:active {
+
+          &:after {
+            content: url("../img/logotype-blue-tablet.svg");
+            position: absolute;
+            top: -25px;
+            left: -72px;
+          }
+        }
+      }
     }
   }
 
   /* фоновая картинка с улыбающимся смартфоном в блоке features на главной */
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+
+    .features {
+      background-image: url("../img/iphone-screen-mobile-3@1x.png");
+      background-repeat: no-repeat;
+      background-size: 160px auto;
+      background-position: center bottom;
+    }
+  }
+
+  @media (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+
+    .features {
+      background-image: url("../img/iphone-screen-mobile-3@2x.png");
+      background-repeat: no-repeat;
+      background-size: 160px auto;
+      background-position: center bottom;
+    }
+  }
+
   .features {
-    background-image: url("../img/bg-features-phone.png");
+    background-image: url("../img/screen-mobile-3.png");
     background-repeat: no-repeat;
     background-size: 160px auto;
-    background-position: center bottom -45px;
+    background-position: center bottom;
   }
 
   /* блок research в мобильной версии скрыт */

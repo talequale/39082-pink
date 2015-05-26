@@ -6,6 +6,23 @@
     width: 940px;
   }
 
+  @media (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+
+    .page-header {
+      max-height: 850px;
+
+      .index-page & {
+        background-image:
+          url("../img/iphone-hand-desktop@2x.png"),
+          url("../img/bg-fullsize.jpg");
+        background-repeat: no-repeat;
+        background-size: 1050px, cover;
+        background-position: 65% bottom, bottom center;
+      }
+    }
+  }
+
   .page-header {
     max-height: 850px;
 
@@ -53,6 +70,76 @@
     /* переопределение ширины лого */
     .logo {
       width: auto;
+
+      &__link {
+        position: relative;
+        font-size: 0;
+
+        &:after {
+          content: url("../img/logotype-white-desktop.svg");
+          position: absolute;
+          top: -35px;
+          left: 0;
+        }
+
+        &:hover {
+
+          &:after {
+            content: url("../img/logotype-purple-desktop.svg");
+            position: absolute;
+            top: -35px;
+            left: 0;
+          }
+        }
+
+        &:active {
+
+          &:after {
+            content: url("../img/logotype-white-tablet.svg");
+            position: absolute;
+            top: -35px;
+            left: 0;
+            opacity: 0.3;
+          }
+        }
+
+        &--footer {
+          position: relative;
+
+          &:after {
+            content: url("../img/logotype-blue-tablet.svg");
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 146.3px;
+            height: 40.375px;
+          }
+
+          &:hover {
+
+            &:after {
+              content: url("../img/logotype-blue-tablet-hover.svg");
+              position: absolute;
+              top: -25px;
+              left: 0;
+              width: 146.3px;
+              height: 40.375px;
+            }
+          }
+
+          &:active {
+
+            &:after {
+              content: url("../img/logotype-blue-tablet.svg");
+              position: absolute;
+              top: -25px;
+              left: 0;
+              width: 146.3px;
+              height: 40.375px;
+            }
+          }
+        }
+      }
     }
 
     /* позиционирование меню */
@@ -177,14 +264,35 @@
 
     &--1 {
       background-image: url("../img/iphone-screen-desktop-1@1x.png");
+      background-size: contain;
+
+      @media (min-resolution: 192dpi),
+              (min-resolution: 2dppx) {
+        background-image: url("../img/iphone-screen-desktop-1@2x.png");
+        background-size: contain;
+      }
     }
 
     &--2 {
       background-image: url("../img/iphone-screen-desktop-2@1x.png");
+      background-size: contain;
+
+      @media (min-resolution: 192dpi),
+              (min-resolution: 2dppx) {
+        background-image: url("../img/iphone-screen-desktop-2@2x.png");
+        background-size: contain;
+      }
     }
 
     &--3 {
       background-image: url("../img/iphone-screen-desktop-3@1x.png");
+      background-size: contain;
+
+      @media (min-resolution: 192dpi),
+              (min-resolution: 2dppx) {
+        background-image: url("../img/iphone-screen-desktop-3@2x.png");
+        background-size: contain;
+      }
     }
   }
 
@@ -282,6 +390,7 @@
   .arrow {
     position: absolute;
     top: 211px;
+    display: block;
     width: 22px;
     height: 42px;
     font-size: 0;
@@ -467,6 +576,46 @@
     }
   }
 
+  /* лого в футере */
+  .logo {
+
+    &__link {
+      position: relative;
+      font-size: 0;
+
+      &--footer {
+        position: relative;
+
+        &:after {
+          content: url("../img/logotype-blue-desktop.svg");
+          position: absolute;
+          top: -25px;
+          left: 0;
+        }
+
+        &:hover {
+
+          &:after {
+            content: url("../img/logotype-blue-desktop-hover.svg");
+            position: absolute;
+            top: -25px;
+            left: 0;
+          }
+        }
+
+        &:active {
+
+          &:after {
+            content: url("../img/logotype-blue-tablet.svg");
+            position: absolute;
+            top: -25px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
   /////////////// blog.html ////////////////
 
   .pink-blog {
@@ -600,7 +749,7 @@
     }
   }
 
-  /////////////// blog.html ////////////////
+  /////////////// form.html ////////////////
   .pink-form {
 
     .page-header {
@@ -774,8 +923,9 @@
 
       &--dates {
         top: 58px;
-        left: 470px;
-        margin-left: 0;
+        left: 50%;
+        margin-left: -130px;
+        padding: 0;
       }
 
       &--achievements {
@@ -877,6 +1027,8 @@
     &__footnote {
 
       span.hidden-text {
+        display: inline-block;
+        vertical-align: top;
         color: $darkblue;
       }
     }
