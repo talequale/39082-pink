@@ -31,3 +31,6 @@ function setValidator(id, regex) {
   }
 
 }
+
+setValidator("trip-length", /^[0-9]*$/);
+setValidator("number-of-companions", /^[0-9]*$/);
