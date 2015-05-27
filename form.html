@@ -116,10 +116,10 @@
 
 					<!-- инпут с кнопками -->
 					<div class="page-form__label-input-wrapper">
-						<div class="page-form__input-table">
-							<button class="decrease-btn">&mdash;</button>
-							<input type="text" id="trip-length" name="input-number" placeholder="10 дней" required>
-							<button class="increase-btn">+</button>
+						<div class="page-form__input-table  js-button-combo">
+							<button type="button" class="decrease-btn  js-combo-minus">&mdash;</button>
+							<input type="text" id="trip-length" name="input-number" class="js-combo-value" data-min="1" placeholder="1" required>
+							<button type="button" class="increase-btn  js-combo-plus">+</button>
 						</div>
 						<label for="trip-length" class="page-form__text-input-label  page-form__text-input-label--dates">Продолжительность</label>
 					</div>
@@ -144,10 +144,10 @@
 
 				<!-- инпут с кнопками в блоке попутчиков -->
 				<div class="page-form__label-input-wrapper  page-form__label-input-wrapper--companions">
-					<div class="page-form__input-table">
-						<button class="decrease-btn">&mdash;</button>
-						<input type="text" id="number-of-companions" name="input-number" placeholder="2 чел" required>
-						<button class="increase-btn">+</button>
+					<div class="page-form__input-table  js-button-combo">
+						<button type="button" class="decrease-btn  js-combo-minus">&mdash;</button>
+						<input type="text" id="number-of-companions" name="input-number" class="js-combo-value" data-min="0" placeholder="0" required>
+						<button type="button" class="increase-btn  js-combo-plus">+</button>
 					</div>
 				</div>
 
@@ -485,7 +485,8 @@
 
 
 
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/numbers-script.js"></script>
+
 
 </body>
 </html>
