@@ -1,4 +1,4 @@
-var plus = document.querySelectorAll(".js-combo-plus"); // кнопки минут
+var plus = document.querySelectorAll(".js-combo-plus"); // кнопки минус
 var minus = document.querySelectorAll(".js-combo-minus"); // кнопки плюс
 
 
@@ -14,6 +14,7 @@ for (var i = 0; i < plus.length; i++) {
 
   });
 
+  // обработчики для минусов
   minus[i].addEventListener("click",function(){
     event.preventDefault;
     var input = this.parentNode.querySelector(".js-combo-value");
@@ -26,7 +27,7 @@ for (var i = 0; i < plus.length; i++) {
 
 }
 
-
+// проверка типа символов
 (function() {
 
   function setValidator(id, regex) {
