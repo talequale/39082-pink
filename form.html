@@ -53,7 +53,7 @@
 
 
 	<div class="page-form">
-		<form action="#" method="post">
+		<form action="http://simonenko.su/academy/echo" method="post">
 
 
 			<!-- белый фон, нет рамки в планшетной версии -->
@@ -65,10 +65,10 @@
 					<p class="page-form__block-description  page-form__block-description--second-line">Пожалуйста, заполните форму ниже:</p>
 
 					<label for="first-name" class="page-form__text-input-label">Имя: *</label>
-					<input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя" required>
+					<input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя">
 
 					<label for="last-name" class="page-form__text-input-label">Фамилия: *</label>
-					<input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию" required>
+					<input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию">
 
 					<label for="middle-name" class="page-form__text-input-label">Отчество:</label>
 					<input type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
@@ -110,7 +110,7 @@
 
 
 					<div class="page-form__label-input-wrapper">
-						<input type="text" id="departure-date" name="departure-date" placeholder="1 апреля 2015" required>
+						<input type="text" id="departure-date" name="departure-date" placeholder="1 апреля 2015">
 						<label for="departure-date" class="page-form__text-input-label  page-form__text-input-label--dates">Дата выезда</label>
 					</div>
 
@@ -118,7 +118,7 @@
 					<div class="page-form__label-input-wrapper">
 						<div class="page-form__input-table  js-button-combo">
 							<button type="button" class="decrease-btn  js-combo-minus">&mdash;</button>
-							<input type="text" id="trip-length" name="input-number" class="js-combo-value" data-min="1" placeholder="1" required>
+							<input type="text" id="trip-length" name="input-number" class="js-combo-value" data-min="1" placeholder="1">
 							<button type="button" class="increase-btn  js-combo-plus">+</button>
 						</div>
 						<label for="trip-length" class="page-form__text-input-label  page-form__text-input-label--dates">Продолжительность</label>
@@ -146,7 +146,7 @@
 				<div class="page-form__label-input-wrapper  page-form__label-input-wrapper--companions">
 					<div class="page-form__input-table  js-button-combo">
 						<button type="button" class="decrease-btn  js-combo-minus">&mdash;</button>
-						<input type="text" id="number-of-companions" name="input-number" class="js-combo-value" data-min="0" placeholder="0" required>
+						<input type="text" id="number-of-companions" name="input-number" class="js-combo-value" data-min="0" placeholder="0">
 						<button type="button" class="increase-btn  js-combo-plus">+</button>
 					</div>
 				</div>
@@ -167,7 +167,7 @@
 								<p class="page-form__companion">1</p>
 							</td>
 							<td>
-								<input type="text" id="name-1" name="input-companion" placeholder="Введите ваше имя" required>
+								<input type="text" id="name-1" name="input-companion" placeholder="Введите ваше имя">
 							</td>
 							<td class="page-form__col-delete"><a href="#" class="page-form__col-delete-link">Удалить</a></td>
 						</tr>
@@ -200,7 +200,7 @@
 								<p class="page-form__companion">1</p>
 							</td>
 							<td>
-								<input type="text" id="name-2" name="input-companion" placeholder="Введите ваше имя" required>
+								<input type="text" id="name-2" name="input-companion" placeholder="Введите ваше имя">
 							</td>
 							<td class="page-form__col-delete"><a href="#" class="page-form__col-delete-link">Удалить</a></td>
 						</tr>
@@ -239,7 +239,7 @@
 								<p class="page-form__companion">1</p>
 							</td>
 							<td>
-								<input type="text" id="name-3" name="input-companion" placeholder="Введите ваше имя" required>
+								<input type="text" id="name-3" name="input-companion" placeholder="Введите ваше имя">
 							</td>
 							<td>
 								<input type="text" id="nickname-3" name="nickname" placeholder="Ну как же без этого!">
@@ -270,7 +270,7 @@
 								<p class="page-form__companion">1</p>
 							</td>
 							<td>
-								<input type="text" id="name-4" name="input-companion" placeholder="Введите ваше имя" required>
+								<input type="text" id="name-4" name="input-companion" placeholder="Введите ваше имя">
 							</td>
 							<td>
 								<input type="text" id="nickname-4" name="nickname" placeholder="Ну как же без этого!">
@@ -323,7 +323,7 @@
 			<div class="container  container--upload">
 
 				<div class="page-form__fileform">
-					<input type="file" id="upload-images-btn" name="upload-images-btn">
+					<input type="file" id="upload-images-btn" name="upload-images-btn" multiple>
 					<div class="page-form__select-button">Загрузить фото</div>
 				</div>
 
@@ -486,6 +486,8 @@
 
 
     <script src="js/numbers-script.js"></script>
+    <script src="js/submit-form.js"></script>
+
 
 
 </body>
