@@ -33,5 +33,6 @@ a {
 }
 
 button {
-  transition: 0.4s;
+  transition-property: width;
+  transition-duration: 0.4s;
 }
