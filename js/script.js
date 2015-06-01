@@ -76,11 +76,64 @@
 })();
 
 
-//скрипт добавления полей попутчиков
+/*//скрипт добавления полей попутчиков
 (function() {
-})();
+
+  var amount = getElementById("number-of-companions");
+  var
+})();*/
 
 //скрипт отправки формы
+// (function() {
+
+//   if (!("FormData" in window)) {
+
+//     return;
+
+//   } else {
+
+//     var form = document.querySelector(".page-form");
+
+//     form.addEventListener("submit", function(event) {
+
+//       event.preventDefault();
+
+//       var data = new FormData(form);
+
+//       request(data, function(response) {
+
+//         console.log(response);
+
+//       });
+
+//       function request(data, fn) {
+
+//         var xhr = new XMLHttpRequest();
+//         var time = (new Date()).getTime();
+
+//         xhr.open("post", "http://simonenko.su/academy/echo?" + time);
+
+//         xhr.addEventListener("readystatechange", function() {
+
+//           if (xhr.readyState == 4) {
+
+//             fn(xhr.responseText);
+
+//           }
+
+//         });
+
+//       xhr.send(data);
+
+//     }
+
+//     });
+
+//   }
+
+// })();
+
+//попытка добавить в скрипт отправки формы отправку картинок
 (function() {
 
   if (!("FormData" in window)) {
@@ -90,6 +143,10 @@
   } else {
 
     var form = document.querySelector(".page-form");
+    var area = document.querySelector(".images");
+    var template = document.querySelector("#image-template").innerHTML;
+
+    var queue =[];
 
     form.addEventListener("submit", function(event) {
 
@@ -97,13 +154,21 @@
 
       var data = new FormData(form);
 
+      queue.forEach(function(element) {
+
+        data.append("images", element.file);
+
+      });
+
       request(data, function(response) {
 
         console.log(response);
 
       });
 
-      function request(data, fn) {
+    });
+
+    function request(data, fn) {
 
         var xhr = new XMLHttpRequest();
         var time = (new Date()).getTime();
@@ -124,11 +189,81 @@
 
     }
 
+    form.querySelector("#upload-images-btn").addEventListener("change", function() {
+
+      var files = this.files;
+
+      for (var i = 0; i < files.length; i++) {
+
+       preview(files[i]);
+
+      }
+
+      this.value = "";
+
     });
+
+    function preview(file) {
+
+      if("FileReader" in window) {
+
+        if(file.type.match(/image.*/)) {
+
+          var reader = new FileReader();
+
+          reader.addEventListener("load", function(event) {
+
+            var html = Mustache.render(template, {
+
+              "image": event.target.result,
+              "name": file.name
+
+            });
+
+            var figure = document.createElement("figure");
+            figure.classList.add("image");
+            figure.innerHTML = html;
+
+            area.appendChild(figure);
+
+            figure.querySelector(".delete-btn").addEventListener("click", function(event) {
+
+              event.preventDefault();
+              removePreview(figure);
+
+            });
+
+            queue.push({
+              "file": file,
+              "figure": figure
+
+            });
+
+          });
+
+          reader.readAsDataUrl(file);
+        }
+      }
+    }
+
+    function removePreview(figure) {
+
+      queue = queue.filter(function(element) {
+
+        return.element.figure != figure;
+
+      });
+
+      figure.parentNode.removeChild(figure);
+
+    }
 
   }
 
 })();
+
+
+
 
 // открытие мобильного меню по тапу
 (function() {

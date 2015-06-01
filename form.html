@@ -293,22 +293,22 @@
 
 				<h2 class="page-form__block-title  page-form__block-title--achievements">Ваши безбашенные достижения в путешествии</h2>
 
-				<input type="checkbox" id="selfie-shark" checked>
+				<input type="checkbox" id="selfie-shark" name="selfie-shark" checked>
 				<label class="page-form__checkbox-label" for="selfie-shark">Сделал селфи с акулой</label>
 
-				<input type="checkbox" id="sunburn" checked>
+				<input type="checkbox" id="sunburn" name="sunburn" checked>
 				<label class="page-form__checkbox-label" for="sunburn">Обгорел на пляже</label>
 
-				<input type="checkbox" id="chuck-norris">
+				<input type="checkbox" id="chuck-norris" name="chuck-norris">
 				<label class="page-form__checkbox-label" for="chuck-norris">Видел Чака Норриса</label>
 
-				<input type="checkbox" id="souvenirs">
+				<input type="checkbox" id="souvenirs" name="souvenirs">
 				<label class="page-form__checkbox-label" for="souvenirs">Накупил сувениров</label>
 
-				<input type="checkbox" id="leaning-tower" checked>
+				<input type="checkbox" id="leaning-tower" name="leaning-tower" checked>
 				<label class="page-form__checkbox-label" for="leaning-tower">Удержал башню</label>
 
-				<input type="checkbox" id="ruined-hotel">
+				<input type="checkbox" id="ruined-hotel" name="ruined-hotel">
 				<label class="page-form__checkbox-label" for="ruined-hotel">Разгромил отель</label>
 
 			</div>
@@ -482,9 +482,96 @@
 
 	</footer>
 
+  <script src="bower_components/tap/dist/tap.min.js"></script>
+
+  <script id="image-template" type="text/html">
+
+    /*<figure class="image">*/
+      <picture>
+        <source media="(min-width: 768px)" srcset="{{image}}" width="120" height="120" alt="{{name}}" title="{{name}}">
+        <img src="{{image}}" width="68" height="68" alt="{{name}}" title="{{name}}">
+      </picture>
+      <a href="#" class="delete-btn">Удалить картинку</a>
+      <figcaption class="image__caption">{{name}}</figcaption>
+    /*</figure>*/
+
+  </script>
+
+  <script id="field-template-desktop" type="text/html">
+
+    <div class="page-form__table-wrapper  page-form__table-wrapper--desktop">
+
+      <table class="page-form__table">
+
+        <tr>
+          <th class="page-form__companion-number">№</th>
+          <th>
+            <label for="name-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Имя: *</label>
+          </th>
+          <th>
+            <label for="nickname-2" class="page-form__text-input-label  page-form__text-input-label--companion-name">Прозвище:</label>
+          </th>
+          <th></th>
+        </tr>
+        <tr>
+          <td class="page-form__input-table-cell  page-form__input-table-cell--button">
+            <p class="page-form__companion">1</p>
+          </td>
+          <td>
+            <input type="text" id="name-3" name="input-companion" placeholder="Введите ваше имя">
+          </td>
+          <td>
+            <input type="text" id="nickname-3" name="nickname" placeholder="Ну как же без этого!">
+          </td>
+          <td class="page-form__col-delete">
+            <a href="#" class="page-form__col-delete-link">Удалить</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </script>
+
+  <script id="field-template" type="text/html">
+
+    <div class="page-form__table-wrapper  page-form__table-wrapper--companion-1">
+      <table class="page-form__table">
+        <tr>
+          <th class="page-form__companion-number">№</th>
+          <th>
+            <label for="name-1" class="page-form__text-input-label  page-form__text-input-label--companion-name">Имя: *</label>
+          </th>
+          <th class="page-form__col-delete"></th>
+        </tr>
+        <tr>
+          <td class="page-form__input-table-cell  page-form__input-table-cell--button">
+            <p class="page-form__companion">1</p>
+          </td>
+          <td>
+            <input type="text" id="name-1" name="input-companion" placeholder="Введите ваше имя">
+          </td>
+          <td class="page-form__col-delete"><a href="#" class="page-form__col-delete-link">Удалить</a></td>
+        </tr>
+        <tr>
+          <th class="page-form__companion-number"></th>
+          <th><label for="nickname-1" class="page-form__text-input-label  page-form__text-input-label--companion-name">Прозвище:</label></th>
+              <th class="page-form__col-delete"></th>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="text" id="nickname-1" name="nickname" placeholder="Ну как же без этого!">
+          </td>
+          <td class="page-form__col-delete"></td>
+        </tr>
+      </table>
+    </div>
+
+  </script>
+
+  <script src="js/vendors/mustache.min.js"></script>
 
   <script src="js/script.js"></script>
-  <script src="bower_components/tap/dist/tap.min.js"></script>
 
 
 </body>
