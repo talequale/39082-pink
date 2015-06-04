@@ -7,7 +7,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
-  grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
@@ -83,14 +82,6 @@ module.exports = function(grunt) {
         'gosha/img/README',
         'gosha/js/README'
       ]
-    },
-
-    cmq: {
-      style: {
-        files: {
-          "css/style.css": ["css/style.css"]
-        }
-      }
     },
 
     cssmin: {
@@ -173,8 +164,6 @@ module.exports = function(grunt) {
   "sass",
 
   "autoprefixer",
-
-  "cmq",
 
   "cssmin",
 

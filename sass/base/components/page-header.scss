@@ -28,6 +28,7 @@
 
   &__title {
     @include block-title($font);
+    padding: 0 30px;
 
     /* паддинги заголовка хедера на странице блога */
     .pink-blog & {
