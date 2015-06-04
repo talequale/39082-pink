@@ -7,3 +7,5 @@ prepros.cfg
 *.map
 css/*
 gosha
+build/*
+bower_components
