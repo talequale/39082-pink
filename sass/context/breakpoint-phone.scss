@@ -42,7 +42,7 @@
 
     background-image: url("../img/bg-header-phone.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center -120px;
 
     &__content {
@@ -173,6 +173,8 @@
     }
   }
 
+
+
   .map-wrapper {
     height: 200px;
 
@@ -221,12 +223,25 @@
         display: none;
       }
     }
+
+    /* ширина полей с кнопками для фикса в фф */
+    input[name="input-number"] {
+      width: calc(100% - 126px);
+    }
   }
 
   .index-page {
 
     .page-footer {
       display: none;
+    }
+  }
+
+  .image {
+
+    &__caption {
+      max-width: 68px;
+      word-wrap: break-word;
     }
   }
 }

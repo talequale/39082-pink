@@ -1,5 +1,5 @@
 /* кнопка-гамбургер для переключения состояний меню */
-.menu-toggle { 
+.menu-toggle {
   display: block;
   position: absolute;
   top: 50%;
@@ -19,7 +19,7 @@
     background-color: $purple;
 
     /* верхняя полоска :hover */
-    &:before { 
+    &:before {
       content: "";
       position: absolute;
       top: -10px;
@@ -45,7 +45,7 @@
     opacity: 0.3;
 
     /* верхняя полоска :active */
-    &:before { 
+    &:before {
       content: "";
       position: absolute;
       top: -10px;
@@ -68,7 +68,7 @@
   }
 
   /* верхняя полоска */
-  &:before { 
+  &:before {
     content: "";
     position: absolute;
     top: -10px;
@@ -90,7 +90,7 @@
   }
 
   /* крестик вместо гамбургера по модификатору active */
-  &--active { 
+  &--active {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -119,7 +119,7 @@
       background-color: $white;
       transform: rotate(135deg);
     }
-    
+
     /* элемент крестика, наклон влево */
     &:after {
       content: "";
@@ -138,7 +138,8 @@
     }
 
     &:hover {
-      
+      background-color: transparent;
+
       /* элемент крестика, наклон вправо :hover */
       &:before {
         content: "";
