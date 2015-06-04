@@ -7,7 +7,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
-  
+  grunt.loadNpmTasks('grunt-combine-media-queries');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-csscomb');
+
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -78,8 +83,106 @@ module.exports = function(grunt) {
         'gosha/img/README',
         'gosha/js/README'
       ]
+    },
+
+    cmq: {
+      style: {
+        files: {
+          "css/style.css": ["css/style.css"]
+        }
+      }
+    },
+
+    cssmin: {
+      style: {
+        options: {
+          keepSpecialComments: 0,
+          report: "gzip"
+        },
+        files: {
+          "css/style.min.css": ["css/style.css"]
+        }
+      }
+    },
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif,svg}"]
+        }]
+      }
+    },
+
+    htmlmin: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        caseSensitive: true,
+        keepClosingSlash: false
+      },
+      html: {
+        files: {
+          "build/index.min.html": "build/index.html",
+          "build/form.min.html": "build/form.html",
+          "build/post.min.html": "build/post.html",
+          "build/blog.min.html": "build/blog.html"
+        }
+      }
+    },
+
+    csscomb: { 
+      style: { 
+        expand: true, 
+        src: ["less/**/*.less"] 
+      }
+    },
+
+    clean: {
+      build: ["build"]
+    },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            '*.html',
+            'css/**',
+            'img/**',
+            'js/**'
+          ],
+          dest: 'build',
+        }]
+      }
     }
   });
+
+  grunt.registerTask("build", [
+
+  "clean",
+
+  "copy",
+
+  "csscomb",
+
+  "sass",
+
+  "autoprefixer",
+
+  "cmq",
+
+  "cssmin",
+
+  "imagemin",
+
+  "htmlmin"
+
+  ]);
 
   grunt.registerTask('test', ['lintspaces:test']);
 
