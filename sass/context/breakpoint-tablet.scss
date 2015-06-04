@@ -454,21 +454,6 @@
         100% auto,
         100% auto;
       overflow: hidden;
-
-      /* маркер карты */
-      /*&:after {
-        content: "";
-        position: absolute;
-        bottom: 145px;
-        left: 50%;
-        margin-top: -18px;
-        margin-left: -18px;
-        width: 16px;
-        height: 16px;
-        background-color: $purple;
-        border: 10px solid $white;
-        border-radius: 50%;
-      }*/
     }
 
     &__title {
@@ -794,6 +779,16 @@
   //////////////// form.html ///////////////////
   .page-form {
 
+    /* ширина инпута для нормального отображения в фф */
+    &__input-table {
+
+      &--duration {
+
+        input[name="input-number"] {
+          width: calc(100% - 126px);
+        }
+      }
+    }
 
     &__footnote {
 
@@ -1011,6 +1006,11 @@
   /* маргин у картинок */
   .image {
     margin-right: 70px;
+
+    &__caption {
+      max-width: 86px;
+      word-wrap: break-word;
+    }
 
     /* размер картинок в планшетной версии больше */
     img {

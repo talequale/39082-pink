@@ -8,7 +8,7 @@
   // обработчики для плюсов
   for (var i = 0; i < plus.length; i++) {
 
-    plus[i].addEventListener("click",function(){
+    plus[i].addEventListener("click",function(event){
       event.preventDefault;
       var input = this.parentNode.querySelector(".js-combo-value");
 
@@ -18,7 +18,7 @@
     });
 
     // обработчики для минусов
-    minus[i].addEventListener("click",function(){
+    minus[i].addEventListener("click",function(event){
       event.preventDefault;
       var input = this.parentNode.querySelector(".js-combo-value");
 
@@ -31,109 +31,48 @@
   }
 
   // проверка типа символов
-  (function() {
 
-    function setValidator(id, regex) {
+  function setValidator(id, regex) {
 
-      var element = document.getElementById(id);
+    var element = document.getElementById(id);
 
-        if (element) {
+      if (element) {
 
-          var lastValue = element.value;
+        var lastValue = element.value;
 
-            if (!regex.test(lastValue))
+          if (!regex.test(lastValue))
 
-              lastValue = "";
+            lastValue = "";
 
-        setInterval(function() {
+      setInterval(function() {
 
-          var value = element.value;
+        var value = element.value;
 
-          if (value != lastValue) {
+        if (value != lastValue) {
 
-            if (regex.test(value))
+          if (regex.test(value))
 
-              lastValue = value;
+            lastValue = value;
 
-            else
+          else
 
-              element.value = lastValue;
+            element.value = lastValue;
 
-          }
+        }
 
-        }, 10);
-
-      }
+      }, 10);
 
     }
 
-    setValidator("trip-length", /^[0-9]*$/);
-    setValidator("number-of-companions", /^[0-9]*$/);
+  }
 
-  })();
-
+  setValidator("trip-length", /^[0-9]*$/);
+  setValidator("number-of-companions", /^[0-9]*$/);
 
 })();
 
 
-/*//скрипт добавления полей попутчиков
-(function() {
-
-  var amount = getElementById("number-of-companions");
-  var
-})();*/
-
 //скрипт отправки формы
-// (function() {
-
-//   if (!("FormData" in window)) {
-
-//     return;
-
-//   } else {
-
-//     var form = document.querySelector(".page-form");
-
-//     form.addEventListener("submit", function(event) {
-
-//       event.preventDefault();
-
-//       var data = new FormData(form);
-
-//       request(data, function(response) {
-
-//         console.log(response);
-
-//       });
-
-//       function request(data, fn) {
-
-//         var xhr = new XMLHttpRequest();
-//         var time = (new Date()).getTime();
-
-//         xhr.open("post", "http://simonenko.su/academy/echo?" + time);
-
-//         xhr.addEventListener("readystatechange", function() {
-
-//           if (xhr.readyState == 4) {
-
-//             fn(xhr.responseText);
-
-//           }
-
-//         });
-
-//       xhr.send(data);
-
-//     }
-
-//     });
-
-//   }
-
-// })();
-
-//попытка добавить в скрипт отправки формы отправку картинок
 (function() {
 
   if (!("FormData" in window)) {
@@ -142,7 +81,7 @@
 
   } else {
 
-    var form = document.querySelector(".page-form");
+    var form = document.querySelector(".page-form form");
     var area = document.querySelector(".images");
     var template = document.querySelector("#image-template").innerHTML;
 
@@ -241,7 +180,7 @@
 
           });
 
-          reader.readAsDataUrl(file);
+          reader.readAsDataURL(file);
         }
       }
     }
@@ -250,7 +189,7 @@
 
       queue = queue.filter(function(element) {
 
-        return.element.figure != figure;
+        return element.figure != figure;
 
       });
 
